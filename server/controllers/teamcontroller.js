@@ -96,9 +96,15 @@ const generateInvoice = async (match) => {
 // Create Match & Generate PDF
 const createMatch = async (req, res) => {
   try {
-    const { team1, team2, matchDate, players } = req.body;
+    let { team1, team2, matchDate, players } = req.body;
     if (!team1 || !team2 || !matchDate || players.length < 1) {
       return res.status(400).json({ message: "All fields are required" });
+    }
+    const dateParts = matchDate.split("-");
+    matchDate = new Date(`${dateParts[2]}-${dateParts[1]}-${dateParts[0]}`);
+
+    if (isNaN(matchDate)) {
+      return res.status(400).json({ message: "Invalid match date format" });
     }
 
     const match = new Match({ team1, team2, matchDate, players });

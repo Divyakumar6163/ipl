@@ -1,10 +1,11 @@
-import TeamEntry from "../components/TeamEntry";
 import Header from "../components/Header";
+import UpcomingMatches from "../components/UpcomingMatches";
 export default function Home() {
   return (
     <div >
       <Header/>
-      <TeamEntry />
+      <UpcomingMatches />
+      {/* <TeamEntry /> */}
     </div>
   );
 }
