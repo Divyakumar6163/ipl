@@ -72,7 +72,7 @@ const generateInvoice = async (match) => {
     doc.moveDown(1);
 
     // Generate QR Code with match details
-    const qrCodeData = `${process.env.FRONTEND_LINK}/${invoiceNumber}`;
+    const qrCodeData = `${process.env.FRONTEND_LINK}/livescore/${invoiceNumber}`;
 
     const qrImage = qr.imageSync(qrCodeData, { type: "png" });
     doc.image(qrImage, doc.x + 170, doc.y, { width: 200, height: 200 });
@@ -136,4 +136,20 @@ const getInvoice = async (req, res) => {
   }
 };
 
-module.exports = { createMatch, getInvoice };
+const getPlayers = async (req, res) => {
+  try {
+    const { teamID } = req.params;
+    console.log(teamID);
+    if (!teamID || teamID.length === 0) {
+      return res.status(400).json({ message: "No team ID provided" });
+    }
+
+    const players = await Match.find({ _id: { $in: teamID } });
+    console.log(players);
+    res.status(200).json(players);
+  } catch (error) {
+    console.error("Error fetching players:", error);
+    res.status(500).json({ message: "Server error" });
+  }
+};
+module.exports = { createMatch, getInvoice, getPlayers };

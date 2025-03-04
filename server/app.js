@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const teamroutes = require("./routes/teamsroutes");
+const livematchroutes = require("./routes/livematchroutes");
 
 const cookieParser = require("cookie-parser");
 const app = express();
@@ -31,4 +32,5 @@ app.use(bodyParser.json());
 app.use(express.json());
 
 app.use("/", teamroutes);
+app.use("/", livematchroutes);
 module.exports = app;
