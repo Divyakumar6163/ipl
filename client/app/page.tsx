@@ -3,7 +3,7 @@ import UpcomingMatches from "../components/UpcomingMatches";
 export default function Home() {
   return (
     <div >
-      <Header/>
+      {/* <Header/> */}
       <UpcomingMatches />
       {/* <TeamEntry /> */}
     </div>
