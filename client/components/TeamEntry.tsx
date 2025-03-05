@@ -47,33 +47,47 @@ export default function Home() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
+  
     const matchData = {
       team1: formData.team1,
       team2: formData.team2,
       matchDate: formData.matchDate,
       players: formData.selectedPlayers,
     };
-
+  
     try {
-      const response = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_LINK}/makeTeam`, matchData, {
-        headers: { "Content-Type": "application/json" },
-        responseType: "blob",
-      });
-
+      const response = await axios.post(
+        `${process.env.NEXT_PUBLIC_BACKEND_LINK}/makeTeam`,
+        matchData,
+        {
+          headers: { "Content-Type": "application/json" },
+          responseType: "blob", // ✅ Expect binary PDF data
+        }
+      );
+      console.log(response);
       if (response.status === 200) {
-        alert("Match details saved successfully!");
-
+        // ✅ Extract match ID from response headers
+        const matchId = response.headers["match-id"]; // Ensure header name is lowercase
+        console.log(matchId);
+        if (!matchId) {
+          console.error("Match ID not found in headers");
+          alert("Error: Match ID missing from response");
+          return;
+        }
+        const res=await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_LINK}/updatesold`,{teamID:matchId,retailerID:localStorage.getItem("retailerID")});
+        alert(`Match saved successfully!`);
+  
+        // ✅ Create a PDF Blob & trigger download
         const pdfBlob = new Blob([response.data], { type: "application/pdf" });
-        const pdfUrl = window.URL.createObjectURL(pdfBlob);
-
+        const downloadUrl = window.URL.createObjectURL(pdfBlob);
+  
         const link = document.createElement("a");
-        link.href = pdfUrl;
-        link.download = "Match_Invoice.pdf";
+        link.href = downloadUrl;
+        link.download = `Match_Invoice.pdf`;
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-
+  
         setFormData({ team1: "", team2: "", matchDate: "", selectedPlayers: [] });
         router.push("/");
       } else {
@@ -84,7 +98,9 @@ export default function Home() {
       alert("Something went wrong.");
     }
   };
+  
 
+  
   if (isAuthorized === false) {
     return (
       <div className="h-screen flex items-center justify-center bg-gray-900 text-white">

@@ -11,12 +11,12 @@ export default function Login() {
   const router = useRouter();
 
   // ✅ Check if user is already logged in (On Page Load)
-//   useEffect(() => {
-//     const token = localStorage.getItem("token");
-//     if (token) {
-//       verifyToken(token);
-//     }
-//   }, []);
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      verifyToken(token);
+    }
+  }, []);
 
   // 🔹 Verify Token and Auto Login if Valid
   const verifyToken = async (token: string) => {
@@ -43,11 +43,12 @@ export default function Login() {
     try {
         console.log("Login Started");
       const response = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_LINK}/login`, { username, password });
-        console.log(response.status);
+        console.log(response.data.data);
       if (response.status === 200) {
         console.log(response.data.token);
         localStorage.setItem("token", response.data.token); // Store JWT
         localStorage.setItem("role", response.data.role); // Store role
+        localStorage.setItem("retailerID", response.data.data._id); // Store username
         setIsLogin(false); // Reset login state
         router.push("/"); // Redirect after login
       }
@@ -59,13 +60,13 @@ export default function Login() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white">
-      <div className="bg-gray-800 p-8 rounded-lg shadow-md w-96">
-        <h2 className="text-3xl font-bold text-center mb-6">🔐 Login</h2>
+      <div className="bg-gray-800 p-8 rounded-lg shadow-md w-full  m-5">
+        <h2 className="text-3xl font-bold text-center mb-6">Login</h2>
 
         {error && <p className="text-red-500 text-center">{error}</p>}
 
         <form onSubmit={handleLogin} className="flex flex-col">
-          <label className="mb-2 text-lg">📧 Username:</label>
+          <label className="mb-2 text-lg">Username:</label>
           <input
             type="text"
             value={username}
@@ -74,7 +75,7 @@ export default function Login() {
             required
           />
 
-          <label className="mb-2 text-lg">🔑 Password:</label>
+          <label className="mb-2 text-lg">Password:</label>
           <input
             type="password"
             value={password}

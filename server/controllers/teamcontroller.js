@@ -97,9 +97,11 @@ const generateInvoice = async (match) => {
 const createMatch = async (req, res) => {
   try {
     let { team1, team2, matchDate, players } = req.body;
+
     if (!team1 || !team2 || !matchDate || players.length < 1) {
       return res.status(400).json({ message: "All fields are required" });
     }
+
     const dateParts = matchDate.split("-");
     matchDate = new Date(`${dateParts[2]}-${dateParts[1]}-${dateParts[0]}`);
 
@@ -110,18 +112,26 @@ const createMatch = async (req, res) => {
     const match = new Match({ team1, team2, matchDate, players });
     await match.save();
 
-    // Generate PDF invoice
     const pdfPath = await generateInvoice(match);
 
-    // Send the PDF for direct download
-    res.download(pdfPath, `Match_Invoice_${match._id}.pdf`, (err) => {
-      if (err) {
-        console.error("Error sending file:", err);
-        res.status(500).json({ message: "Failed to download invoice" });
-      }
+    // ✅ Log response headers before sending response
+    console.log("Sending Response Headers:", {
+      "Content-Type": "application/pdf",
+      "Content-Disposition": `attachment; filename=Match_Invoice_${match._id}.pdf`,
+      "Match-ID": match._id.toString(),
     });
+
+    res.set({
+      "Content-Type": "application/pdf",
+      "Content-Disposition": `attachment; filename=Match_Invoice_${match._id}.pdf`,
+      "Match-ID": match._id.toString(), // ✅ Ensure Match-ID is set
+    });
+
+    // ✅ Send the PDF file as a stream
+    const pdfStream = fs.createReadStream(pdfPath);
+    pdfStream.pipe(res);
   } catch (error) {
-    console.error(error);
+    console.error("Error generating match invoice:", error);
     res.status(500).json({ message: "Server error" });
   }
 };

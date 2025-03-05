@@ -20,7 +20,7 @@ const login = async (req, res) => {
       expiresIn: process.env.ACCESS_JWT_EXPIRES_IN,
     });
     console.log("Token", token);
-    res.status(200).json({ token, role: user.role });
+    res.status(200).json({ token, role: user.role, data: user });
   } catch (error) {
     res.status(500).json({ message: "Server error" });
   }
@@ -40,5 +40,34 @@ const verifyToken = (req, res) => {
     res.status(401).json({ message: "Invalid token" });
   }
 };
+const updatesold = async (req, res) => {
+  try {
+    const { retailerID, teamID } = req.body;
+    console.log("IDs", retailerID, teamID);
+    // Check if both retailerID and teamID are provided
+    if (!retailerID || !teamID) {
+      return res
+        .status(400)
+        .json({ message: "Both retailerID and teamID are required" });
+    }
 
-module.exports = { login, verifyToken };
+    // Find the retailer in the database
+    const user = await User.findOne({ _id: retailerID });
+
+    if (!user) {
+      return res.status(404).json({ message: "Retailer not found" });
+    }
+
+    // Update the teamsold array by adding the new teamID
+    await User.updateOne(
+      { _id: retailerID },
+      { $push: { teamsold: teamID } } // Adds teamID to the array
+    );
+
+    res.status(200).json({ message: "Team sold updated successfully" });
+  } catch (error) {
+    console.error("Error updating teamsold:", error);
+    res.status(500).json({ message: "Server error" });
+  }
+};
+module.exports = { login, verifyToken, updatesold };

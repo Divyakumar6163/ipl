@@ -31,9 +31,7 @@ export default function SelectedPlayers() {
         // Fetch match details
         const matchResponse = await axios.get(
           `${process.env.NEXT_PUBLIC_BACKEND_LINK}/getTeam/${teamID}`,
-          {
-            headers: { "Content-Type": "application/json" },
-          }
+          { headers: { "Content-Type": "application/json" } }
         );
 
         const matchData = matchResponse.data[0];
@@ -87,14 +85,32 @@ export default function SelectedPlayers() {
   );
 
   return (
-    <div className="flex flex-col items-center p-10 bg-gray-900 min-h-screen text-white">
+    <div className="flex flex-col items-center p-5 bg-gray-900 min-h-screen text-white">
       {matchDetails ? (
         <>
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 text-center">
-            👥 Selected Players
-          </h2>
+          {/* 🔹 Match Info at the Top (Centered) */}
+          <div className="mb-8 p-4 bg-gray-800 rounded-md shadow-lg w-full max-w-lg text-center flex flex-col items-center space-y-2">
+            <h2 className="text-xl md:text-2xl font-bold text-white">
+              {matchDetails.team1} vs {matchDetails.team2}
+            </h2>
+            <h3 className="text-md md:text-lg font-medium text-gray-300">
+              {new Date(matchDetails.matchDate).toLocaleDateString("en-GB", {
+                day: "2-digit",
+                month: "short",
+              })}
+            </h3>
+            <h2 className="text-lg md:text-xl font-bold text-yellow-400">
+              Rank: 1
+            </h2>
+            <h3 className="text-lg md:text-xl font-semibold text-yellow-400">
+              Total Score: {totalScore}
+            </h3>
+          </div>
 
-          {/* Players Section (1 Player per Row) */}
+          {/* 🔹 Selected Players Section */}
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-2 text-center">
+            Your Players
+          </h2>
           <div className="w-full max-w-2xl">
             {playerScores.map((player, idx) => (
               <div
@@ -117,29 +133,6 @@ export default function SelectedPlayers() {
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* Total Score & Rank Section */}
-          <div className="mt-10 p-4 bg-gray-800 rounded-md shadow-lg w-full max-w-lg text-center">
-          <h2 className="text-2xl font-bold text-white">
-          🔢 Rank: {" "}
-              <span className="text-yellow-400">1</span>
-            </h2>
-            <h3 className="text-xl font-semibold text-gray-300 mt-2">
-            🏆 Total Score:{" "}
-            <span className="text-yellow-400">{totalScore}</span>
-            </h3>
-          </div>
-            
-          {/* Match Details */}
-          <div className="flex flex-col items-center space-y-3 p-4 bg-gray-800 rounded-md shadow-lg w-full max-w-lg mt-10">
-            <div className="text-lg font-semibold text-gray-300">
-             {matchDetails.team1} vs {matchDetails.team2}
-            </div>
-            <div className="text-md font-medium text-gray-300 bg-gray-700 px-4 py-2 rounded-md shadow-md">
-              📅{" "}
-              {new Date(matchDetails.matchDate).toLocaleDateString("en-GB")}
-            </div>
           </div>
         </>
       ) : (

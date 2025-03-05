@@ -22,7 +22,13 @@ app.use(
     },
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     credentials: true,
-    allowedHeaders: ["Content-Type", "Authorization"],
+    allowedHeaders: [
+      "Content-Type",
+      "Authorization",
+      "Match-ID",
+      "Content-Disposition",
+    ],
+    exposedHeaders: ["Match-ID", "Content-Disposition"],
   })
 );
 
