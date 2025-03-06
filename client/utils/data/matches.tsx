@@ -68,9 +68,9 @@ export const matches = [
     { matchDate: "17-05-2025", team1: "Royal Challengers Bengaluru", team2: "Kolkata Knight Riders" },
     { matchDate: "18-05-2025", team1: "Gujarat Titans", team2: "Chennai Super Kings" },
     { matchDate: "18-05-2025", team1: "Lucknow Super Giants", team2: "Sunrisers Hyderabad" },
-    { matchDate: "20-05-2025", team1: "Qualifier 1", team2: "" },
-    { matchDate: "21-05-2025", team1: "Eliminator", team2: "" },
-    { matchDate: "23-05-2025", team1: "Qualifier 2", team2: "" },
-    { matchDate: "25-05-2025", team1: "Final", team2: "" }
+    { matchDate: "20-05-2025", team1: "Qualifier 1", team2: "Qualifier 2" },
+    { matchDate: "21-05-2025", team1: "Eliminator 1", team2: "Eliminator 2" },
+    { matchDate: "23-05-2025", team1: "Qualifier2 1", team2: "Qualifier2 2" },
+    { matchDate: "25-05-2025", team1: "Final 1", team2: "Final 2" }
   ];
   

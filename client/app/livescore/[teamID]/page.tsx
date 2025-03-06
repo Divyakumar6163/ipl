@@ -2,6 +2,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "next/navigation";
+import Image from "next/image";
+import IPL_TEAMS from "@/utils/data/shortname";
+import IPL_PLAYERS from "@/utils/data/iplplayer";
 
 interface Match {
   _id: string;
@@ -20,6 +23,7 @@ interface Player {
 export default function SelectedPlayers() {
   const [matchDetails, setMatchDetails] = useState<Match | null>(null);
   const [playerScores, setPlayerScores] = useState<Player[]>([]);
+  const [teamRank, setTeamRank] = useState<number | null>(null);
   const params = useParams();
   const teamID = params.teamID as string;
 
@@ -28,7 +32,7 @@ export default function SelectedPlayers() {
 
     const fetchMatchDetails = async () => {
       try {
-        // Fetch match details
+        // 🔹 Fetch match details
         const matchResponse = await axios.get(
           `${process.env.NEXT_PUBLIC_BACKEND_LINK}/getTeam/${teamID}`,
           { headers: { "Content-Type": "application/json" } }
@@ -37,9 +41,10 @@ export default function SelectedPlayers() {
         const matchData = matchResponse.data[0];
         setMatchDetails(matchData);
 
-        // Fetch player scores every 10 seconds
-        const fetchScores = async () => {
+        // 🔹 Function to fetch player scores and rank
+        const fetchScoresAndRank = async () => {
           try {
+            // 🔹 Fetch player scores
             const scoreResponse = await axios.post(
               `${process.env.NEXT_PUBLIC_BACKEND_LINK}/getscore`,
               {
@@ -52,23 +57,37 @@ export default function SelectedPlayers() {
 
             const scoreData = scoreResponse.data.players;
 
-            // Update scores with backend data
+            // 🔹 Update scores with backend data
             const updatedScores = matchData.players.map((player: string) => ({
               name: player,
               totalScore: scoreData[player] || 0,
-              image: `/images/players/${player}.jpg`,
+              image: IPL_PLAYERS[player]?.image || "/default-player.png",
             }));
 
             setPlayerScores(updatedScores);
             console.log("Scores updated:", updatedScores);
+
+            // 🔹 Fetch team rank
+            const rankResponse = await axios.post(
+              `${process.env.NEXT_PUBLIC_BACKEND_LINK}/getrank`,
+              {
+                team1: matchData.team1,
+                team2: matchData.team2,
+                matchDate: matchData.matchDate,
+              }
+            );
+
+            const rankData = rankResponse.data.rankings;
+            const teamRankData = rankData.find((team: any) => team.teamId === teamID);
+            setTeamRank(teamRankData ? teamRankData.rank : null);
           } catch (error) {
-            console.error("Error fetching scores:", error);
+            console.error("Error fetching scores or rank:", error);
           }
         };
 
-        // Fetch scores immediately and then every 10 seconds
-        fetchScores();
-        const interval = setInterval(fetchScores, 10000);
+        // Fetch scores & rank immediately and every 10 seconds
+        fetchScoresAndRank();
+        const interval = setInterval(fetchScoresAndRank, 10000);
         return () => clearInterval(interval);
       } catch (error) {
         console.error("Error fetching match details:", error);
@@ -78,7 +97,7 @@ export default function SelectedPlayers() {
     fetchMatchDetails();
   }, [teamID]);
 
-  // Calculate total score of all players
+  // 🔢 Calculate total score of all players
   const totalScore = playerScores.reduce(
     (sum, player) => sum + player.totalScore,
     0
@@ -90,9 +109,43 @@ export default function SelectedPlayers() {
         <>
           {/* 🔹 Match Info at the Top (Centered) */}
           <div className="mb-8 p-4 bg-gray-800 rounded-md shadow-lg w-full max-w-lg text-center flex flex-col items-center space-y-2">
-            <h2 className="text-xl md:text-2xl font-bold text-white">
-              {matchDetails.team1} vs {matchDetails.team2}
-            </h2>
+            <div className="flex items-center justify-center space-x-6  px-4 pt-4 rounded-lg shadow-lg">
+              {/* Team 1 */}
+              <div className="flex items-center space-x-2">
+                {IPL_TEAMS[matchDetails.team1]?.logo && (
+                  <Image
+                    src={IPL_TEAMS[matchDetails.team1]?.logo}
+                    alt={matchDetails.team1}
+                    width={45}
+                    height={45}
+                    className="object-contain"
+                  />
+                )}
+                <div className="text-center text-xl font-bold text-white">
+                  {IPL_TEAMS[matchDetails.team1]?.short || "Team 1"}
+                </div>
+              </div>
+
+              {/* VS */}
+              <div className="text-center text-lg font-semibold text-gray-400">VS</div>
+
+              {/* Team 2 */}
+              <div className="flex items-center space-x-2">
+                {IPL_TEAMS[matchDetails.team2]?.logo && (
+                  <Image
+                    src={IPL_TEAMS[matchDetails.team2]?.logo}
+                    alt={matchDetails.team2}
+                    width={45}
+                    height={45}
+                    className="object-contain"
+                  />
+                )}
+                <div className="text-center text-xl font-bold text-white">
+                  {IPL_TEAMS[matchDetails.team2]?.short || "Team 2"}
+                </div>
+              </div>
+            </div>
+
             <h3 className="text-md md:text-lg font-medium text-gray-300">
               {new Date(matchDetails.matchDate).toLocaleDateString("en-GB", {
                 day: "2-digit",
@@ -100,7 +153,7 @@ export default function SelectedPlayers() {
               })}
             </h3>
             <h2 className="text-lg md:text-xl font-bold text-yellow-400">
-              Rank: 1
+              Rank: {teamRank !== null ? teamRank : "Calculating..."}
             </h2>
             <h3 className="text-lg md:text-xl font-semibold text-yellow-400">
               Total Score: {totalScore}
@@ -120,9 +173,11 @@ export default function SelectedPlayers() {
                 {/* Left Side: Player Image and Name */}
                 <div className="flex items-center space-x-4">
                   <img
-                    src={player.image || "/default-player.png"}
+                    src={player.image}
                     alt={player.name}
-                    className="w-12 h-12 rounded-full border-2 border-yellow-400"
+                    width={48}
+                    height={48}
+                    className="rounded-full border-2 border-yellow-400 object-cover"
                   />
                   <h3 className="text-lg font-semibold">{player.name}</h3>
                 </div>
@@ -136,7 +191,11 @@ export default function SelectedPlayers() {
           </div>
         </>
       ) : (
-        <p className="text-gray-400">Loading match details...</p>
+        <div className="flex items-center justify-center h-screen">
+          <p className="text-gray-300 text-2xl md:text-4xl font-bold animate-pulse  px-6 py-3 rounded-lg shadow-lg">
+            Loading match details...
+          </p>
+        </div>
       )}
     </div>
   );

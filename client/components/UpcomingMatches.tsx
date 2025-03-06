@@ -4,7 +4,8 @@ import { useDispatch } from "react-redux";
 import { selectMatch } from "../store/matchesSlice";
 import { matches } from "../utils/data/matches";
 import { useRouter } from "next/navigation";
-
+// import IPL_TEAMS from "@/utils/data/shortname";
+// import Image from "next/image";
 export default function UpcomingMatches() {
   const [upcoming, setUpcoming] = useState(matches);
   const [isAuthorized, setIsAuthorized] = useState(true); // New state for role check
@@ -59,20 +60,21 @@ export default function UpcomingMatches() {
               className="cursor-pointer bg-gradient-to-r from-gray-800 to-gray-700 px-6 py-3 rounded-xl shadow-lg w-full flex flex-col items-center transition transform hover:scale-105 md:mt-20"
             >
               <div className="flex flex-col items-center text-center">
-                <h3 className="text-lg font-semibold text-white mb-2">{match.team1}</h3>
+                <div className="flex items-center space-x-2 mb-2">
+                  {/* <Image src={IPL_TEAMS[match.team1]?.logo} alt={match.team1} width={40} height={40} />
+                  <h3 className="text-lg font-semibold text-white">{IPL_TEAMS[match.team1]?.short}</h3> */}
+                  <h3 className="text-lg font-semibold text-white">{match.team1}</h3>
+
+                </div>
+
                 <span className="text-xl font-bold text-gray-300 mb-2">VS</span>
-                <h3 className="text-lg font-semibold text-white">{match.team2}</h3>
-              </div>
-              <div className="mt-2 text-sm font-small text-gray-300 px-4 py-2 rounded-md shadow-md">
-                {match.matchDate
-                  ? (() => {
-                      const [day, month, year] = match.matchDate.split("-").map(Number);
-                      return new Date(year, month - 1, day).toLocaleDateString("en-GB", {
-                        day: "2-digit",
-                        month: "short",
-                      });
-                    })()
-                  : "Not Selected"}
+
+                <div className="flex items-center space-x-2">
+                  {/* <Image src={IPL_TEAMS[match.team2]?.logo} alt={match.team2} width={40} height={40} />
+                  <h3 className="text-lg font-semibold text-white">{IPL_TEAMS[match.team2]?.short}</h3> */}
+                  <h3 className="text-lg font-semibold text-white">{match.team2}</h3>
+
+                </div>
               </div>
             </div>
           ))

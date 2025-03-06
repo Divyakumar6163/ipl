@@ -9,7 +9,10 @@ const app = express();
 
 app.use(cookieParser());
 
-const allowedOrigins = ["http://localhost:3000"];
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://j92fkdxv-3000.inc1.devtunnels.ms",
+];
 
 app.use(
   cors({

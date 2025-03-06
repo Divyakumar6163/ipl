@@ -4,11 +4,9 @@ import axios from "axios";
 import { useSelector } from "react-redux";
 import { RootState } from "../store/store";
 import { useRouter } from "next/navigation";
-
-const players = [
-  "Virat Kohli", "MS Dhoni", "Rohit Sharma", "KL Rahul", "David Warner",
-  "Hardik Pandya", "Jasprit Bumrah", "Shikhar Dhawan", "Rishabh Pant", "Ravindra Jadeja"
-];
+import Image from "next/image";
+import IPL_TEAMS from "@/utils/data/shortname";
+import IPL_PLAYERS from "@/utils/data/iplplayer";
 
 export default function Home() {
   const selectedMatch = useSelector((state: RootState) => state.matches.selectedMatch);
@@ -115,17 +113,44 @@ export default function Home() {
         {/* Team & Match Date Display */}
         <div className="flex flex-col items-center">
           <div className="flex flex-col items-center bg-gray-800 p-4 rounded-md shadow-lg w-full">
-            <div className="flex items-center space-x-4">
-              <div className="text-center md:text-2xl text-sm font-bold text-white px-6 py-1 rounded-md shadow-md">
-                {formData.team1 || "Team 1"}
+            <div className="flex items-center justify-center space-x-6  px-4 pt-4 rounded-lg shadow-lg">
+                {/* Team 1 */}
+                <div className="flex items-center space-x-2">
+                  {IPL_TEAMS[formData.team1]?.logo && (
+                    <Image
+                      src={IPL_TEAMS[formData.team1]?.logo}
+                      alt={formData.team1}
+                      width={45}
+                      height={45}
+                      className="object-contain"
+                    />
+                  )}
+                  <div className="text-center text-xl font-bold text-white">
+                    {IPL_TEAMS[formData.team1]?.short || "Team 1"}
+                  </div>
+                </div>
+
+                {/* VS */}
+                <div className="text-center text-lg font-semibold text-gray-400">VS</div>
+
+                {/* Team 2 */}
+                <div className="flex items-center space-x-2">
+                  {IPL_TEAMS[formData.team2]?.logo && (
+                    <Image
+                      src={IPL_TEAMS[formData.team2]?.logo}
+                      alt={formData.team2}
+                      width={45}
+                      height={45}
+                      className="object-contain"
+                    />
+                  )}
+                  <div className="text-center text-xl font-bold text-white">
+                    {IPL_TEAMS[formData.team2]?.short || "Team 2"}
+                  </div>
+                </div>
               </div>
 
-              <div className="text-center text-lg font-semibold text-gray-300">VS</div>
 
-              <div className="text-center md:text-2xl text-sm font-bold text-white px-6 py-1 rounded-md shadow-md">
-                {formData.team2 || "Team 2"}
-              </div>
-            </div>
 
             {/* Match Date Below Team Names */}
             <div className="mt-2 text-sm font-small text-gray-300 px-4 py-2 rounded-md shadow-md">
@@ -143,32 +168,39 @@ export default function Home() {
         </div>
 
         {/* Player Selection */}
+        {/* Player Selection */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {[0, 1, 2, 3].map((i) => (
-            <div key={i} className="flex flex-col">
-              <label className="block text-sm mb-2 md:text-lg">🎯 Select Player {i + 1}:</label>
-              <select
-                name={`player${i}`}
-                value={formData.selectedPlayers[i] || ""}
-                onChange={(e) => handlePlayerChange(i, e.target.value)}
-                required
-                className="w-full px-3 py-2 rounded-md bg-gray-700 text-white text-sm md:text-lg"
-              >
-                <option value="">--Select Player--</option>
-                {players
-                  .filter(
-                    (player) =>
-                      !formData.selectedPlayers.includes(player) || formData.selectedPlayers[i] === player
-                  )
-                  .map((player) => (
+          {[0, 1, 2, 3].map((i) => {
+            // ✅ Filter players based on team1 & team2
+            const filteredPlayers = Object.keys(IPL_PLAYERS).filter(
+              (player) =>
+                (IPL_PLAYERS[player].team === IPL_TEAMS[formData.team1]?.short ||
+                  IPL_PLAYERS[player].team === IPL_TEAMS[formData.team2]?.short) &&
+                (!formData.selectedPlayers.includes(player) || formData.selectedPlayers[i] === player)
+            );
+
+            return (
+              <div key={i} className="flex flex-col">
+                <label className="block text-sm mb-2 md:text-lg">🎯 Select Player {i + 1}:</label>
+                <select
+                  name={`player${i}`}
+                  value={formData.selectedPlayers[i] || ""}
+                  onChange={(e) => handlePlayerChange(i, e.target.value)}
+                  required
+                  className="w-full px-3 py-2 rounded-md bg-gray-700 text-white text-sm md:text-lg"
+                >
+                  <option value="">--Select Player--</option>
+                  {filteredPlayers.map((player) => (
                     <option key={player} value={player}>
                       {player}
                     </option>
                   ))}
-              </select>
-            </div>
-          ))}
-        </div>
+                </select>
+              </div>
+            );
+          })}
+        </div>;
+
 
         {/* Submit Button */}
         <div className="flex justify-center mt-2">
