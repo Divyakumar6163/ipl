@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
 import axios from "axios";
 import { matches } from "../../utils/data/matches"; // Ensure this file contains match data
 
@@ -9,7 +8,6 @@ type PlayerScores = {
 };
 
 const ScoreTable = () => {
-  const router = useRouter();
   const [isAuthorized, setIsAuthorized] = useState<boolean | null>(null);
   const [players, setPlayers] = useState<string[]>([]);
   const [scores, setScores] = useState<PlayerScores>({});
@@ -27,11 +25,24 @@ const ScoreTable = () => {
 
     for (const match of matches) {
       const matchDate = new Date(match.matchDate.split("-").reverse().join("-")); // Convert DD-MM-YYYY to YYYY-MM-DD
+      // console.log(today);
       const diff = matchDate.getTime() - today.getTime();
 
       if (diff >= 0 && diff < nearestDateDiff) {
         nearestDateDiff = diff;
         nearestMatch = match;
+
+        const now = new Date();
+        // console.log("Hours 1",now.getHours());
+        if (match.matchTime === "3:30pm" && now.getHours() >= 19) {
+          // console.log("Hours 2",now.getHours());
+          const sameDayEveningMatch = matches.find(
+            (m) => m.matchDate === match.matchDate && m.matchTime === "7:30pm"
+          );
+          if (sameDayEveningMatch) {
+            nearestMatch = sameDayEveningMatch;
+          }
+        }
       }
     }
 
@@ -43,7 +54,6 @@ const ScoreTable = () => {
     }
   }, []);
 
-  // ✅ Fetch players from the backend based on the nearest match
   useEffect(() => {
     if (!currentMatch) return;
 
@@ -52,7 +62,8 @@ const ScoreTable = () => {
         const response = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_LINK}/matchplayer`, {
           team1: currentMatch.team1,
           team2: currentMatch.team2,
-          matchDate: currentMatch.matchDate
+          matchDate: currentMatch.matchDate,
+          matchTime: currentMatch.matchTime
         });
 
         if (!response.data.match || !response.data.match.players) {
@@ -98,12 +109,14 @@ const ScoreTable = () => {
         team1: currentMatch.team1,
         team2: currentMatch.team2,
         matchDate: currentMatch.matchDate,
+        matchTime: currentMatch.matchTime,
         players: { ...scores, [player]: newScore } // Send all players' scores
       });
       await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_LINK}/update-rank`, {
         team1: currentMatch.team1,
         team2: currentMatch.team2,
         matchDate: currentMatch.matchDate,
+        matchTime: currentMatch.matchTime,
         players: { ...scores, [player]: newScore }
       });
     } catch (error) {
@@ -136,22 +149,16 @@ const ScoreTable = () => {
   }
 
   return (
-    <div className="p-4 bg-gray-900 text-white shadow-lg overflow-auto h-screen flex flex-col">
+    <div className="p-2 bg-gray-900 text-white shadow-lg overflow-auto h-screen flex flex-col">
       <h2 className="text-2xl font-bold text-center mb-4">Score Table</h2>
-
-      {/* {currentMatch && (
-        <div className="mb-4 text-center text-lg font-semibold text-gray-300">
-          <p>📅 Match: {currentMatch.team1} vs {currentMatch.team2} - {currentMatch.matchDate}</p>
-        </div>
-      )} */}
 
       <div className="flex-1 overflow-y-auto">
         <table className="w-full border-collapse border border-gray-700">
           <thead>
             <tr className="bg-gray-800">
-              <th className="p-2 border border-gray-700">Player</th>
-              <th className="p-2 border border-gray-700">Score</th>
-              <th className="p-2 border border-gray-700">Actions</th>
+              <th className="p-1.5 border border-gray-700">Player</th>
+              <th className="p-1.5 border border-gray-700">Score</th>
+              <th className="p-1.5 border border-gray-700">Actions</th>
             </tr>
           </thead>
           <tbody>

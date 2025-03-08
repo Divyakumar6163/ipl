@@ -3,7 +3,7 @@ const Team = require("../models/team");
 const Rank = require("../models/rankmodel");
 const getScore = async (req, res) => {
   try {
-    const { team1, team2, matchDate, players } = req.body;
+    const { team1, team2, matchDate, matchTime, players } = req.body;
     // const formattedDate = new Date(matchDate).toLocaleDateString("en-GB");
     const formattedDate = new Date(matchDate)
       .toLocaleDateString("en-GB", {
@@ -19,6 +19,7 @@ const getScore = async (req, res) => {
       !team1 ||
       !team2 ||
       !formattedDate ||
+      !matchTime ||
       !players ||
       players.length === 0
     ) {
@@ -27,11 +28,17 @@ const getScore = async (req, res) => {
 
     // Fetch match from DB that matches team1, team2, and matchDate
     const match =
-      (await Match.findOne({ team1, team2, matchDate: formattedDate })) ||
+      (await Match.findOne({
+        team1,
+        team2,
+        matchDate: formattedDate,
+        matchTime,
+      })) ||
       (await Match.findOne({
         team2: team1.trim(),
         team1: team2.trim(),
         matchDate: formattedDate.trim(),
+        matchTime: matchTime.trim(),
       }));
     // console.log("Match:", match);
     if (!match) {
@@ -62,16 +69,16 @@ const getScore = async (req, res) => {
 };
 const getPlayer = async (req, res) => {
   try {
-    const { team1, team2, matchDate } = req.body;
+    const { team1, team2, matchDate, matchTime } = req.body;
 
-    if (!team1 || !team2 || !matchDate) {
+    if (!team1 || !team2 || !matchDate || !matchTime) {
       return res
         .status(400)
         .json({ message: "Missing required fields: team1, team2, matchDate" });
     }
 
     // 🔍 Search for match in the database
-    const match = await Match.findOne({ team1, team2, matchDate });
+    const match = await Match.findOne({ team1, team2, matchDate, matchTime });
     console.log(match);
     if (!match) {
       return res.status(404).json({ message: "Match not found" });
@@ -86,16 +93,16 @@ const getPlayer = async (req, res) => {
 
 const updateScore = async (req, res) => {
   try {
-    const { team1, team2, matchDate, players } = req.body;
+    const { team1, team2, matchDate, matchTime, players } = req.body;
 
-    if (!team1 || !team2 || !matchDate || !players) {
+    if (!team1 || !team2 || !matchDate || !matchTime || !players) {
       return res.status(400).json({
         message: "Missing required fields: team1, team2, matchDate, players",
       });
     }
 
     // 🔍 Find the match
-    const match = await Match.findOne({ team1, team2, matchDate });
+    const match = await Match.findOne({ team1, team2, matchDate, matchTime });
 
     if (!match) {
       return res.status(404).json({ message: "Match not found" });
@@ -115,9 +122,9 @@ const updateScore = async (req, res) => {
 };
 const updateRank = async (req, res) => {
   try {
-    let { team1, team2, matchDate, players } = req.body;
+    let { team1, team2, matchDate, matchTime, players } = req.body;
 
-    if (!team1 || !team2 || !matchDate || !players) {
+    if (!team1 || !team2 || !matchDate || !matchTime || !players) {
       return res.status(400).json({
         message: "Missing required fields: team1, team2, matchDate, players",
       });
@@ -127,7 +134,7 @@ const updateRank = async (req, res) => {
     matchDate = new Date(`${dateParts[2]}-${dateParts[1]}-${dateParts[0]}`);
 
     // 🔍 Find all teams that belong to this match
-    const teams = await Team.find({ team1, team2, matchDate });
+    const teams = await Team.find({ team1, team2, matchDate, matchTime });
 
     if (!teams.length) {
       return res.status(404).json({ message: "No teams found for this match" });
@@ -164,7 +171,12 @@ const updateRank = async (req, res) => {
         rank: currentRank,
       });
     }
-    let existingRank = await Rank.findOne({ team1, team2, matchDate });
+    let existingRank = await Rank.findOne({
+      team1,
+      team2,
+      matchDate,
+      matchTime,
+    });
 
     if (existingRank) {
       // 🆙 Update existing ranking
@@ -176,6 +188,7 @@ const updateRank = async (req, res) => {
         team1,
         team2,
         matchDate,
+        matchTime,
         rankings: rankedTeams,
       });
     }
@@ -191,9 +204,9 @@ const updateRank = async (req, res) => {
 };
 const getRank = async (req, res) => {
   try {
-    let { team1, team2, matchDate } = req.body;
+    let { team1, team2, matchDate, matchTime } = req.body;
 
-    if (!team1 || !team2 || !matchDate) {
+    if (!team1 || !team2 || !matchDate || !matchTime) {
       return res.status(400).json({
         message: "Missing required fields: team1, team2, matchDate",
       });
@@ -203,7 +216,7 @@ const getRank = async (req, res) => {
     // matchDate = new Date(`${dateParts[2]}-${dateParts[1]}-${dateParts[0]}`);
 
     // 🔍 Find rank entry in the database
-    const rankData = await Rank.findOne({ team1, team2, matchDate });
+    const rankData = await Rank.findOne({ team1, team2, matchDate, matchTime });
 
     if (!rankData) {
       return res

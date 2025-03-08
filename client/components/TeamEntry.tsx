@@ -15,6 +15,7 @@ export default function Home() {
     team1: selectedMatch?.team1 || "",
     team2: selectedMatch?.team2 || "",
     matchDate: selectedMatch?.matchDate || "",
+    matchTime: selectedMatch?.matchTime || "",
     selectedPlayers: [] as string[],
   });
 
@@ -50,6 +51,7 @@ export default function Home() {
       team1: formData.team1,
       team2: formData.team2,
       matchDate: formData.matchDate,
+      matchTime: formData.matchTime,
       players: formData.selectedPlayers,
     };
   
@@ -72,7 +74,7 @@ export default function Home() {
           alert("Error: Match ID missing from response");
           return;
         }
-        const res=await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_LINK}/updatesold`,{teamID:matchId,retailerID:localStorage.getItem("retailerID")});
+        await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_LINK}/updatesold`,{teamID:matchId,retailerID:localStorage.getItem("retailerID")});
         alert(`Match saved successfully!`);
   
         // ✅ Create a PDF Blob & trigger download
@@ -86,7 +88,7 @@ export default function Home() {
         link.click();
         document.body.removeChild(link);
   
-        setFormData({ team1: "", team2: "", matchDate: "", selectedPlayers: [] });
+        setFormData({ team1: "", team2: "", matchDate: "",matchTime:"", selectedPlayers: [] });
         router.push("/");
       } else {
         alert("Failed to save match details.");
@@ -109,7 +111,7 @@ export default function Home() {
 
   return (
     <div className="h-screen flex items-center justify-center bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white p-4">
-      <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-6">
+      <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-6 w-full p-3">
         {/* Team & Match Date Display */}
         <div className="flex flex-col items-center">
           <div className="flex flex-col items-center bg-gray-800 p-4 rounded-md shadow-lg w-full">
@@ -152,7 +154,7 @@ export default function Home() {
 
 
 
-            {/* Match Date Below Team Names */}
+            {/* Match Date & Time Below Team Names */}
             <div className="mt-2 text-sm font-small text-gray-300 px-4 py-2 rounded-md shadow-md">
               {formData.matchDate
                 ? (() => {
@@ -163,11 +165,11 @@ export default function Home() {
                     });
                   })()
                 : "Not Selected"}
+              {" "} | {formData.matchTime || "Time Not Available"}
             </div>
           </div>
         </div>
 
-        {/* Player Selection */}
         {/* Player Selection */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {[0, 1, 2, 3].map((i) => {
@@ -199,7 +201,7 @@ export default function Home() {
               </div>
             );
           })}
-        </div>;
+        </div>
 
 
         {/* Submit Button */}

@@ -14,11 +14,12 @@ export default function UpcomingMatches() {
 
   useEffect(() => {
     const today = new Date();
-
     // Filter matches that are in the future
     const filteredMatches = matches.filter((match) => {
       const matchDate = new Date(match.matchDate.split("-").reverse().join("-"));
-      return matchDate >= today;
+      console.log("MatchDate",matchDate);
+      console.log("Today",today);
+      return matchDate > today;
     });
 
     // Get the next three upcoming matches
@@ -83,5 +84,5 @@ export default function UpcomingMatches() {
         )}
       </div>
     </div>
-  );
+  )
 }

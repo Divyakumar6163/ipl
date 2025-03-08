@@ -4,6 +4,7 @@ interface Match {
   team1: string;
   team2: string;
   matchDate: string;
+  matchTime: string;
 }
 
 interface MatchesState {
