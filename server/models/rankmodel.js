@@ -6,6 +6,7 @@ const RankSchema = new mongoose.Schema(
     team2: { type: String, required: true },
     matchDate: { type: Date, required: true },
     matchTime: { type: String, required: true },
+    contestPrice: { type: Number, required: true },
     rankings: [
       {
         teamId: { type: mongoose.Schema.Types.ObjectId, ref: "Team" },

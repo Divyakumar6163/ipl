@@ -22,7 +22,7 @@ const generateInvoice = async (match) => {
 
     const invoiceNumber = match._id.toString();
     const invoiceDate = new Date().toLocaleString();
-    const purchasePrice = 50;
+    const purchasePrice = match.price;
 
     // Invoice Title
     doc
@@ -97,9 +97,16 @@ const generateInvoice = async (match) => {
 // Create Match & Generate PDF
 const createMatch = async (req, res) => {
   try {
-    let { team1, team2, matchDate, matchTime, players } = req.body;
+    let { team1, team2, matchDate, matchTime, players, price } = req.body;
 
-    if (!team1 || !team2 || !matchDate || !matchTime || players.length < 1) {
+    if (
+      !team1 ||
+      !team2 ||
+      !matchDate ||
+      !matchTime ||
+      !price ||
+      players.length < 1
+    ) {
       return res.status(400).json({ message: "All fields are required" });
     }
 
@@ -109,8 +116,15 @@ const createMatch = async (req, res) => {
     if (isNaN(matchDate)) {
       return res.status(400).json({ message: "Invalid match date format" });
     }
-
-    const match = new Match({ team1, team2, matchDate, matchTime, players });
+    console.log(price);
+    const match = new Match({
+      team1,
+      team2,
+      matchDate,
+      matchTime,
+      price,
+      players,
+    });
     await match.save();
 
     const pdfPath = await generateInvoice(match);

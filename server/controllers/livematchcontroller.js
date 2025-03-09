@@ -13,8 +13,8 @@ const getScore = async (req, res) => {
       })
       .split("/")
       .join("-");
-    console.log("Request Body:", req.body);
-    console.log("Formatted Date:", formattedDate);
+    // console.log("Request Body:", req.body);
+    // console.log("Formatted Date:", formattedDate);
     if (
       !team1 ||
       !team2 ||
@@ -79,7 +79,7 @@ const getPlayer = async (req, res) => {
 
     // 🔍 Search for match in the database
     const match = await Match.findOne({ team1, team2, matchDate, matchTime });
-    console.log(match);
+    // console.log(match);
     if (!match) {
       return res.status(404).json({ message: "Match not found" });
     }
@@ -123,7 +123,7 @@ const updateScore = async (req, res) => {
 const updateRank = async (req, res) => {
   try {
     let { team1, team2, matchDate, matchTime, players } = req.body;
-
+    // console.log("Request Body:", req.body);
     if (!team1 || !team2 || !matchDate || !matchTime || !players) {
       return res.status(400).json({
         message: "Missing required fields: team1, team2, matchDate, players",
@@ -140,73 +140,104 @@ const updateRank = async (req, res) => {
       return res.status(404).json({ message: "No teams found for this match" });
     }
 
-    // 🔢 Calculate the net score for each team
-    let teamScores = [];
+    // ✅ Group teams by contest price
+    const teamsByPrice = {};
     teams.forEach((team) => {
-      let totalScore = 0;
+      const price = team.price; // Assuming each team has contestPrice field
+      if (!teamsByPrice[price]) teamsByPrice[price] = [];
+      teamsByPrice[price].push(team);
+    });
 
-      team.players.forEach((player) => {
-        if (players[player] !== undefined) {
-          totalScore += players[player]; // Add score if player exists in request
+    // ⚙️ For storing all ranking results for response
+    const allRankings = [];
+
+    // 🔄 Loop through each contest price group
+    console.log("TeamBtPrice", teamsByPrice);
+    for (const price in teamsByPrice) {
+      const teamsInPriceGroup = teamsByPrice[price];
+
+      // 🔢 Calculate net scores for teams in this price group
+      let teamScores = [];
+      teamsInPriceGroup.forEach((team) => {
+        let totalScore = 0;
+
+        team.players.forEach((player) => {
+          if (players[player] !== undefined) {
+            totalScore += players[player];
+          }
+        });
+
+        teamScores.push({ teamId: team._id, score: totalScore });
+      });
+
+      // 🔢 Sort teams based on score in descending order
+      teamScores.sort((a, b) => b.score - a.score);
+
+      // 🏆 Assign ranks while handling ties correctly
+      let rankedTeams = [];
+      let currentRank = 1;
+
+      for (let i = 0; i < teamScores.length; i++) {
+        if (i > 0 && teamScores[i].score < teamScores[i - 1].score) {
+          currentRank++; // Increment rank when score is lower
         }
-      });
-
-      teamScores.push({ teamId: team._id, score: totalScore });
-    });
-
-    // 🔢 Sort teams based on score in descending order
-    teamScores.sort((a, b) => b.score - a.score);
-
-    // 🏆 Assign ranks while handling ties correctly
-    let rankedTeams = [];
-    let currentRank = 1;
-
-    for (let i = 0; i < teamScores.length; i++) {
-      if (i > 0 && teamScores[i].score < teamScores[i - 1].score) {
-        currentRank++; // Ensure next unique rank follows correctly
+        rankedTeams.push({
+          teamId: teamScores[i].teamId,
+          score: teamScores[i].score,
+          rank: currentRank,
+        });
       }
-      rankedTeams.push({
-        teamId: teamScores[i].teamId,
-        score: teamScores[i].score,
-        rank: currentRank,
-      });
-    }
-    let existingRank = await Rank.findOne({
-      team1,
-      team2,
-      matchDate,
-      matchTime,
-    });
 
-    if (existingRank) {
-      // 🆙 Update existing ranking
-      existingRank.rankings = rankedTeams;
-      await existingRank.save();
-    } else {
-      // 📌 Create new ranking entry
-      await Rank.create({
+      // ✅ Check if rank for this price group already exists
+      let existingRank = await Rank.findOne({
         team1,
         team2,
         matchDate,
         matchTime,
+        contestPrice: Number(price), // Ensure price is stored correctly
+      });
+
+      if (existingRank) {
+        // 🆙 Update existing ranking for this price
+        existingRank.rankings = rankedTeams;
+        await existingRank.save();
+      } else {
+        // 📌 Create new ranking for this price
+        await Rank.create({
+          team1,
+          team2,
+          matchDate,
+          matchTime,
+          contestPrice: Number(price), // Store contest price
+          rankings: rankedTeams,
+        });
+      }
+
+      // Collect for final response
+      allRankings.push({
+        contestPrice: Number(price),
         rankings: rankedTeams,
       });
     }
-    console.log(rankedTeams);
+
+    console.log(allRankings);
+
     res.status(200).json({
-      message: "Team scores and rankings updated successfully",
-      rankings: rankedTeams,
+      message:
+        "Team scores and rankings updated successfully for all contest prices",
+      rankings: allRankings,
     });
   } catch (error) {
     console.error("Error calculating team scores:", error);
     res.status(500).json({ message: "Internal server error" });
   }
 };
+
 const getRank = async (req, res) => {
   try {
-    let { team1, team2, matchDate, matchTime } = req.body;
+    let { team1, team2, matchDate, matchTime, contestPrice } = req.body;
 
-    if (!team1 || !team2 || !matchDate || !matchTime) {
+    if (!team1 || !team2 || !matchDate || !matchTime || !contestPrice) {
       return res.status(400).json({
         message: "Missing required fields: team1, team2, matchDate",
       });
@@ -216,7 +247,13 @@ const getRank = async (req, res) => {
     // matchDate = new Date(`${dateParts[2]}-${dateParts[1]}-${dateParts[0]}`);
 
     // 🔍 Find rank entry in the database
-    const rankData = await Rank.findOne({ team1, team2, matchDate, matchTime });
+    const rankData = await Rank.findOne({
+      team1,
+      team2,
+      matchDate,
+      matchTime,
+      contestPrice,
+    });
 
     if (!rankData) {
       return res

@@ -77,8 +77,8 @@ export default function SelectedPlayers() {
             // 🔹 Convert Match Date to "YYYY-MM-DD" format
             const matchDateFormatted = new Date(matchData.matchDate).toISOString().split("T")[0];
 
-            console.log("Current Date:", currentDate);
-            console.log("Match Date:", matchDateFormatted);
+            // console.log("Current Date:", currentDate);
+            // console.log("Match Date:", matchDateFormatted);
             if (currentDate >= matchDateFormatted) {
               const rankResponse = await axios.post(
                 `${process.env.NEXT_PUBLIC_BACKEND_LINK}/getrank`,
@@ -86,11 +86,13 @@ export default function SelectedPlayers() {
                   team1: matchData.team1,
                   team2: matchData.team2,
                   matchDate: matchData.matchDate,
-                  matchTime: matchData.matchTime
+                  matchTime: matchData.matchTime,
+                  contestPrice: matchData.price
                 }
               );
 
             const rankData = rankResponse.data.rankings;
+            console.log("Rank Data:", rankResponse.data);
             teamRankData = rankData.find((team: any) => team.teamId === teamID);
             }
             setTeamRank(teamRankData ? teamRankData.rank : null);

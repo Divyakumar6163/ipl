@@ -42,13 +42,14 @@ const verifyToken = (req, res) => {
 };
 const updatesold = async (req, res) => {
   try {
-    const { retailerID, teamID } = req.body;
-    console.log("IDs", retailerID, teamID);
-    // Check if both retailerID and teamID are provided
-    if (!retailerID || !teamID) {
+    const { retailerID, teamID, price } = req.body;
+    console.log("IDs", retailerID, teamID, "Price:", price);
+
+    // Check if both retailerID, teamID, and price are provided
+    if (!retailerID || !teamID || price === undefined) {
       return res
         .status(400)
-        .json({ message: "Both retailerID and teamID are required" });
+        .json({ message: "retailerID, teamID, and price are required" });
     }
 
     // Find the retailer in the database
@@ -58,16 +59,50 @@ const updatesold = async (req, res) => {
       return res.status(404).json({ message: "Retailer not found" });
     }
 
-    // Update the teamsold array by adding the new teamID
+    // Check if wallet has enough balance
+    if (user.wallet < price) {
+      return res.status(400).json({ message: "Insufficient wallet balance" });
+    }
+
+    // Update teamsold and deduct price from wallet atomically
     await User.updateOne(
       { _id: retailerID },
-      { $push: { teamsold: teamID } } // Adds teamID to the array
+      {
+        $push: { teamsold: teamID }, // Adds teamID to the array
+        $inc: { wallet: -price }, // Deducts price from wallet
+      }
     );
 
-    res.status(200).json({ message: "Team sold updated successfully" });
+    res
+      .status(200)
+      .json({ message: "Team sold updated and wallet deducted successfully" });
   } catch (error) {
-    console.error("Error updating teamsold:", error);
+    console.error("Error updating teamsold and wallet:", error);
     res.status(500).json({ message: "Server error" });
   }
 };
-module.exports = { login, verifyToken, updatesold };
+
+// Update Wallet Controller
+const getwallet = async (req, res) => {
+  try {
+    const { retailerID } = req.body;
+
+    if (!retailerID) {
+      return res.status(400).json({ message: "Invalid input data" });
+    }
+
+    const retailer = await User.findById(retailerID, { wallet: 1 });
+
+    if (!retailer) {
+      return res.status(404).json({ message: "Retailer not found" });
+    }
+
+    // ✅ Return only wallet amount
+    return res.status(200).json({ wallet: retailer.wallet });
+  } catch (error) {
+    console.error("Wallet fetch error:", error);
+    return res.status(500).json({ message: "Internal server error" });
+  }
+};
+
+module.exports = { login, verifyToken, updatesold, getwallet };

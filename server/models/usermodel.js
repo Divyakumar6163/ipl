@@ -5,6 +5,7 @@ const userSchema = new mongoose.Schema({
   password: { type: String, required: true },
   role: { type: String, default: "user" },
   teamsold: { type: [String], default: [] },
+  wallet: { type: Number, default: 0 },
 });
 
 module.exports = mongoose.model("User", userSchema);
