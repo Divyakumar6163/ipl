@@ -7,5 +7,6 @@ router.post("/getrank", livematchcontroller.getRank);
 router.post("/matchplayer", livematchcontroller.getPlayer);
 router.post("/update-score", livematchcontroller.updateScore);
 router.post("/update-rank", livematchcontroller.updateRank);
+router.post("/track-run", livematchcontroller.trackRun);
 
 module.exports = router;

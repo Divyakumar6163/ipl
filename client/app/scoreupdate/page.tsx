@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { matches } from "../../utils/data/matches"; // Ensure this file contains match data
+import { matches } from "../../utils/data/matches";
 
 type PlayerScores = {
   [playerName: string]: number;
@@ -15,64 +15,53 @@ const ScoreTable = () => {
   const [error, setError] = useState<string | null>(null);
   const [currentMatch, setCurrentMatch] = useState<any>(null);
 
-  // ✅ Find the nearest match (today or upcoming)
+  // ✅ Find nearest match (handle 3:30pm and 7:30pm logic)
   useEffect(() => {
     const today = new Date();
-    today.setHours(0, 0, 0, 0); // Normalize date
-
+    today.setHours(0, 0, 0, 0);
     let nearestMatch = null;
     let nearestDateDiff = Infinity;
 
     for (const match of matches) {
-      const matchDate = new Date(match.matchDate.split("-").reverse().join("-")); // Convert DD-MM-YYYY to YYYY-MM-DD
-      // console.log(today);
+      const matchDate = new Date(match.matchDate.split("-").reverse().join("-"));
       const diff = matchDate.getTime() - today.getTime();
-
       if (diff >= 0 && diff < nearestDateDiff) {
         nearestDateDiff = diff;
         nearestMatch = match;
-
         const now = new Date();
-        // console.log("Hours 1",now.getHours());
         if (match.matchTime === "3:30pm" && now.getHours() >= 19) {
-          // console.log("Hours 2",now.getHours());
           const sameDayEveningMatch = matches.find(
             (m) => m.matchDate === match.matchDate && m.matchTime === "7:30pm"
           );
-          if (sameDayEveningMatch) {
-            nearestMatch = sameDayEveningMatch;
-          }
+          if (sameDayEveningMatch) nearestMatch = sameDayEveningMatch;
         }
       }
     }
 
-    if (nearestMatch) {
-      setCurrentMatch(nearestMatch);
-    } else {
+    if (nearestMatch) setCurrentMatch(nearestMatch);
+    else {
       setError("No upcoming matches found.");
       setLoading(false);
     }
   }, []);
 
+  // ✅ Fetch players for that match
   useEffect(() => {
     if (!currentMatch) return;
-
     const fetchPlayers = async () => {
       try {
         const response = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_LINK}/matchplayer`, {
           team1: currentMatch.team1,
           team2: currentMatch.team2,
           matchDate: currentMatch.matchDate,
-          matchTime: currentMatch.matchTime
+          matchTime: currentMatch.matchTime,
         });
-
         if (!response.data.match || !response.data.match.players) {
           setError("No players found for this match.");
           setLoading(false);
           return;
         }
-
-        const playerList = Object.keys(response.data.match.players); // Extract player names
+        const playerList = Object.keys(response.data.match.players);
         setPlayers(playerList);
         setScores(response.data.match.players);
       } catch (err) {
@@ -81,72 +70,91 @@ const ScoreTable = () => {
         setLoading(false);
       }
     };
-
     fetchPlayers();
   }, [currentMatch]);
 
-  // ✅ Check role before opening the page
+  // ✅ Role authorization
   useEffect(() => {
     const role = localStorage.getItem("role");
-    if (role !== "admin" && role !== "updater") {
-      setIsAuthorized(false);
-    } else {
-      setIsAuthorized(true);
-    }
+    setIsAuthorized(role === "admin" || role === "updater");
   }, []);
 
-  // ✅ Function to update the score of a player
-  const updateScore = async (player: string, runs: number) => {
-    const newScore = scores[player] + runs;
-
-    // Update state immediately
-    setScores((prevScores) => ({
-      ...prevScores,
-      [player]: newScore
-    }));
-    try {
-      await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_LINK}/update-score`, {
-        team1: currentMatch.team1,
-        team2: currentMatch.team2,
-        matchDate: currentMatch.matchDate,
-        matchTime: currentMatch.matchTime,
-        players: { ...scores, [player]: newScore } // Send all players' scores
-      });
-      await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_LINK}/update-rank`, {
-        team1: currentMatch.team1,
-        team2: currentMatch.team2,
-        matchDate: currentMatch.matchDate,
-        matchTime: currentMatch.matchTime,
-        players: { ...scores, [player]: newScore }
-      });
-    } catch (error) {
-      console.error("Error updating match scores:", error);
-    }
+  // ✅ POINTING SYSTEM MAP
+  const POINTS_MAP: { [key: string]: number } = {
+    "1 Run": 1,
+    "4 Run": 8,
+    "6 Run": 12,
+    "Wicket": 25,
+    "Dot Ball": 1,
+    "Catch": 8,
+    "Stumping": 12,
   };
 
-  if (isAuthorized === null || loading) {
-    return (
-      <div className="h-screen flex items-center justify-center bg-gray-900 text-white">
-        <h2 className="text-xl font-bold">⏳ Loading...</h2>
-      </div>
-    );
-  }
+  // ✅ Function to update score and also call backend for each run (1, 4, 6)
+// ✅ Function to update score and also call backend for each run (1, 4, 6)
+const updateScore = async (player: string, action: string) => {
+  let addedPoints = POINTS_MAP[action] || 0;
+  let newScore = scores[player] + addedPoints;
 
-  if (!isAuthorized) {
-    return (
-      <div className="h-screen flex items-center justify-center bg-gray-900 text-white">
-        <h2 className="text-xl font-bold">🚫 You are not authorized to access this page.</h2>
-      </div>
-    );
-  }
+  const updatedPlayers = { ...scores, [player]: newScore };
 
-  if (error) {
-    return (
-      <div className="h-screen flex items-center justify-center bg-gray-900 text-white">
-        <h2 className="text-xl font-bold">❌ {error}</h2>
-      </div>
-    );
+  try {
+    // ✅ Update player score and team rank
+    await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_LINK}/update-score`, {
+      team1: currentMatch.team1,
+      team2: currentMatch.team2,
+      matchDate: currentMatch.matchDate,
+      matchTime: currentMatch.matchTime,
+      players: updatedPlayers,
+    });
+
+    await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_LINK}/update-rank`, {
+      team1: currentMatch.team1,
+      team2: currentMatch.team2,
+      matchDate: currentMatch.matchDate,
+      matchTime: currentMatch.matchTime,
+      players: updatedPlayers,
+    });
+
+    // ✅ Special backend tracking for runs (1, 4, 6)
+    if (["1 Run", "4 Run", "6 Run"].includes(action)) {
+      const run = parseInt(action.split(" ")[0]); // Extract the number part (1, 4, 6)
+
+      const res = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_LINK}/track-run`, {
+        team1: currentMatch.team1,
+        team2: currentMatch.team2,
+        matchDate: currentMatch.matchDate,
+        matchTime: currentMatch.matchTime,
+        player,
+        run, // Send the run value for backend processing
+      });
+
+      console.log("Run tracking response:", res.data.run); // Bonus points if milestone achieved
+
+      // ✅ Now update state again with both added run & backend milestone run if any
+      setScores((prevScores) => ({
+        ...prevScores,
+        [player]: newScore + res.data.run, // Add actual run + bonus/milestone run
+      }));
+    }
+    else{
+      // ✅ Update state immediately for responsiveness
+        setScores((prevScores) => ({
+          ...prevScores,
+          [player]: newScore,
+        }));
+    }
+
+  } catch (error) {
+    console.error("Error updating scores:", error);
   }
+};
+
+
+  // ✅ Conditional Rendering
+  if (isAuthorized === null || loading) return <div className="h-screen flex items-center justify-center bg-gray-900 text-white"><h2 className="text-xl font-bold">⏳ Loading...</h2></div>;
+  if (!isAuthorized) return <div className="h-screen flex items-center justify-center bg-gray-900 text-white"><h2 className="text-xl font-bold">🚫 Unauthorized Access</h2></div>;
+  if (error) return <div className="h-screen flex items-center justify-center bg-gray-900 text-white"><h2 className="text-xl font-bold">❌ {error}</h2></div>;
 
   return (
     <div className="p-2 bg-gray-900 text-white shadow-lg overflow-auto h-screen flex flex-col">
@@ -168,13 +176,13 @@ const ScoreTable = () => {
                 <td className="p-2 border border-gray-700 text-yellow-400">{scores[player]}</td>
                 <td className="p-2 border border-gray-700">
                   <div className="flex flex-wrap justify-evenly gap-2">
-                    {[1, 2, 3, 4, 5, 6, "Out", "Catch"].map((value) => (
+                    {["1 Run", "4 Run", "6 Run", "Wicket", "Dot Ball", "Catch", "Stumping"].map((action) => (
                       <button
-                        key={value}
+                        key={action}
                         className="bg-blue-500 hover:bg-blue-700 text-white px-3 py-1 rounded-md text-sm"
-                        onClick={() => updateScore(player, typeof value === "number" ? value : 0)}
+                        onClick={() => updateScore(player, action)}
                       >
-                        {value} {typeof value === "number" ? "Run" : ""}
+                        {action}
                       </button>
                     ))}
                   </div>

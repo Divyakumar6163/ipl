@@ -1,6 +1,7 @@
 const Match = require("../models/livematch");
 const Team = require("../models/team");
 const Rank = require("../models/rankmodel");
+const Trackrun = require("../models/trackrun");
 const getScore = async (req, res) => {
   try {
     const { team1, team2, matchDate, matchTime, players } = req.body;
@@ -152,7 +153,7 @@ const updateRank = async (req, res) => {
     const allRankings = [];
 
     // 🔄 Loop through each contest price group
-    console.log("TeamBtPrice", teamsByPrice);
+    // console.log("TeamBtPrice", teamsByPrice);
     for (const price in teamsByPrice) {
       const teamsInPriceGroup = teamsByPrice[price];
 
@@ -220,7 +221,7 @@ const updateRank = async (req, res) => {
       });
     }
 
-    console.log(allRankings);
+    // console.log(allRankings);
 
     res.status(200).json({
       message:
@@ -271,4 +272,107 @@ const getRank = async (req, res) => {
   }
 };
 
-module.exports = { getScore, getPlayer, updateScore, updateRank, getRank };
+const trackRun = async (req, res) => {
+  try {
+    const { team1, team2, matchDate, matchTime, player, run } = req.body;
+    console.log("Request Body:", req.body);
+    if (
+      !team1 ||
+      !team2 ||
+      !matchDate ||
+      !matchTime ||
+      !player ||
+      run === undefined
+    ) {
+      return res.status(400).json({
+        message:
+          "Missing required fields: team1, team2, matchDate, matchTime, player, run",
+      });
+    }
+
+    // ✅ Find if match already exists
+    let existingMatch = await Trackrun.findOne({
+      team1,
+      team2,
+      matchDate,
+      matchTime,
+    });
+
+    let milestoneBonus = 0;
+
+    if (existingMatch) {
+      // Match exists, check player
+      let currentPlayer = existingMatch.players.get(player);
+
+      if (!currentPlayer) {
+        // Player not found, initialize
+        currentPlayer = {
+          score: run,
+          fifty: run >= 50,
+          hundred: run >= 100,
+        };
+      } else {
+        // Player exists, update score
+        currentPlayer.score += run;
+
+        // Check for milestone bonuses
+        if (!currentPlayer.fifty && currentPlayer.score >= 50) {
+          currentPlayer.fifty = true;
+          milestoneBonus = 8; // Bonus for reaching 50
+        }
+        if (!currentPlayer.hundred && currentPlayer.score >= 100) {
+          currentPlayer.hundred = true;
+          milestoneBonus = 16; // Bonus for reaching 100 (if applicable later)
+        }
+      }
+
+      // Update player data in map
+      existingMatch.players.set(player, currentPlayer);
+      await existingMatch.save();
+
+      return res.status(200).json({
+        message: "Player score updated successfully",
+        updatedPlayer: currentPlayer,
+        run: milestoneBonus,
+      });
+    } else {
+      // ✅ If match doesn't exist, create new match and player
+      const players = new Map();
+      players.set(player, {
+        score: run,
+        fifty: run >= 50,
+        hundred: run >= 100,
+      });
+
+      if (run >= 50) milestoneBonus = 8; // Bonus if already 50+ on first entry
+
+      const newMatch = new Trackrun({
+        team1,
+        team2,
+        matchDate,
+        matchTime,
+        players,
+      });
+
+      await newMatch.save();
+
+      return res.status(201).json({
+        message: "Match created and player score added",
+        match: newMatch,
+        run: milestoneBonus,
+      });
+    }
+  } catch (error) {
+    console.error("Error updating/creating match score:", error);
+    return res.status(500).json({ message: "Internal server error" });
+  }
+};
+
+module.exports = {
+  getScore,
+  getPlayer,
+  updateScore,
+  updateRank,
+  getRank,
+  trackRun,
+};
