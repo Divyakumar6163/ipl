@@ -1,5 +1,5 @@
 export const matches = [
-  { matchDate: "22-03-2025", matchTime: "7:30pm", team1: "Kolkata Knight Riders", team2: "Royal Challengers Bengaluru" },
+  { matchDate: "11-03-2025", matchTime: "7:30pm", team1: "Kolkata Knight Riders", team2: "Royal Challengers Bengaluru" },
   { matchDate: "23-03-2025", matchTime: "3:30pm", team1: "Sunrisers Hyderabad", team2: "Rajasthan Royals" },
   { matchDate: "23-03-2025", matchTime: "7:30pm", team1: "Chennai Super Kings", team2: "Mumbai Indians" },
   { matchDate: "24-03-2025", matchTime: "7:30pm", team1: "Delhi Capitals", team2: "Lucknow Super Giants" },

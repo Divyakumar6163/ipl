@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.6.0",
+    "axios": "^1.8.2",
     "fs": "^0.0.1-security",
     "next": "15.2.0",
     "pdfkit": "^0.16.0",
