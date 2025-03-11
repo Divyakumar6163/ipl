@@ -10,8 +10,9 @@ export const IPL_PLAYERS: Record<string, Player> = {
   "Shivam Dube": { team: "CSK", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/211.png" },
   "Ravindra Jadeja": { team: "CSK", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/46.png" },
   "MS Dhoni": { team: "CSK", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/57.png" },
+  "Khaleel Ahmed": { team: "CSK", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/100.png" },
   "Ravichandran Ashwin": { team: "CSK", image: "https://images.news18.com/ibnlive/uploads/2024/11/ravichandran-ashwin-ipl-2025-mega-auction-ipl-2025-auction-2024-11-c51120a7b2af17c391494e76e2b68cc9-16x9.jpg?impolicy=website&width=640&height=360" },
-  "Anshul Kamboj": { team: "CSK", image: "https://feeds.abplive.com/onecms/images/uploaded-images/2024/11/25/f2e1061c4533d7fcedf92ef2a6c98b7a17325433177921131_original.jpeg?impolicy=abp_cdn&imwidth=1200&height=675" },
+  // "Anshul Kamboj": { team: "CSK", image: "https://feeds.abplive.com/onecms/images/uploaded-images/2024/11/25/f2e1061c4533d7fcedf92ef2a6c98b7a17325433177921131_original.jpeg?impolicy=abp_cdn&imwidth=1200&height=675" },
 
   // ✅ Mumbai Indians (MI)
   "Rohit Sharma": { team: "MI", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/6.png" },
@@ -28,9 +29,11 @@ export const IPL_PLAYERS: Record<string, Player> = {
   "Rajat Patidar": { team: "RCB", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/597.png" },
   "Krunal Pandya": { team: "RCB", image: "https://newsisland.in/wp-content/uploads/2024/12/Screenshot_153.png" },
   "Jitesh Sharma": { team: "RCB", image: "" },
-  "Rasikh Dar": { team: "RCB", image: "" },
+  // "Rasikh Dar": { team: "RCB", image: "" },
+  "Devdutt Padikkal": { team: "RCB", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/100.png" },
+  "Suyash Sharma": { team: "RCB", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/100.png" },
   "Bhuvneshwar Kumar": { team: "RCB", image: "https://scontent.fmaa8-1.fna.fbcdn.net/v/t39.30808-6/469703898_619896960609838_2017834388911603510_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=F5ooMtvsk2YQ7kNvgFbzuwQ&_nc_oc=AdidxJ592nNfL48lbKTEAOPCvV0pBkQScRjMz51U7FaGYfqnhcnbgSTj_JWYnt1Ti1o&_nc_zt=23&_nc_ht=scontent.fmaa8-1.fna&_nc_gid=AQ0jy6A5jNeaNrN23pD8iCv&oh=00_AYHNoVudOqlP5Rw5uqYuZyjaxByHjQygQeSjmkJXaJvgyw&oe=67D24F61" },
-  "Yash Dayal": { team: "RCB", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/978.png" },
+  // "Yash Dayal": { team: "RCB", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/978.png" },
 
   // ✅ Kolkata Knight Riders (KKR)
   "Venkatesh Iyer": { team: "KKR", image: "https://ipltable.in/wp-content/uploads/2024/03/image-84.jpeg" },
@@ -39,7 +42,8 @@ export const IPL_PLAYERS: Record<string, Player> = {
   "Ramandeep Singh": { team: "KKR", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/991.png" },
   "Varun Chakaravarthy": { team: "KKR", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/140.png" },
   "Harshit Rana": { team: "KKR", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/1013.png" },
-  "Vaibhav Arora": { team: "KKR", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/583.png" },
+  "Ajinkya Rahane": { team: "KKR", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/100.png" },
+  // "Vaibhav Arora": { team: "KKR", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/583.png" },
 
   // ✅ Sunrisers Hyderabad (SRH)
   "Abhishek Sharma": { team: "SRH", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/212.png" },
@@ -56,9 +60,10 @@ export const IPL_PLAYERS: Record<string, Player> = {
    "Nitish Rana": { team: "RR", image: "https://www.rajasthanroyals.com/static-assets/images/players/63649.png?v=6.84" },
    "Riyan Parag": { team: "RR", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/189.png" },
    "Dhruv Jurel": { team: "RR", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/1004.png" },
-   "Shubham Dubey": { team: "RR", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/3112.png" },
+  //  "Shubham Dubey": { team: "RR", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/3112.png" },
    "Sandeep Sharma": { team: "RR", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/220.png" },
    "Sanju Samson": { team: "RR", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/190.png" },
+   "Akash Madhwal": { team: "RR", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/100.png" },
  
    // ✅ Punjab Kings (PBKS)
    "Prabhsimran Singh": { team: "PBKS", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/137.png" },
@@ -73,10 +78,11 @@ export const IPL_PLAYERS: Record<string, Player> = {
    "KL Rahul": { team: "DC", image: "https://www.threads.net/@bossman_kl_rahul_001/post/DCwRfKxzyq5" },
    "Abishek Porel": { team: "DC", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/1580.png" },
    "Axar Patel": { team: "DC", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/110.png" },
-   "Sameer Rizvi": { team: "DC", image: "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_320,q_50/lsci/db/PICTURES/CMS/397400/397425.4.png" },
+  //  "Sameer Rizvi": { team: "DC", image: "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_320,q_50/lsci/db/PICTURES/CMS/397400/397425.4.png" },
    "Ashutosh Sharma": { team: "DC", image: "" },
    "Kuldeep Yadav": { team: "DC", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/14.png" },
    "Mukesh Kumar": { team: "DC", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/1462.png" },
+   "Karun Nair": { team: "DC", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/100.png" },
  
    // ✅ Gujarat Titans (GT)
    "Shubman Gill": { team: "GT", image: "https://www.gujarattitansipl.com/static-assets/images/players/66818.png?v=5.22" },
