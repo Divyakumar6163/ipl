@@ -8,7 +8,7 @@ dotenv.config({ path: "../config.env" });
 
 const generateInvoice = async (match) => {
   return new Promise((resolve, reject) => {
-    const doc = new PDFDocument({ margin: 50 });
+    const doc = new PDFDocument({ margin: 50, size: "A4" }); // A4 for standard size
     const fileName = `invoice_${match._id}.pdf`;
     const filePath = `./invoices/${fileName}`;
 
@@ -24,6 +24,10 @@ const generateInvoice = async (match) => {
     const invoiceDate = new Date().toLocaleString();
     const purchasePrice = match.price;
 
+    // Approximate vertical centering - move to start point
+    const startY = 100; // Adjust this value as needed for better centering
+    doc.y = startY;
+
     // Invoice Title
     doc
       .font("Helvetica-Bold")
@@ -33,52 +37,53 @@ const generateInvoice = async (match) => {
 
     // Invoice Information
     doc.fontSize(12).font("Helvetica");
-    doc.text(`Invoice ID: ${invoiceNumber}`);
-    doc.text(`Invoice Date: ${invoiceDate}`);
-    doc.text(`Purchase Price: Rs.${purchasePrice}`);
-    doc.moveDown(2);
+    doc.text(`Invoice ID: ${invoiceNumber}`, { align: "center" });
+    doc.text(`Invoice Date: ${invoiceDate}`, { align: "center" });
+    doc.text(`Purchase Price: Rs.${purchasePrice}`, { align: "center" });
+    doc.moveDown(0.5);
 
     // Match Details Section
     doc
       .font("Helvetica-Bold")
       .fontSize(14)
-      .text("Match Details:", { underline: true });
-    doc.moveDown(1);
+      .text("Match Details", { align: "center" });
+    doc.moveDown(0.5);
 
     doc.font("Helvetica").fontSize(12);
+    doc.text(` ${match.team1} vs ${match.team2}`, { align: "center" });
     doc.text(
-      `Match Date: ${new Date(match.matchDate).toLocaleDateString("en-IN", {
+      `${new Date(match.matchDate).toLocaleDateString("en-IN", {
         year: "numeric",
         month: "long",
         day: "numeric",
-      })}`
+      })} | ${match.matchTime}`,
+      { align: "center" }
     );
-    doc.text(`Match Time: ${match.matchTime}`);
-
-    doc.text(`Team 1: ${match.team1}`);
-    doc.text(`Team 2: ${match.team2}`);
     doc.moveDown(2);
 
     // Player List Section
     doc
       .font("Helvetica-Bold")
       .fontSize(14)
-      .text("Players:", { underline: true });
-    doc.moveDown(1);
+      .text("Players", { align: "center" });
+    doc.moveDown(0.5);
 
     doc.font("Helvetica").fontSize(12);
     match.players.forEach((player, index) => {
-      doc.text(`${index + 1}. ${player}`);
+      doc.text(`${index + 1}. ${player}`, { align: "center" });
     });
-    doc.moveDown(1);
+    doc.moveDown(0.5);
 
     // Generate QR Code with match details
     const qrCodeData = `${process.env.FRONTEND_LINK}/livescore/${invoiceNumber}`;
-
     const qrImage = qr.imageSync(qrCodeData, { type: "png" });
-    doc.image(qrImage, doc.x + 170, doc.y, { width: 200, height: 200 });
 
-    doc.moveDown(15);
+    // Center QR Code
+    const pageWidth = doc.page.width;
+    const qrSize = 100;
+    const qrX = (pageWidth - qrSize) / 2;
+    doc.image(qrImage, qrX, doc.y, { width: qrSize, height: qrSize });
+    doc.moveDown(8); // Adjust as needed based on QR code height
 
     // Footer
     doc
