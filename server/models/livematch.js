@@ -5,6 +5,7 @@ const matchSchema = new mongoose.Schema({
   team2: { type: String, required: true },
   matchDate: { type: String, required: true },
   matchTime: { type: String, required: true },
+  matchCompletion: { type: Boolean, default: false },
   players: {
     type: Map,
     of: Number,

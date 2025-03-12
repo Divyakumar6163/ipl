@@ -19,7 +19,9 @@
     "fs": "^0.0.1-security",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.11.0",
+    "openai": "^4.87.3",
     "pdfkit": "^0.16.0",
-    "qr-image": "^3.2.0"
+    "qr-image": "^3.2.0",
+    "twilio": "^5.5.0"
   }
 }

@@ -8,5 +8,6 @@ router.post("/matchplayer", livematchcontroller.getPlayer);
 router.post("/update-score", livematchcontroller.updateScore);
 router.post("/update-rank", livematchcontroller.updateRank);
 router.post("/track-run", livematchcontroller.trackRun);
+router.post("/match-completed", livematchcontroller.matchCompletion);
 
 module.exports = router;

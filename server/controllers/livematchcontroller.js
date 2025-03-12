@@ -62,7 +62,7 @@ const getScore = async (req, res) => {
 
     // console.log("Matched Players:", matchedPlayers);
 
-    res.status(200).json({ players: matchedPlayers });
+    res.status(200).json({ players: matchedPlayers, match: match });
   } catch (error) {
     console.error("Error fetching matching players:", error);
     res.status(500).json({ message: "Server error" });
@@ -367,6 +367,55 @@ const trackRun = async (req, res) => {
     return res.status(500).json({ message: "Internal server error" });
   }
 };
+const matchCompletion = async (req, res) => {
+  try {
+    const { team1, team2, matchDate, matchTime } = req.body;
+
+    console.log("Request Body:", req.body);
+    const dateParts = matchDate.split("-");
+    const matchDateModified = new Date(
+      `${dateParts[2]}-${dateParts[1]}-${dateParts[0]}`
+    );
+
+    // ✅ Validate required fields
+    if (!team1 || !team2 || !matchDate || !matchTime) {
+      return res.status(400).json({
+        message: "Missing required fields: team1, team2, matchDate, matchTime",
+      });
+    }
+
+    // ✅ Find teams matching the given match details
+    const filter = { team1, team2, matchDate: matchDateModified, matchTime };
+    const teams = await Team.find(filter);
+    const match = await Match.find({ team1, team2, matchDate, matchTime });
+    if (teams.length === 0 || match.length === 0) {
+      return res.status(404).json({
+        message: "No teams found matching the provided match details.",
+      });
+    }
+
+    // ✅ Update `matchCompletion` to true for all matched teams
+    const updateResult = await Team.updateMany(filter, {
+      $set: { matchCompletion: true },
+    });
+    console.log("MatchCompletion", match);
+    await Match.updateMany(
+      { team1, team2, matchDate, matchTime },
+      { $set: { matchCompletion: true } }
+    );
+    console.log(
+      `Updated ${updateResult.modifiedCount} team(s) as match completed.`
+    );
+
+    return res.status(200).json({
+      message: "Match marked as completed for all relevant teams.",
+      updatedCount: updateResult.modifiedCount,
+    });
+  } catch (error) {
+    console.error("Error updating match completion:", error);
+    return res.status(500).json({ message: "Internal server error" });
+  }
+};
 
 module.exports = {
   getScore,
@@ -375,4 +424,5 @@ module.exports = {
   updateRank,
   getRank,
   trackRun,
+  matchCompletion,
 };

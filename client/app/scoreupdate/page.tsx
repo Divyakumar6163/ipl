@@ -150,6 +150,24 @@ const updateScore = async (player: string, action: string) => {
   }
 };
 
+// ✅ Function to mark match as completed
+const completeMatch = async () => {
+  try {
+    const res = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_LINK}/match-completed`, {
+      team1: currentMatch.team1,
+      team2: currentMatch.team2,
+      matchDate: currentMatch.matchDate,
+      matchTime: currentMatch.matchTime,
+    });
+    console.log('Match completion response:', res.data);
+    alert('✅ Match marked as completed!');
+  } catch (error) {
+    console.error('Error marking match as completed:', error);
+    alert('❌ Failed to mark match as completed. Try again.');
+  }
+};
+
+
 
   // ✅ Conditional Rendering
   if (isAuthorized === null || loading) return <div className="h-screen flex items-center justify-center bg-gray-900 text-white"><h2 className="text-xl font-bold">⏳ Loading...</h2></div>;
@@ -158,8 +176,18 @@ const updateScore = async (player: string, action: string) => {
 
   return (
     <div className="p-2 bg-gray-900 text-white shadow-lg overflow-auto h-screen flex flex-col">
-      <h2 className="text-2xl font-bold text-center mb-4">Score Table</h2>
+      <div className="relative mb-4">
+        <h2 className="text-2xl font-bold text-center">Score Table</h2>
+        <button
+          className="absolute right-0 top-0 bg-blue-500 hover:bg-blue-700 hover:cursor-pointer text-white font-bold py-2 px-4 rounded-md"
+          onClick={completeMatch}
+        >
+          Match Completed
+        </button>
+      </div>
 
+
+  
       <div className="flex-1 overflow-y-auto">
         <table className="w-full border-collapse border border-gray-700">
           <thead>
@@ -194,6 +222,7 @@ const updateScore = async (player: string, action: string) => {
       </div>
     </div>
   );
+  
 };
 
 export default ScoreTable;
