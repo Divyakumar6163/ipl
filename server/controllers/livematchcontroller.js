@@ -2,6 +2,7 @@ const Match = require("../models/livematch");
 const Team = require("../models/team");
 const Rank = require("../models/rankmodel");
 const Trackrun = require("../models/trackrun");
+const Winners = require("../models/winner");
 const getScore = async (req, res) => {
   try {
     const { team1, team2, matchDate, matchTime, players } = req.body;
@@ -417,6 +418,70 @@ const matchCompletion = async (req, res) => {
   }
 };
 
+const getPrize = async (req, res) => {
+  try {
+    const { team1, team2, matchDate, matchTime, rank, teamID, contestPrice } =
+      req.body;
+    console.log("Request Body:", req.body);
+    if (!team1 || !team2 || !matchDate || !matchTime || !rank) {
+      return res.status(400).json({
+        message:
+          "Missing required fields: team1, team2, matchDate, matchTime, rank",
+      });
+    }
+    const dateObj = new Date(matchDate);
+    const day = String(dateObj.getDate()).padStart(2, "0");
+    const month = String(dateObj.getMonth() + 1).padStart(2, "0"); // Month is 0-indexed
+    const year = dateObj.getFullYear();
+    const formattedDate = `${day}-${month}-${year}`;
+    // ✅ Find prize data for specific match and contest
+    const winnerData = await Winners.findOne({
+      team1,
+      team2,
+      matchDate: formattedDate,
+      matchTime,
+      contestPrice,
+    });
+    console.log("WinnerData", winnerData);
+    if (!winnerData) {
+      return res
+        .status(404)
+        .json({ message: "Prize distribution not found for this match" });
+    }
+
+    const prizeDistribution = winnerData.prizeDistribution;
+
+    let prizeAmount = 0;
+
+    // ✅ First check if exact rank prize exists
+    if (prizeDistribution[rank]) {
+      prizeAmount = prizeDistribution[rank];
+    } else {
+      // ✅ Check for rank in ranges like "4-10"
+      for (const key of Object.keys(prizeDistribution)) {
+        if (key.includes("-")) {
+          const [start, end] = key.split("-").map(Number);
+          if (rank >= start && rank <= end) {
+            prizeAmount = prizeDistribution[key];
+            break;
+          }
+        }
+      }
+    }
+
+    // ✅ Respond with prize
+    return res.status(200).json({
+      message: "Prize amount fetched successfully",
+      prize: prizeAmount,
+      rank,
+      teamID,
+    });
+  } catch (error) {
+    console.error("Error fetching prize amount:", error);
+    return res.status(500).json({ message: "Internal server error" });
+  }
+};
+
 module.exports = {
   getScore,
   getPlayer,
@@ -425,4 +490,5 @@ module.exports = {
   getRank,
   trackRun,
   matchCompletion,
+  getPrize,
 };

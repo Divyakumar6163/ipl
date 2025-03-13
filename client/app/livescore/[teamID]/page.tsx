@@ -25,6 +25,7 @@ interface Player {
 export default function SelectedPlayers() {
   const [matchDetails, setMatchDetails] = useState<Match | null>(null);
   const [playerScores, setPlayerScores] = useState<Player[]>([]);
+  const [prize, setPrize] = useState<number | null>(null);
   const [teamRank, setTeamRank] = useState<number | null>(null);
   const [isMatchCompleted, setIsMatchCompleted] = useState<boolean | null>(false);
   const params = useParams();
@@ -32,27 +33,22 @@ export default function SelectedPlayers() {
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   useEffect(() => {
     if (!teamID) return;
-  
+
     const fetchMatchDetails = async () => {
       try {
-        // 🔹 Fetch match details
         const matchResponse = await axios.get(
           `${process.env.NEXT_PUBLIC_BACKEND_LINK}/getTeam/${teamID}`,
           { headers: { "Content-Type": "application/json" } }
         );
-  
+
         const matchData = matchResponse.data[0];
-        console.log("Match Data:", matchData);
         setMatchDetails(matchData);
-  
-        if (matchData.matchCompletion || isMatchCompleted) {
-          console.log("Match already completed, stopping fetch cycle.");
-          setIsMatchCompleted(true); // Ensure local state is updated
-          if (intervalRef.current) clearInterval(intervalRef.current); // Clear interval if running
+
+        if (matchData.matchCompletion) {
+          handleFinalFetch(matchData);
           return;
         }
-  
-        // ✅ Function to fetch player scores and rank
+
         const fetchScoresAndRank = async () => {
           try {
             const scoreResponse = await axios.post(
@@ -63,21 +59,13 @@ export default function SelectedPlayers() {
                 matchDate: matchData.matchDate,
                 matchTime: matchData.matchTime,
                 players: matchData.players,
+                contestPrice: matchData.price,
               }
             );
-  
+
             const scoreData = scoreResponse.data.players;
             const matchCompleted = scoreResponse.data.match?.matchCompletion;
-  
-            console.log("Match Completion:", matchCompleted);
-  
-            if (matchCompleted) {
-              setIsMatchCompleted(true);
-              if (intervalRef.current) clearInterval(intervalRef.current); // Stop further calls if match completed
-              return;
-            }
-  
-            // 🔹 Update scores with backend data
+
             const updatedScores = matchData.players.map((player: string) => ({
               name: player,
               totalScore: scoreData[player] || 0,
@@ -85,21 +73,9 @@ export default function SelectedPlayers() {
                 IPL_PLAYERS[player]?.image ||
                 "https://banner2.cleanpng.com/20180516/zq/avcl9cqnd.webp",
             }));
-  
-            setPlayerScores(updatedScores);
-            console.log("Scores updated:", updatedScores);
-  
-            // 🔹 Fetch team rank
-            let teamRankData = null;
-                 // 🔹 Get Current Date in "YYYY-MM-DD" format
-                 const currentDate = new Date().toISOString().split("T")[0];
 
-                 // 🔹 Convert Match Date to "YYYY-MM-DD" format
-                 const matchDateFormatted = new Date(matchData.matchDate).toISOString().split("T")[0];
-     
-                 // console.log("Current Date:", currentDate);
-                 // console.log("Match Date:", matchDateFormatted);
-             if (currentDate >= matchDateFormatted) {
+            setPlayerScores(updatedScores);
+
             const rankResponse = await axios.post(
               `${process.env.NEXT_PUBLIC_BACKEND_LINK}/getrank`,
               {
@@ -110,41 +86,94 @@ export default function SelectedPlayers() {
                 contestPrice: matchData.price,
               }
             );
-  
+
             const rankData = rankResponse.data.rankings;
-            teamRankData = rankData.find((team: any) => team.teamId === teamID);}
+            const teamRankData = rankData.find((team: any) => team.teamId === teamID);
             setTeamRank(teamRankData ? teamRankData.rank : null);
+
+            if (matchCompleted) {
+              handleFinalFetch(matchData);
+            }
           } catch (error) {
             console.error("Error fetching scores or rank:", error);
           }
         };
-  
-        // 🔹 Initial fetch
+
         fetchScoresAndRank();
-  
-        // ✅ Start interval only if match is not completed yet
-        if (!intervalRef.current) {
-          intervalRef.current = setInterval(fetchScoresAndRank, 10000);
-        }
-  
+        intervalRef.current = setInterval(fetchScoresAndRank, 10000);
       } catch (error) {
         console.error("Error fetching match details:", error);
       }
     };
-  
+
     fetchMatchDetails();
-  
-    // ✅ Cleanup interval on unmount
+
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current);
     };
   }, [teamID]);
 
-  // 🔢 Calculate total score of all players
-  const totalScore = playerScores.reduce(
-    (sum, player) => sum + player.totalScore,
-    0
-  );
+  const handleFinalFetch = async (matchData: Match) => {
+    setIsMatchCompleted(true);
+    if (intervalRef.current) clearInterval(intervalRef.current);
+
+    try {
+      const finalRankResponse = await axios.post(
+        `${process.env.NEXT_PUBLIC_BACKEND_LINK}/getrank`,
+        {
+          team1: matchData.team1,
+          team2: matchData.team2,
+          matchDate: matchData.matchDate,
+          matchTime: matchData.matchTime,
+          contestPrice: matchData.price,
+        }
+      );
+      const finalRankData = finalRankResponse.data.rankings;
+      const finalTeamRank = finalRankData.find((team: any) => team.teamId === teamID);
+      setTeamRank(finalTeamRank ? finalTeamRank.rank : null);
+
+      const finalScoreResponse = await axios.post(
+        `${process.env.NEXT_PUBLIC_BACKEND_LINK}/getscore`,
+        {
+          team1: matchData.team1,
+          team2: matchData.team2,
+          matchDate: matchData.matchDate,
+          matchTime: matchData.matchTime,
+          players: matchData.players,
+          contestPrice: matchData.price,
+        }
+      );
+      const finalScoreData = finalScoreResponse.data.players;
+      const updatedFinalScores = matchData.players.map((player: string) => ({
+        name: player,
+        totalScore: finalScoreData[player] || 0,
+        image:
+          IPL_PLAYERS[player]?.image ||
+          "https://banner2.cleanpng.com/20180516/zq/avcl9cqnd.webp",
+      }));
+      setPlayerScores(updatedFinalScores);
+
+      const prizeResponse = await axios.post(
+        `${process.env.NEXT_PUBLIC_BACKEND_LINK}/getprize`,
+        {
+          team1: matchData.team1,
+          team2: matchData.team2,
+          matchDate: matchData.matchDate,
+          matchTime: matchData.matchTime,
+          contestPrice: matchData.price,
+          teamID: teamID,
+          rank: finalTeamRank?.rank,
+        }
+      );
+      console.log("Prize Response:", prizeResponse.data.prize);
+      setPrize(prizeResponse.data.prize || 0);
+    } catch (error) {
+      console.error("Error in final fetch:", error);
+    }
+  };
+
+  const totalScore = playerScores.reduce((sum, player) => sum + player.totalScore, 0);
+  console.log("Total Score:", prize);
   return (
     <div className="flex flex-col items-center justify-center p-5 bg-gray-900 min-h-screen text-white">
       {matchDetails ? (
@@ -205,34 +234,48 @@ export default function SelectedPlayers() {
           </div>
 
           {/* 🔹 Selected Players Section */}
+          {/* 🔹 Display Prize if match is completed, else show "Your Team" */}
+        {isMatchCompleted ? (
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-2 text-center">
-            Your Players
+            {prize && prize > 0 ? (
+              <span className="text-green-400">
+                🎉 Congratulations! You won ₹{prize}
+              </span>
+            ) : (
+              <span className="text-red-400">😔 Better Luck Next Time!!!</span>
+            )}
           </h2>
-          <div className="w-full max-w-2xl">
-            {playerScores.map((player, idx) => (
-              <div
-                key={idx}
-                className="bg-gray-800 p-4 rounded-lg shadow-md flex items-center justify-between w-full mb-4"
-              >
-                {/* Left Side: Player Image and Name */}
-                <div className="flex items-center space-x-4">
-                  <img
-                    src={player.image}
-                    alt={"Player"}
-                    width={48}
-                    height={48}
-                    className="rounded-full border-2 border-yellow-400 object-cover"
-                  />
-                  <h3 className="text-lg font-semibold">{player.name}</h3>
-                </div>
+        ) : (
+          <>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-2 text-center">
+              Your Team
+            </h2>
+            <div className="w-full max-w-2xl">
+              {playerScores.map((player, idx) => (
+                <div
+                  key={idx}
+                  className="bg-gray-800 p-4 rounded-lg shadow-md flex items-center justify-between w-full mb-4"
+                >
+                  {/* Left Side: Player Image and Name */}
+                  <div className="flex items-center space-x-4">
+                    <img
+                      src={player.image}
+                      alt={"Player"}
+                      width={48}
+                      height={48}
+                      className="rounded-full border-2 border-yellow-400 object-cover"
+                    />
+                    <h3 className="text-lg font-semibold">{player.name}</h3>
+                  </div>
 
-                {/* Right Side: Player Score */}
-                <div className="text-lg font-bold text-yellow-400">
-                  ⭐ {player.totalScore}
+                  {/* Right Side: Player Score */}
+                  <div className="text-lg font-bold text-yellow-400">⭐ {player.totalScore}</div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </>
+        )}
+
         </>
       ) : (
         <div className="flex items-center justify-center h-screen">
