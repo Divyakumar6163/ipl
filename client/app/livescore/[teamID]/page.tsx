@@ -173,117 +173,121 @@ export default function SelectedPlayers() {
   };
 
   const totalScore = playerScores.reduce((sum, player) => sum + player.totalScore, 0);
-  console.log("Total Score:", prize);
+  console.log("Total Prize:", prize);
   return (
-    <div className="flex flex-col items-center justify-center p-5 bg-gray-900 min-h-screen text-white">
-      {matchDetails ? (
-        <>
-          {/* 🔹 Match Info at the Top (Centered) */}
-          <div className="mb-8 p-4 bg-gray-800 rounded-md shadow-lg w-full max-w-lg text-center flex flex-col items-center space-y-2">
-            <div className="flex items-center justify-center space-x-6  px-4 pt-4 ">
-              {/* Team 1 */}
-              <div className="flex items-center space-x-2">
-                {IPL_TEAMS[matchDetails.team1]?.logo && (
-                  <Image
-                    src={IPL_TEAMS[matchDetails.team1]?.logo}
-                    alt={matchDetails.team1}
-                    width={45}
-                    height={45}
-                    className="object-contain"
-                  />
-                )}
-                <div className="text-center text-xl font-bold text-white">
-                  {IPL_TEAMS[matchDetails.team1]?.short || "Team 1"}
-                </div>
-              </div>
-
-              {/* VS */}
-              <div className="text-center text-lg font-semibold text-gray-400">VS</div>
-
-              {/* Team 2 */}
-              <div className="flex items-center space-x-2">
-                {IPL_TEAMS[matchDetails.team2]?.logo && (
-                  <Image
-                    src={IPL_TEAMS[matchDetails.team2]?.logo}
-                    alt={matchDetails.team2}
-                    width={45}
-                    height={45}
-                    className="object-contain"
-                  />
-                )}
-                <div className="text-center text-xl font-bold text-white">
-                  {IPL_TEAMS[matchDetails.team2]?.short || "Team 2"}
-                </div>
-              </div>
-            </div>
-
-            <h3 className="text-md md:text-lg font-medium text-gray-300">
-            {new Date(matchDetails.matchDate).toLocaleDateString("en-GB", {
-              day: "2-digit",
-              month: "short",
-            })}{" "}
-            | {matchDetails.matchTime || "Time Not Available"}
-          </h3>
-
-            <h2 className="text-lg md:text-xl font-bold text-yellow-400">
-              {teamRank!==null ? "Rank: ":""}{teamRank !== null ? teamRank : (totalScore!==0? "Calculating...": "To be Started")}
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-6">
+      {isMatchCompleted && prize !== null && (
+        <div className="p-6 w-full max-w-md text-center">
+        {prize > 0 ? (
+          <>
+            <h2 className="text-3xl font-extrabold text-green-400 mb-2">
+               Congratulations!
             </h2>
-            <h3 className="text-lg md:text-xl font-semibold text-yellow-400">
-              Total Score: {totalScore}
-            </h3>
-          </div>
-
-          {/* 🔹 Selected Players Section */}
-          {/* 🔹 Display Prize if match is completed, else show "Your Team" */}
-        {isMatchCompleted ? (
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-2 text-center">
-            {prize && prize > 0 ? (
-              <span className="text-green-400">
-                🎉 Congratulations! You won ₹{prize}
-              </span>
-            ) : (
-              <span className="text-red-400">😔 Better Luck Next Time!!!</span>
-            )}
-          </h2>
+            <p className="text-lg font-medium text-white">
+              Your Team won <span className="font-bold text-yellow-400">₹{prize}</span>
+            </p>
+          </>
         ) : (
           <>
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-2 text-center">
-              Your Team
+            <h2 className="text-3xl font-extrabold text-red-400 mb-2">
+              Better Luck Next Time!
             </h2>
-            <div className="w-full max-w-2xl">
-              {playerScores.map((player, idx) => (
-                <div
-                  key={idx}
-                  className="bg-gray-800 p-4 rounded-lg shadow-md flex items-center justify-between w-full mb-4"
-                >
-                  {/* Left Side: Player Image and Name */}
-                  <div className="flex items-center space-x-4">
-                    <img
-                      src={player.image}
-                      alt={"Player"}
-                      width={48}
-                      height={48}
-                      className="rounded-full border-2 border-yellow-400 object-cover"
-                    />
-                    <h3 className="text-lg font-semibold">{player.name}</h3>
-                  </div>
-
-                  {/* Right Side: Player Score */}
-                  <div className="text-lg font-bold text-yellow-400">⭐ {player.totalScore}</div>
-                </div>
-              ))}
-            </div>
+            <p className="text-lg font-medium text-gray-300">
+              Keep playing to win exciting prizes!
+            </p>
           </>
         )}
-
+      </div>
+      
+      )}
+  
+      {matchDetails ? (
+        <>
+          {/* Match Card */}
+          <div className="bg-gray-800 rounded-lg shadow-lg w-full max-w-md p-6 space-y-4 text-center">
+            {/* Team Names & Logos */}
+            <div className="flex justify-between items-center">
+              <div className="flex items-center space-x-2">
+                <Image
+                  src={IPL_TEAMS[matchDetails.team1]?.logo}
+                  alt={matchDetails.team1}
+                  width={40}
+                  height={40}
+                  className="object-contain"
+                />
+                <span className="font-bold text-xl">{IPL_TEAMS[matchDetails.team1]?.short || "Team 1"}</span>
+              </div>
+  
+              <span className="text-gray-400 font-semibold text-lg">VS</span>
+  
+              <div className="flex items-center space-x-2">
+                <Image
+                  src={IPL_TEAMS[matchDetails.team2]?.logo}
+                  alt={matchDetails.team2}
+                  width={40}
+                  height={40}
+                  className="object-contain"
+                />
+                <span className="font-bold text-xl">{IPL_TEAMS[matchDetails.team2]?.short || "Team 2"}</span>
+              </div>
+            </div>
+  
+            {/* Date & Time */}
+            <div className="text-gray-400 font-medium">
+              {new Date(matchDetails.matchDate).toLocaleDateString("en-GB", {
+                day: "2-digit",
+                month: "short",
+              })}{" "}
+              | {matchDetails.matchTime || "Time Not Available"}
+            </div>
+  
+            {/* Rank & Score */}
+            <div className="space-y-1">
+              <h2 className="text-lg font-bold text-yellow-400">
+                {teamRank !== null ? `Rank: ${teamRank}` : totalScore !== 0 ? "Calculating..." : "To be Started"}
+              </h2>
+              <h3 className="text-lg font-semibold text-yellow-400">
+                Total Score: {totalScore}
+              </h3>
+            </div>
+          </div>
+  
+          {/* Players Section */}
+          {/* { ( */}
+            <div className="w-full max-w-2xl mt-10">
+             { playerScores.length>0 && <h2 className="text-2xl font-bold text-center mb-2">Your Team</h2>}
+              <div className="space-y-4">
+                {playerScores.map((player, idx) => (
+                  <div
+                    key={idx}
+                    className="flex items-center justify-between p-4 bg-gray-800 rounded-lg shadow-md"
+                  >
+                    <div className="flex items-center space-x-4">
+                      <img
+                        src={player.image}
+                        alt={player.name}
+                        width={50}
+                        height={50}
+                        className="rounded-full border-2 border-yellow-400 object-cover"
+                      />
+                      <span className="text-lg font-semibold">{player.name}</span>
+                    </div>
+                    <span className="text-lg font-bold text-yellow-400">⭐ {player.totalScore}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+         {/* ) : null} */}
         </>
       ) : (
-        <div className="flex items-center justify-center h-screen">
-          <p className="text-gray-300 text-2xl md:text-4xl font-bold animate-pulse  px-6 py-3 rounded-lg shadow-lg">
+        // Loader if match details are not available yet
+        <div className="flex items-center justify-center h-full">
+          <p className="text-gray-300 text-xl md:text-2xl font-bold animate-pulse">
             Loading match details...
           </p>
         </div>
       )}
     </div>
   );
+  
 }
