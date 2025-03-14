@@ -189,10 +189,10 @@ export default function SelectedPlayers() {
           </>
         ) : (
           <>
-            <h2 className="text-3xl font-extrabold text-red-400 mb-2">
+            <h2 className="text-2xl font-extrabold text-red-400 mb-2">
               Better Luck Next Time!
             </h2>
-            <p className="text-lg font-medium text-gray-300">
+            <p className="text-m font-medium text-gray-300">
               Keep playing to win exciting prizes!
             </p>
           </>
@@ -254,7 +254,7 @@ export default function SelectedPlayers() {
   
           {/* Players Section */}
           {/* { ( */}
-            <div className="w-full max-w-2xl mt-10">
+            <div className="w-full max-w-2xl mt-5">
              { playerScores.length>0 && <h2 className="text-2xl font-bold text-center mb-2">Your Team</h2>}
               <div className="space-y-4">
                 {playerScores.map((player, idx) => (
@@ -270,7 +270,7 @@ export default function SelectedPlayers() {
                         height={50}
                         className="rounded-full border-2 border-yellow-400 object-cover"
                       />
-                      <span className="text-lg font-semibold">{player.name}</span>
+                      <span className="text-m font-semibold">{player.name}</span>
                     </div>
                     <span className="text-lg font-bold text-yellow-400">⭐ {player.totalScore}</span>
                   </div>

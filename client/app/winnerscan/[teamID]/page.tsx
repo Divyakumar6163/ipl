@@ -1,28 +1,33 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { useParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import axios from 'axios';
+import Image from 'next/image';
+import IPL_TEAMS from '@/utils/data/shortname';
 
 interface MatchDetail {
-    _id: string;
-    team1: string;
-    team2: string;
-    matchDate: string;
-    matchTime: string;
-    price: number;
-    matchCompletion: boolean;
-    players: string[];
+  _id: string;
+  team1: string;
+  team2: string;
+  matchDate: string;
+  matchTime: string;
+  price: number;
+  matchCompletion: boolean;
+  players: string[];
 }
 
 const TeamResultPage: React.FC = () => {
   const { teamID } = useParams<{ teamID: string }>();
-  console.log(teamID);
+  const retailerID= localStorage.getItem("retailerID");
+  // console.log("retailerID",retailerID);
   const [matchDetail, setMatchDetail] = useState<MatchDetail | null>(null);
   const [rank, setRank] = useState<number | null>(null);
   const [winningAmount, setWinningAmount] = useState<number | null>(null);
   const [error, setError] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(true);
-
+  const [paying, setPaying] = useState<boolean>(false);
+  const [paySuccess, setPaySuccess] = useState<string>('');
+  const router=useRouter();
   // ✅ Main flow to fetch match details, rank, and winning amount
   useEffect(() => {
     const fetchData = async () => {
@@ -31,43 +36,43 @@ const TeamResultPage: React.FC = () => {
 
         // 1. Fetch Match Detail using teamId
         const matchResponse = await axios.get(
-            `${process.env.NEXT_PUBLIC_BACKEND_LINK}/getTeam/${teamID}`,
-            { headers: { "Content-Type": "application/json" } }
-          );
-  
-          const matchData = matchResponse.data[0];
-          setMatchDetail(matchData);
+          `${process.env.NEXT_PUBLIC_BACKEND_LINK}/getTeam/${teamID}`,
+          { headers: { "Content-Type": "application/json" } }
+        );
 
-          const rankResponse = await axios.post(
-            `${process.env.NEXT_PUBLIC_BACKEND_LINK}/getrank`,
-            {
-              team1: matchData.team1,
-              team2: matchData.team2,
-              matchDate: matchData.matchDate,
-              matchTime: matchData.matchTime,
-              contestPrice: matchData.price,
-            }
-          );
+        const matchData = matchResponse.data[0];
+        setMatchDetail(matchData);
 
-          const rankData = rankResponse.data.rankings;
-          const teamRankData = rankData.find((team: any) => team.teamId === teamID);
-          setRank(teamRankData ? teamRankData.rank : null);
+        // 2. Fetch Team Rank
+        const rankResponse = await axios.post(
+          `${process.env.NEXT_PUBLIC_BACKEND_LINK}/getrank`,
+          {
+            team1: matchData.team1,
+            team2: matchData.team2,
+            matchDate: matchData.matchDate,
+            matchTime: matchData.matchTime,
+            contestPrice: matchData.price,
+          }
+        );
 
-        // 3. Fetch Winning Amount using matchId and teamId
+        const rankData = rankResponse.data.rankings;
+        const teamRankData = rankData.find((team: any) => team.teamId === teamID);
+        setRank(teamRankData ? teamRankData.rank : null);
+
+        // 3. Fetch Winning Amount
         const prizeResponse = await axios.post(
-            `${process.env.NEXT_PUBLIC_BACKEND_LINK}/getprize`,
-            {
-              team1: matchData.team1,
-              team2: matchData.team2,
-              matchDate: matchData.matchDate,
-              matchTime: matchData.matchTime,
-              contestPrice: matchData.price,
-              teamID: teamID,
-              rank: teamRankData?.rank,
-            }
-          );
-          console.log("Prize Response:", prizeResponse.data.prize);
-          setWinningAmount(prizeResponse.data.prize || 0);
+          `${process.env.NEXT_PUBLIC_BACKEND_LINK}/getprize`,
+          {
+            team1: matchData.team1,
+            team2: matchData.team2,
+            matchDate: matchData.matchDate,
+            matchTime: matchData.matchTime,
+            contestPrice: matchData.price,
+            teamID: teamID,
+            rank: teamRankData?.rank,
+          }
+        );
+        setWinningAmount(prizeResponse.data.prize || 0);
       } catch (err: any) {
         console.error('Error fetching data:', err);
         setError('Failed to load data. Please try again later.');
@@ -81,40 +86,170 @@ const TeamResultPage: React.FC = () => {
     }
   }, [teamID]);
 
+  // ✅ Handle Payment Button Click
+  const handlePayment = async () => {
+    if (!matchDetail || !winningAmount) return;
+    try {
+      setPaying(true);
+      setPaySuccess('');
+      setError('');
+
+      // 1. Check if already paid
+      const checkResponse = await axios.post(
+        `${process.env.NEXT_PUBLIC_BACKEND_LINK}/checkPayment`,
+        { teamID, ...matchDetail }
+      );
+
+      if (checkResponse.data.status=="already-paid") {
+        setError('⚠️ Payment already processed for this team.');
+        setPaying(false);
+        return;
+      }
+
+      // 2. Store Payment Info
+      const storeResponse = await axios.post(
+        `${process.env.NEXT_PUBLIC_BACKEND_LINK}/storePayment`,
+        {
+          teamID,
+          winningAmount,
+          retailerID
+        }
+      );
+
+      if (storeResponse.status===200) {
+        setPaySuccess('✅ Payment processed successfully!');
+      } else {
+        setError('❌ Failed to process payment. Please try again.');
+      }
+    } catch (err: any) {
+      console.error('Payment Error:', err);
+      setError('❌ Error occurred during payment process.');
+    } finally {
+      setPaying(false);
+    }
+  };
+
   // ✅ Loading state
   if (loading) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-gray-100">
-        <p className="text-xl text-gray-700">Loading...</p>
+      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-6">
+        <div className="flex items-center justify-center h-full">
+          <p className="text-gray-300 text-xl md:text-2xl font-bold animate-pulse">
+            Loading Team Details...
+          </p>
+        </div>
       </div>
     );
   }
 
   // ✅ Error state
-  if (error) {
+  if (error && !paying) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-red-100">
-        <p className="text-xl text-red-500">{error}</p>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-6">
+      <div className="flex items-center justify-center h-full">
+          <p className="text-gray-300 text-xl md:text-2xl font-bold text-center">
+            {error}
+          </p>
+        </div>
+          <button
+            onClick={() => router.push('/winnerscan')}
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-2 rounded-lg"
+          >Scan Again</button>
       </div>
     );
   }
-console.log(matchDetail);
-console.log(rank);
-console.log(winningAmount);
-  // ✅ Display data
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 p-6 text-white">
-      <h1 className="text-3xl font-bold mb-6">Team Result Summary</h1>
+    <div className="flex flex-col items-center  min-h-screen bg-gray-900 p-6 text-white">
+      <h1 className="text-2xl font-bold mb-10  text-center">Payment Gateway</h1>
 
-      <div className="bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-md">
-        <h2 className="text-xl font-semibold mb-4">Match Details</h2>
-        {/* <p><strong>Match Name:</strong> {matchDetail?.matchName}</p>
-        <p><strong>Match Date:</strong> {matchDetail?.date}</p> */}
+      <div className="bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-md space-y-6 text-center ">
+        {matchDetail && (
+          <>
+            {/* Team Names & Logos */}
+            <div className="flex justify-between items-center">
+              <div className="flex items-center space-x-2">
+                <Image
+                  src={IPL_TEAMS[matchDetail.team1]?.logo}
+                  alt={matchDetail.team1}
+                  width={40}
+                  height={40}
+                  className="object-contain"
+                />
+                <span className="font-bold text-xl">{IPL_TEAMS[matchDetail.team1]?.short || "Team 1"}</span>
+              </div>
 
-        <div className="mt-6">
-          <h3 className="text-lg font-semibold text-yellow-300">Team Rank: <span className="text-white">{rank}</span></h3>
-          <h3 className="text-lg font-semibold text-green-400 mt-2">Winning Amount: <span className="text-white">₹ {winningAmount}</span></h3>
-        </div>
+              <span className="text-gray-400 font-semibold text-lg">VS</span>
+
+              <div className="flex items-center space-x-2">
+                <Image
+                  src={IPL_TEAMS[matchDetail.team2]?.logo}
+                  alt={matchDetail.team2}
+                  width={40}
+                  height={40}
+                  className="object-contain"
+                />
+                <span className="font-bold text-xl">{IPL_TEAMS[matchDetail.team2]?.short || "Team 2"}</span>
+              </div>
+            </div>
+
+            {/* Date & Time */}
+            <div className="text-gray-400 font-medium">
+              {new Date(matchDetail.matchDate).toLocaleDateString("en-GB", { day: '2-digit', month: 'short' })} | {matchDetail.matchTime}
+            </div>
+
+            {/* Rank & Winning */}
+            <div className="space-y-2">
+              <h2 className="text-lg font-bold text-yellow-400">{rank !== null ? `Rank: ${rank}` : "Calculating Rank..."}</h2>
+              {matchDetail.matchCompletion && <h3 className="text-lg font-semibold text-yellow-400">Winning Amount: ₹ {winningAmount}</h3>}
+            </div>
+
+            {/* Payment Button */}
+            {matchDetail.matchCompletion && !paySuccess && <button
+              onClick={handlePayment}
+              disabled={paying}
+              className={`w-full py-2 px-4 rounded-lg text-white font-bold ${
+                paying ? 'bg-gray-600 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700'
+              }`}
+            >
+              {paying ? 'Processing...' : `Pay ₹${winningAmount}`}
+              {/* <h3 className="text-lg font-semibold text-yellow-400">Winning Amount: ₹ {winningAmount}</h3> */}
+            </button>}
+             {!matchDetail.matchCompletion && <div className="mt-6 px-4 py-3 bg-yellow-100 border border-yellow-400 text-yellow-700 rounded-lg shadow-md text-center w-full max-w-md">
+             <div className="font-semibold">⚠️ Match not yet completed</div>. Please check back later for results.
+           </div>
+            }
+
+            {/* Payment status */}
+            {paySuccess && (
+              <div className="mt-4 flex flex-col items-center">
+                <div className="text-green-500 font-semibold mb-4">{paySuccess}</div>
+                <button
+                  onClick={() => {
+                    // Optional: Reset success message or navigate to scanner
+                    setPaySuccess(""); // Reset success state if needed
+                    setError(""); // Clear any previous errors
+                    router.push('/winnerscan') // ✅ Redirect to scanner page (change URL as needed)
+                  }}
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md"
+                >
+                  Scan Another Payment
+                </button>
+              </div>
+            )}
+
+            {error && (
+              <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-6">
+                <div className="flex items-center justify-center h-full">
+                  <p className="text-gray-300 text-xl md:text-2xl font-bold text-center">
+                    {error}
+                  </p>
+                </div>
+              </div>
+            )}
+
+          </>
+        )}
       </div>
     </div>
   );

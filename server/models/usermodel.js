@@ -4,7 +4,13 @@ const userSchema = new mongoose.Schema({
   username: { type: String, required: true, unique: true },
   password: { type: String, required: true },
   role: { type: String, default: "user" },
-  teamsold: { type: [String], default: [] },
+  teamsold: { type: [String] },
+  payments: [
+    {
+      teamID: { type: String },
+      winningAmount: { type: Number },
+    },
+  ],
   wallet: { type: Number, default: 0 },
 });
 

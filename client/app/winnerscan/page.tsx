@@ -76,19 +76,9 @@ const QRScannerPage: React.FC = () => {
 
   // ✅ Main UI with scanner and result (if not yet redirected)
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 p-4 text-white">
-      <h2 className="text-3xl font-bold mb-6">Scan Team QR Code</h2>
+    <div className="flex flex-col items-center  min-h-screen bg-gray-900 p-6 text-white">
+      <h2 className="text-3xl font-bold mb-10">Scan Team QR Code</h2>
       <div id="qr-reader" style={{ width: '100%', maxWidth: '400px' }}></div>
-
-      {/* {teamId && (
-        <div className="mt-6 p-4 bg-gray-800 rounded-lg text-center">
-          <h3 className="text-xl font-semibold text-green-400">
-            ✅ Team ID Detected:
-          </h3>
-          <p className="text-lg text-yellow-300 mt-2">{teamId}</p>
-        </div>
-      )} */}
-
       {error && (
         <div className="mt-4 p-2 bg-red-500 text-white rounded">{error}</div>
       )}

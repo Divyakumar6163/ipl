@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const teamroutes = require("./routes/teamsroutes");
 const livematchroutes = require("./routes/livematchroutes");
 const userroutes = require("./routes/userroutes");
+const paymentroutes = require("./routes/payment");
 const cookieParser = require("cookie-parser");
 const app = express();
 
@@ -43,4 +44,6 @@ app.use(express.json());
 app.use("/", teamroutes);
 app.use("/", livematchroutes);
 app.use("/", userroutes);
+app.use("/", paymentroutes);
+
 module.exports = app;
