@@ -27,6 +27,10 @@ const TeamResultPage: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [paying, setPaying] = useState<boolean>(false);
   const [paySuccess, setPaySuccess] = useState<string>('');
+  const [phoneNumber, setPhoneNumber] = useState<string>('');
+  const [phoneSubmitted, setPhoneSubmitted] = useState<boolean>(false);
+  const [panCard, setPanCard] = useState<string>('');
+  const [askPanCard, setAskPanCard] = useState<boolean>(false);
   const router=useRouter();
   // ✅ Main flow to fetch match details, rank, and winning amount
   useEffect(() => {
@@ -85,6 +89,55 @@ const TeamResultPage: React.FC = () => {
       fetchData();
     }
   }, [teamID]);
+
+  const handlePhoneSubmit = async () => {
+    try {
+      if (!phoneNumber || phoneNumber.length < 10) {
+        setError('Please enter a valid 10-digit phone number.');
+        return;
+      }
+      setError('');
+
+      const phoneResponse = await axios.post(
+        `${process.env.NEXT_PUBLIC_BACKEND_LINK}/verifyPhone`,
+        { phoneNumber },
+        { validateStatus: () => true } 
+      );
+      console.log(phoneResponse);
+      if (phoneResponse.status === 200) {
+        setPhoneSubmitted(true);
+      } else if (phoneResponse.status === 300) {
+        setAskPanCard(true); // ✅ Ask PAN Card if response is 300
+      }
+    } catch (err) {
+      console.error('Phone submission error:', err);
+      setError('Failed to save phone number. Please try again.');
+    }
+  };
+
+  const handlePanSubmit = async () => {
+    try {
+      if (!panCard || panCard.length < 10) {
+        setError('Please enter a valid PAN Card number.');
+        return;
+      }
+      setError('');
+
+      const panResponse = await axios.post(
+        `${process.env.NEXT_PUBLIC_BACKEND_LINK}/addCustomer`,
+        { phoneNumber, panCard }
+      );
+
+      if (panResponse.status === 200) {
+        setPhoneSubmitted(true); // ✅ Successfully stored phone & PAN
+        setAskPanCard(false);
+      }
+    } catch (err) {
+      console.error('PAN submission error:', err);
+      setError('Failed to save PAN Card. Please try again.');
+    }
+  };
+
 
   // ✅ Handle Payment Button Click
   const handlePayment = async () => {
@@ -205,7 +258,7 @@ const TeamResultPage: React.FC = () => {
             </div>
 
             {/* Payment Button */}
-            {matchDetail.matchCompletion && !paySuccess && <button
+            {/* {matchDetail.matchCompletion && !paySuccess && <button
               onClick={handlePayment}
               disabled={paying}
               className={`w-full py-2 px-4 rounded-lg text-white font-bold ${
@@ -213,12 +266,31 @@ const TeamResultPage: React.FC = () => {
               }`}
             >
               {paying ? 'Processing...' : `Pay ₹${winningAmount}`}
-              {/* <h3 className="text-lg font-semibold text-yellow-400">Winning Amount: ₹ {winningAmount}</h3> */}
-            </button>}
+              <h3 className="text-lg font-semibold text-yellow-400">Winning Amount: ₹ {winningAmount}</h3>
+            </button>} */}
              {!matchDetail.matchCompletion && <div className="mt-6 px-4 py-3 bg-yellow-100 border border-yellow-400 text-yellow-700 rounded-lg shadow-md text-center w-full max-w-md">
              <div className="font-semibold">⚠️ Match not yet completed</div>. Please check back later for results.
            </div>
             }
+
+            {/* Phone Number Field */}
+            {!phoneSubmitted && !askPanCard && matchDetail.matchCompletion &&(
+              <div className="space-y-3 w-full">
+                <input type="number" placeholder="Enter Phone Number" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} className="w-full p-3 rounded-md bg-gray-700 text-white" />
+                <button onClick={handlePhoneSubmit} className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg w-full">Submit Phone</button>
+              </div>
+            )}
+
+            {/* PAN Card Field if Required */}
+            {askPanCard && matchDetail.matchCompletion && (
+              <div className="space-y-3 w-full">
+                <input type="text" placeholder="Enter PAN Card" value={panCard} onChange={(e) => setPanCard(e.target.value)} className="w-full p-3 rounded-md bg-gray-700 text-white" />
+                <button onClick={handlePanSubmit} className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg w-full">Submit PAN</button>
+              </div>
+            )}
+
+            {matchDetail.matchCompletion && phoneSubmitted && !paySuccess && <button onClick={handlePayment} disabled={paying} className={`w-full py-2 px-4 rounded-lg ${paying ? 'bg-gray-600' : 'bg-blue-600 hover:bg-blue-700'}`}>{paying ? 'Processing...' : `Pay ₹${winningAmount}`}</button>}
+
 
             {/* Payment status */}
             {paySuccess && (

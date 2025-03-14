@@ -37,8 +37,8 @@ const generateInvoice = async (match) => {
 
     // Invoice Information
     doc.fontSize(12).font("Helvetica");
-    doc.text(`Invoice ID: ${invoiceNumber}`, { align: "center" });
-    doc.text(`Invoice Date: ${invoiceDate}`, { align: "center" });
+    doc.text(`Receipt ID: ${invoiceNumber}`, { align: "center" });
+    doc.text(`Receipt Date: ${invoiceDate}`, { align: "center" });
     doc.text(`Purchase Price: Rs.${purchasePrice}`, { align: "center" });
     doc.moveDown(0.5);
 
@@ -151,7 +151,7 @@ const createMatch = async (req, res) => {
     const pdfStream = fs.createReadStream(pdfPath);
     pdfStream.pipe(res);
   } catch (error) {
-    console.error("Error generating match invoice:", error);
+    console.error("Error generating match Receipt:", error);
     res.status(500).json({ message: "Server error" });
   }
 };
@@ -162,7 +162,7 @@ const getInvoice = async (req, res) => {
   if (fs.existsSync(filePath)) {
     res.sendFile(filePath, { root: "." });
   } else {
-    res.status(404).json({ message: "Invoice not found" });
+    res.status(404).json({ message: "Receipt not found" });
   }
 };
 

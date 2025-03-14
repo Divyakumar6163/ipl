@@ -5,6 +5,8 @@ const teamroutes = require("./routes/teamsroutes");
 const livematchroutes = require("./routes/livematchroutes");
 const userroutes = require("./routes/userroutes");
 const paymentroutes = require("./routes/payment");
+const customerroutes = require("./routes/customer");
+const webhookroutes = require("./routes/webhook");
 const cookieParser = require("cookie-parser");
 const app = express();
 
@@ -37,7 +39,7 @@ app.use(
 );
 
 app.options("*", cors());
-
+app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.json());
 
@@ -45,5 +47,7 @@ app.use("/", teamroutes);
 app.use("/", livematchroutes);
 app.use("/", userroutes);
 app.use("/", paymentroutes);
+app.use("/", customerroutes);
+app.use("/", webhookroutes);
 
 module.exports = app;

@@ -118,7 +118,7 @@ const handleSubmit = async (e: React.FormEvent) => {
       const downloadUrl = window.URL.createObjectURL(pdfBlob);
       const link = document.createElement("a");
       link.href = downloadUrl;
-      link.download = `Match_Invoice.pdf`;
+      link.download = `Match_Receipt.pdf`;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
