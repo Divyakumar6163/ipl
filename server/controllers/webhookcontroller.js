@@ -66,14 +66,20 @@ const webhook = async (req, res) => {
                   matchDate: matchData.matchDate,
                   matchTime: matchData.matchTime,
                   contestPrice: matchData.price,
-                }
+                },
+                { validateStatus: () => true }
               );
-              const rankData = rankResponse.data.rankings;
-              const teamRankData = rankData.find(
-                (team) => team.teamId === matchData._id
-              );
+              let teamRankData = null;
+              if (rankResponse.status === 404) {
+                await sendMessage(from, "Match Not Started yet.");
+              } else {
+                const rankData = rankResponse.data.rankings;
+                teamRankData = rankData.find(
+                  (team) => team.teamId === matchData._id
+                );
+              }
               console.log("Rank Response:", teamRankData);
-              if (matchData.matchCompletion) {
+              if (matchData.matchCompletion && rankResponse.status !== 404) {
                 const prizeResponse = await axios.post(
                   `${process.env.BACKEND_LINK}/getprize`,
                   {
@@ -93,7 +99,7 @@ const webhook = async (req, res) => {
                     `🎉 *Congratulations!* 🎉\n\n` +
                       `🏆 *You have won:* ₹${prizeResponse.data.prize}\n` +
                       `📊 *Rank:* ${teamRankData?.rank}\n` +
-                      `⭐ *Total Score:* ${teamRankData.score}\n\n` +
+                      `⭐ *Total Score:* ${teamRankData?.score}\n\n` +
                       `Thank you for participating! Stay tuned for more contests!`
                   );
                 } else {
@@ -101,11 +107,11 @@ const webhook = async (req, res) => {
                     from,
                     `🙏 *Better Luck Next Time!* 🙏\n\n` +
                       `📊 *Rank:* ${teamRankData?.rank}\n` +
-                      `⭐ *Total Score:* ${teamRankData.score}\n\n` +
+                      `⭐ *Total Score:* ${teamRankData?.score}\n\n` +
                       `Keep trying! More chances to win in upcoming contests! 💪`
                   );
                 }
-              } else {
+              } else if (rankResponse.status !== 404) {
                 const scoreResponse = await axios.post(
                   `${process.env.BACKEND_LINK}/getscore`,
                   {
@@ -115,9 +121,10 @@ const webhook = async (req, res) => {
                     matchTime: matchData.matchTime,
                     players: matchData.players,
                     contestPrice: matchData.price,
-                  }
+                  },
+                  { validateStatus: () => true }
                 );
-
+                console.log("Score Response:", scoreResponse.status);
                 const scoreData = scoreResponse.data.players;
 
                 const updatedScores = matchData.players.map((player) => ({
@@ -137,7 +144,7 @@ const webhook = async (req, res) => {
                 const finalMessage =
                   `📊 *Your Current Status:*\n\n` +
                   `🏅 *Rank:* ${teamRankData?.rank}\n` +
-                  `⭐ *Total Score:* ${teamRankData.score}\n\n` +
+                  `⭐ *Total Score:* ${teamRankData?.score}\n\n` +
                   `🎯 *Player Scores:*\n${playerScoresMessage}\n\n` +
                   `Stay tuned for updates! 🏏`;
 
