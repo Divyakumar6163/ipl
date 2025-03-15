@@ -52,14 +52,99 @@ const webhook = async (req, res) => {
         if (lastInvoiceData && lastInvoiceData.invoiceId !== "Not found") {
           try {
             const backendResponse = await axios.get(
-              `${process.env.NEXT_PUBLIC_BACKEND_LINK}/matchdetails/${lastInvoiceData.invoiceId}`,
+              `${process.env.BACKEND_LINK}/matchdetails/${lastInvoiceData.invoiceId}`,
               { headers: { "Content-Type": "application/json" } }
             );
-            if (backendResponse.data.status === 200) {
-              const matchDetails = backendResponse.data.matchDetail;
-              console.log(matchDetails);
+            if (backendResponse.status === 200) {
+              const matchData = backendResponse.data.matchDetail;
+              console.log(matchData);
+              const rankResponse = await axios.post(
+                `${process.env.BACKEND_LINK}/getrank`,
+                {
+                  team1: matchData.team1,
+                  team2: matchData.team2,
+                  matchDate: matchData.matchDate,
+                  matchTime: matchData.matchTime,
+                  contestPrice: matchData.price,
+                }
+              );
+              const rankData = rankResponse.data.rankings;
+              const teamRankData = rankData.find(
+                (team) => team.teamId === matchData._id
+              );
+              console.log("Rank Response:", teamRankData);
+              if (matchData.matchCompletion) {
+                const prizeResponse = await axios.post(
+                  `${process.env.BACKEND_LINK}/getprize`,
+                  {
+                    team1: matchData.team1,
+                    team2: matchData.team2,
+                    matchDate: matchData.matchDate,
+                    matchTime: matchData.matchTime,
+                    contestPrice: matchData.price,
+                    teamID: matchData._id,
+                    rank: teamRankData?.rank,
+                  }
+                );
+                console.log("Prize Response:", prizeResponse.data.prize);
+                if (prizeResponse.data.prize > 0) {
+                  await sendMessage(
+                    from,
+                    `🎉 *Congratulations!* 🎉\n\n` +
+                      `🏆 *You have won:* ₹${prizeResponse.data.prize}\n` +
+                      `📊 *Rank:* ${teamRankData?.rank}\n` +
+                      `⭐ *Total Score:* ${teamRankData.score}\n\n` +
+                      `Thank you for participating! Stay tuned for more contests!`
+                  );
+                } else {
+                  await sendMessage(
+                    from,
+                    `🙏 *Better Luck Next Time!* 🙏\n\n` +
+                      `📊 *Rank:* ${teamRankData?.rank}\n` +
+                      `⭐ *Total Score:* ${teamRankData.score}\n\n` +
+                      `Keep trying! More chances to win in upcoming contests! 💪`
+                  );
+                }
+              } else {
+                const scoreResponse = await axios.post(
+                  `${process.env.BACKEND_LINK}/getscore`,
+                  {
+                    team1: matchData.team1,
+                    team2: matchData.team2,
+                    matchDate: matchData.matchDate,
+                    matchTime: matchData.matchTime,
+                    players: matchData.players,
+                    contestPrice: matchData.price,
+                  }
+                );
+
+                const scoreData = scoreResponse.data.players;
+
+                const updatedScores = matchData.players.map((player) => ({
+                  name: player,
+                  totalScore: scoreData[player] || 0,
+                }));
+
+                // 🔹 Format player scores in a structured way
+                let playerScoresMessage = updatedScores
+                  .map(
+                    (player, index) =>
+                      `${index + 1}. ${player.name} - ⭐ ${player.totalScore}`
+                  )
+                  .join("\n");
+
+                // 🔹 Final Message
+                const finalMessage =
+                  `📊 *Your Current Status:*\n\n` +
+                  `🏅 *Rank:* ${teamRankData?.rank}\n` +
+                  `⭐ *Total Score:* ${teamRankData.score}\n\n` +
+                  `🎯 *Player Scores:*\n${playerScoresMessage}\n\n` +
+                  `Stay tuned for updates! 🏏`;
+
+                // 🔹 Send Message
+                await sendMessage(from, finalMessage);
+              }
             }
-            // console.log("Backend Response:", backendResponse.data);
           } catch (err) {
             console.error("Backend call failed:", err.message);
             await sendMessage(
@@ -109,7 +194,7 @@ const webhook = async (req, res) => {
       // ✅ Send extracted data for user confirmation (Corrected formatting)
       const message =
         `📄 *Extracted Receipt Details:*\n\n` +
-        `🧾 *Receipt ID:* ${extractedData.invoiceId}\n\n` +
+        `🧾 *Receipt ID:* ${extractedData.invoiceId}\n` +
         `🏏 *Team Name:* ${extractedData.teamName}\n` +
         `📅 *Match Date:* ${extractedData.matchDate}\n` +
         `⏰ *Match Time:* ${extractedData.matchTime}\n` +
@@ -153,8 +238,13 @@ const processImageWithOpenAI = async (imageBuffer) => {
       messages: [
         {
           role: "system",
-          content:
-            "Extract Team Name, Match Date, Match Time, and Receipt ID from the given image.",
+          content: `Extract Team Name, Match Date, Match Time, and Receipt ID from the given image. Respond with only the values in plain format without any extra text, stars (*), or colons (:). 
+            Example response 
+            Receipt ID: 67d475a917dd7c9f36f0ecd1
+            Team Name: Mumbai Indians vs Rajasthan Royals
+            Match Date: 25 March 2025
+            Match Time: 7:30pm
+            `,
         },
         {
           role: "user",
@@ -173,17 +263,25 @@ const processImageWithOpenAI = async (imageBuffer) => {
     const text = response.choices[0]?.message?.content || "";
     console.log("AI Extracted Text:", text);
 
-    // ✅ Clean fields using regex
+    // ✅ Advanced Clean function: removes extra symbols like :, *, spaces, and trims
     const cleanField = (value) =>
       value
-        ?.replace(/^(\*+|\:+|\s*)/, "")
-        .replace(/(\*+|\:+)\s*$/, "")
+        ?.replace(/^[:\*\s]+/, "") // Remove leading ':', '*', spaces
+        .replace(/[:\*\s]+$/, "") // Remove trailing ':', '*', spaces
         .trim() || "Not found";
 
+    // ✅ Extract and Clean Fields using Regex
     const teamName = cleanField(/Team\s*Name[:\-]?\s*(.*)/i.exec(text)?.[1]);
     const matchDate = cleanField(/Match\s*Date[:\-]?\s*(.*)/i.exec(text)?.[1]);
     const matchTime = cleanField(/Match\s*Time[:\-]?\s*(.*)/i.exec(text)?.[1]);
-    const invoiceId = cleanField(/Receipt\s*ID[:\-]?\s*(.*)/i.exec(text)?.[1]);
+    const invoiceId = cleanField(/Receipt\s*ID[:\-]?\s*(.*)/i.exec(text)?.[1]); // Assuming now we call it Receipt ID
+
+    console.log({
+      teamName,
+      matchDate,
+      matchTime,
+      invoiceId,
+    });
 
     return { teamName, matchDate, matchTime, invoiceId };
   } catch (error) {
@@ -205,13 +303,13 @@ const sendMessage = async (to, message) => {
 const matchdetails = async (req, res) => {
   try {
     const { teamID } = req.params;
-
+    console.log("Team ID:", teamID);
     if (!teamID) {
       return res.status(400).json({ message: "Team ID is required" });
     }
 
     // ✅ Find match details where teamID is included in teams array
-    const matchDetail = await Team.findOne({ teams: teamID });
+    const matchDetail = await Team.findOne({ _id: teamID.trim() });
 
     // ✅ If no match details found
     if (!matchDetail) {
