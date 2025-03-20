@@ -5,7 +5,7 @@ import axios from "axios";
 interface Retailer {
   _id: string;
   username: string;
-  teamsSold: string[];
+  teamsSold: { teamID: string; price: number }[];
   totalWinningTickets: number;
   totalWinningPaid: number;
   winningTeams: string[];
@@ -40,18 +40,21 @@ const Dashboard = () => {
 
       try {
         const response = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_LINK}/getretailers`);
-
+        console.log(response.data);
         const processedRetailers = response.data.map((retailer: any) => ({
           _id: retailer._id,
           username: retailer.username,
-          teamsSold: retailer.teamsold || [],
-          totalWinningTickets: retailer.payments.length,
-          totalWinningPaid: retailer.payments.reduce(
-            (sum: number, payment: any) => sum + (payment.winningAmount || 0),
-            0
-          ),
-          winningTeams: retailer.payments.map((p: any) => p.teamID || ""),
+          teamsSold: retailer.teamsSold || [], // Now includes objects { teamID, price }
+          totalWinningTickets: retailer.payments ? retailer.payments.length : 0,
+          totalWinningPaid: retailer.payments
+            ? retailer.payments.reduce((sum: number, payment: any) => sum + (payment.winningAmount || 0), 0)
+            : 0,
+          winningTeams: retailer.payments
+            ? retailer.payments.map((p: any) => p.teamID || "")
+            : [],
         }));
+        
+        
 
         setRetailers(processedRetailers);
         setFilteredTeamsRetailers(processedRetailers);
@@ -106,8 +109,8 @@ const Dashboard = () => {
           toDate,
           retailers,
         });
-
-      // setFilteredRetailers(response.data);
+        setFilteredTeamsRetailers(response.data);
+        console.log(response.data);
       }
       else{
         const response = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_LINK}/getwinningteam`, {
@@ -181,30 +184,43 @@ const Dashboard = () => {
           </div>
 
           {/* Teams Sold Data */}
-          {filteredTeamsRetailers.map((retailer) => (
-            <div key={retailer._id} className="p-4 mb-4 bg-gray-800 rounded-lg">
-              <h2 className="text-xl font-bold">{retailer.username}</h2>
-              <div className="flex justify-between items-center mt-2">
-                <p className="text-white">Teams Sold: {retailer.teamsSold.length}</p>
-                <button className="px-2 py-1 text-white rounded-lg" onClick={() => toggleTeamsSold(retailer._id)}>
-                  {expandedTeamsSold[retailer._id] ? "🔼" : "🔽"}
-                </button>
-              </div>
-              {expandedTeamsSold[retailer._id] && (
-                <div className="mt-2 p-3 bg-gray-700 rounded-lg">
-                  {retailer.teamsSold.length > 0 ? (
-                    <ul className="list-inside text-gray-300">
-                      {retailer.teamsSold.map((teamId, index) => (
-                        <li key={index}>🏷️ {teamId}</li>
-                      ))}
-                    </ul>
-                  ) : (
-                    <p className="text-gray-400">No teams sold.</p>
-                  )}
+          {filteredTeamsRetailers.map((retailer) => {
+            // Calculate total price for each retailer
+            const totalRetailerSales = retailer.teamsSold.reduce((sum, team) => sum + team.price, 0);
+
+            return (
+              <div key={retailer._id} className="p-4 mb-4 bg-gray-800 rounded-lg">
+                <h2 className="text-xl font-bold">{retailer.username}</h2>
+               <p className="mt-3 font-bold text-green-400">Total Sale: ₹{totalRetailerSales}</p>
+                <div className="flex justify-between items-center mt-2">
+                  <p className="text-white">Teams Sold: {retailer.teamsSold.length}</p>
+                  <button className="px-2 py-1 text-white rounded-lg" onClick={() => toggleTeamsSold(retailer._id)}>
+                    {expandedTeamsSold[retailer._id] ? "🔼" : "🔽"}
+                  </button>
                 </div>
-              )}
-            </div>
-          ))}
+               {/* Display total price per retailer */}
+                {expandedTeamsSold[retailer._id] && (
+                  <div className="mt-2 p-3 bg-gray-700 rounded-lg">
+                    {retailer.teamsSold.length > 0 ? (
+                      <>
+                        <ul className="list-inside text-gray-300">
+                          {retailer.teamsSold.map((team, index) => (
+                            <li key={index}>
+                              🏷️ {team.teamID} - ₹{team.price}
+                            </li>
+                          ))}
+                        </ul>
+                       
+                      </>
+                    ) : (
+                      <p className="text-gray-400">No teams sold.</p>
+                    )}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+
         </>
       )}
 
