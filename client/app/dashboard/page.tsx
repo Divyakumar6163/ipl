@@ -13,6 +13,8 @@ interface Retailer {
 
 const Dashboard = () => {
   const [retailers, setRetailers] = useState<Retailer[]>([]);
+  const [retailersTeamSold, setRetailersTeamSold] = useState<Retailer[]>([]);
+  const [retailersWinning, setRetailersWinning] = useState<Retailer[]>([]);
   const [filteredTeamsRetailers, setFilteredTeamsRetailers] = useState<Retailer[]>([]);
   const [filteredWinningRetailers, setFilteredWinningRetailers] = useState<Retailer[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
@@ -22,10 +24,6 @@ const Dashboard = () => {
 
   const [selectedRetailerTeams, setSelectedRetailerTeams] = useState<string>("all");
   const [selectedRetailerWinning, setSelectedRetailerWinning] = useState<string>("all");
-  const [fromDateTeams, setFromDateTeams] = useState<string>("");
-  const [toDateTeams, setToDateTeams] = useState<string>("");
-  const [fromDateWinning, setFromDateWinning] = useState<string>("");
-  const [toDateWinning, setToDateWinning] = useState<string>("");
 
   const [expandedTeamsSold, setExpandedTeamsSold] = useState<{ [key: string]: boolean }>({});
   const [expandedWinningTeams, setExpandedWinningTeams] = useState<{ [key: string]: boolean }>({});
@@ -44,19 +42,17 @@ const Dashboard = () => {
         const processedRetailers = response.data.map((retailer: any) => ({
           _id: retailer._id,
           username: retailer.username,
-          teamsSold: retailer.teamsSold || [], // Now includes objects { teamID, price }
-          totalWinningTickets: retailer.payments ? retailer.payments.length : 0,
-          totalWinningPaid: retailer.payments
-            ? retailer.payments.reduce((sum: number, payment: any) => sum + (payment.winningAmount || 0), 0)
-            : 0,
-          winningTeams: retailer.payments
-            ? retailer.payments.map((p: any) => p.teamID || "")
-            : [],
+          teamsSold: retailer.teamsSold || [], 
+          totalWinningTickets: retailer.totalWinningTickets ? retailer.totalWinningTickets.length : 0,
+          totalWinningPaid: retailer.totalWinningPaid ? retailer.totalWinningPaid : 0,
+          winningTeams: retailer.winningTeams ? retailer.winningTeams: [],
         }));
         
-        
+        console.log(processedRetailers);
 
         setRetailers(processedRetailers);
+        setRetailersTeamSold(processedRetailers);
+        setRetailersWinning(processedRetailers);
         setFilteredTeamsRetailers(processedRetailers);
         setFilteredWinningRetailers(processedRetailers);
       } catch (err) {
@@ -83,7 +79,7 @@ const Dashboard = () => {
     setSelectedRetailerTeams(selected);
 
     setFilteredTeamsRetailers(
-      selected === "all" ? retailers : retailers.filter((retailer) => retailer._id === selected)
+      selected === "all" ? retailersTeamSold : retailersTeamSold.filter((retailer) => retailer._id === selected)
     );
   };
 
@@ -92,7 +88,7 @@ const Dashboard = () => {
     setSelectedRetailerWinning(selected);
 
     setFilteredWinningRetailers(
-      selected === "all" ? retailers : retailers.filter((retailer) => retailer._id === selected)
+      selected === "all" ? retailersWinning : retailersWinning.filter((retailer) => retailer._id === selected)
     );
   };
 
@@ -109,6 +105,7 @@ const Dashboard = () => {
           toDate,
           retailers,
         });
+        setRetailersTeamSold(response.data);
         setFilteredTeamsRetailers(response.data);
         console.log(response.data);
       }
@@ -118,6 +115,9 @@ const Dashboard = () => {
           toDate,
           retailers,
         });
+        setRetailersWinning(response.data);
+        setFilteredWinningRetailers(response.data);
+        console.log(response.data);
       }
     } catch (err) {
       console.error("Error filtering retailers by date:", err);
@@ -126,7 +126,7 @@ const Dashboard = () => {
       setLoading(false);
     }
   };
-
+console.log(filteredWinningRetailers)
   return (
     <div className="p-6 bg-gray-900 min-h-screen text-white">
       <h1 className="text-3xl font-bold mb-6 text-center">Retailer Dashboard</h1>

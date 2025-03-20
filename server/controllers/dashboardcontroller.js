@@ -121,6 +121,51 @@ const getsoldteam = async (req, res) => {
   }
 };
 
-const getwinningteam = async (res, req) => {};
+const getwinningteam = async (req, res) => {
+  try {
+    const { fromDate, toDate, retailers } = req.body;
+
+    if (!fromDate || !toDate || !Array.isArray(retailers)) {
+      return res.status(400).json({ error: "Invalid input data" });
+    }
+
+    const from = new Date(fromDate);
+    const to = new Date(toDate);
+
+    // Find users whose payments contain winningTeams within the date range
+    const filteredRetailers = await User.find({
+      role: { $in: ["retailer", "admin"] },
+      payments: {
+        $elemMatch: { createdAt: { $gte: from, $lte: to } },
+      },
+    });
+
+    console.log("Filtered Retailers with Winning Teams:", filteredRetailers);
+    const responseRetailers = filteredRetailers.map((retailer) => {
+      const filteredPayments = retailer.payments.filter(
+        (payment) => payment.createdAt >= from && payment.createdAt <= to
+      );
+      return {
+        _id: retailer._id,
+        username: retailer.username,
+        teamsSold: retailer.teamsold.map((teamID) => ({
+          teamID,
+          price: Math.floor(Math.random() * 5000) + 1000, // Placeholder for price, adjust as needed
+        })),
+        totalWinningTickets: filteredPayments.length,
+        totalWinningPaid: filteredPayments.reduce(
+          (sum, payment) => sum + (payment.winningAmount || 0),
+          0
+        ),
+        winningTeams: filteredPayments.map((payment) => payment.teamID),
+      };
+    });
+    console.log("response", responseRetailers);
+    res.status(200).json(responseRetailers);
+  } catch (error) {
+    console.error("Error fetching winning teams:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+};
 
 module.exports = { getsoldteam, getRetailers, getwinningteam };
