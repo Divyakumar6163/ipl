@@ -144,7 +144,7 @@ console.log(filteredWinningRetailers)
           className={`p-2 rounded-lg ${selectedTab === "winning" ? "bg-blue-500" : "bg-gray-700"}`}
           onClick={() => setSelectedTab("winning")}
         >
-          Winning Information
+          Winners
         </button>
       </div>
 
@@ -189,7 +189,7 @@ console.log(filteredWinningRetailers)
             const totalRetailerSales = retailer.teamsSold.reduce((sum, team) => sum + team.price, 0);
 
             return (
-              <div key={retailer._id} className="p-4 mb-4 bg-gray-800 rounded-lg">
+              <div key={retailer._id} className="p-4 mb-4 bg-gray-800 rounded-lg justify-center sm:max-w-1/2">
                 <h2 className="text-xl font-bold">{retailer.username}</h2>
                <p className="mt-3 font-bold text-green-400">Total Sale: ₹{totalRetailerSales}</p>
                 <div className="flex justify-between items-center mt-2">
@@ -262,6 +262,7 @@ console.log(filteredWinningRetailers)
           {filteredWinningRetailers.map((retailer) => (
             <div key={retailer._id} className="p-4 mb-4 bg-gray-800 rounded-lg">
               <h2 className="text-xl font-bold">{retailer.username}</h2>
+              <p className="text-green-400 mt-2">Total Winning Paid: ₹{retailer.totalWinningPaid}</p>
               <div className="flex justify-between items-center mt-2">
                 <p className="text-white">Winning Tickets: {retailer.totalWinningTickets}</p>
                 <button className="px-2 py-1 text-white rounded-lg" onClick={() => toggleWinningTeams(retailer._id)}>
@@ -281,7 +282,6 @@ console.log(filteredWinningRetailers)
                   )}
                 </div>
               )}
-              <p className="text-white mt-2">Total Winning Paid: ₹{retailer.totalWinningPaid}</p>
             </div>
           ))}
         </>

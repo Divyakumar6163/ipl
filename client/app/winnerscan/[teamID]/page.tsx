@@ -100,7 +100,7 @@ const TeamResultPage: React.FC = () => {
 
       const phoneResponse = await axios.post(
         `${process.env.NEXT_PUBLIC_BACKEND_LINK}/verifyPhone`,
-        { phoneNumber },
+        { phoneNumber,teamID },
         { validateStatus: () => true } 
       );
       console.log(phoneResponse);
@@ -125,7 +125,7 @@ const TeamResultPage: React.FC = () => {
 
       const panResponse = await axios.post(
         `${process.env.NEXT_PUBLIC_BACKEND_LINK}/addCustomer`,
-        { phoneNumber, panCard }
+        { phoneNumber, panCard,teamID}
       );
 
       if (panResponse.status === 200) {
