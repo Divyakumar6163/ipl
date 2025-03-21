@@ -41,10 +41,10 @@ const generateInvoice = async (match, res) => {
       // doc.y = startY;
 
       // // Invoice Title
-      // doc
-      //   .font("Helvetica-Bold")
-      //   .fontSize(22)
-      //   .text("IPL FULLTOSS", { align: "center" });
+      doc
+        .font("Helvetica-Bold")
+        .fontSize(22)
+        .text("IPL FANTASY", { align: "center" });
       doc.moveDown(1);
 
       // Invoice Information
@@ -92,9 +92,15 @@ const generateInvoice = async (match, res) => {
 
       // Center QR Code
       const pageWidth = doc.page.width;
-      const qrSize = 100;
+      const qrSize = 250; // Doubling the original size of 100
+
+      // Calculate the horizontal position to center the QR code
       const qrX = (pageWidth - qrSize) / 2;
+
+      // Add the QR code image to the PDF
       doc.image(qrImage, qrX, doc.y, { width: qrSize, height: qrSize });
+
+      // Move down the document to provide space after the QR code
       doc.moveDown(8);
 
       // Footer
