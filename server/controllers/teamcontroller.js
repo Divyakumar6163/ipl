@@ -37,14 +37,14 @@ const generateInvoice = async (match, res) => {
       const purchasePrice = match.price;
 
       // Start at a vertical position (for centering if needed)
-      const startY = 100;
-      doc.y = startY;
+      // const startY = 100;
+      // doc.y = startY;
 
-      // Invoice Title
-      doc
-        .font("Helvetica-Bold")
-        .fontSize(22)
-        .text("IPL FULLTOSS", { align: "center" });
+      // // Invoice Title
+      // doc
+      //   .font("Helvetica-Bold")
+      //   .fontSize(22)
+      //   .text("IPL FULLTOSS", { align: "center" });
       doc.moveDown(1);
 
       // Invoice Information
