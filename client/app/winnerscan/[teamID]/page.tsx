@@ -18,6 +18,7 @@ interface MatchDetail {
 
 const TeamResultPage: React.FC = () => {
   const { teamID } = useParams<{ teamID: string }>();
+  const [isAuthorized, setIsAuthorized] = useState<boolean>(false);
   const retailerID= localStorage.getItem("retailerID");
   // console.log("retailerID",retailerID);
   const [matchDetail, setMatchDetail] = useState<MatchDetail | null>(null);
@@ -33,6 +34,14 @@ const TeamResultPage: React.FC = () => {
   const [askPanCard, setAskPanCard] = useState<boolean>(false);
   const router=useRouter();
   // ✅ Main flow to fetch match details, rank, and winning amount
+  useEffect(() => {
+      const role = localStorage.getItem('role');
+      if (role === 'admin' || role === 'retailer') {
+        setIsAuthorized(true);
+      } else {
+        setError('❌ Unauthorized Access: Admin or Retailer role required.');
+      }
+    }, []);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -183,6 +192,14 @@ const TeamResultPage: React.FC = () => {
   };
 
   // ✅ Loading state
+  if (!isAuthorized) {
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-gray-900 p-8">
+        <p className="text-red-500 text-xl font-bold text-center">
+          ❌ You are not authorized to access this page.
+        </p>
+      </div> );
+  }
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-6">

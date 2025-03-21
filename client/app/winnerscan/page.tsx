@@ -68,8 +68,10 @@ const QRScannerPage: React.FC = () => {
   // 🔴 Unauthorized message
   if (!isAuthorized) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-gray-100">
-        <h2 className="text-xl font-bold text-red-500">{error}</h2>
+      <div className="flex items-center justify-center min-h-screen bg-gray-900 p-8">
+        <p className="text-red-500 text-xl font-bold text-center">
+          ❌ You are not authorized to access this page.
+        </p>
       </div>
     );
   }

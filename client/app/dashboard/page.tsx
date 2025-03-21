@@ -19,7 +19,8 @@ const Dashboard = () => {
   const [filteredWinningRetailers, setFilteredWinningRetailers] = useState<Retailer[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>("");
-
+  const [isAuthorized, setIsAuthorized] = useState<boolean>(false);
+  
   const [selectedTab, setSelectedTab] = useState<"teams" | "winning">("teams");
 
   const [selectedRetailerTeams, setSelectedRetailerTeams] = useState<string>("all");
@@ -30,7 +31,14 @@ const Dashboard = () => {
 
   const [fromDate, setFromDate] = useState<string>("");
   const [toDate, setToDate] = useState<string>("");
-
+  useEffect(() => {
+      const role = localStorage.getItem('role');
+      if (role === 'admin' || role === 'retailer') {
+        setIsAuthorized(true);
+      } else {
+        setError('❌ Unauthorized Access: Admin or Retailer role required.');
+      }
+    }, []);
   useEffect(() => {
     const fetchRetailers = async () => {
       setLoading(true);
@@ -126,7 +134,16 @@ const Dashboard = () => {
       setLoading(false);
     }
   };
-console.log(filteredWinningRetailers)
+console.log(filteredWinningRetailers);
+  // 🔴 Unauthorized message
+  if (!isAuthorized) {
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-gray-900 p-8">
+        <p className="text-red-500 text-xl font-bold text-center">
+          ❌ You are not authorized to access this page.
+        </p>
+      </div> );
+  }
   return (
     <div className="p-6 bg-gray-900 min-h-screen text-white">
       <h1 className="text-3xl font-bold mb-6 text-center">Retailer Dashboard</h1>
@@ -151,6 +168,7 @@ console.log(filteredWinningRetailers)
       {/* Teams Sold Tab */}
       {selectedTab === "teams" && (
         <>
+
           {/* Filters */}
           <div className="mb-6 flex flex-wrap justify-center gap-4">
             <select className="p-2 bg-gray-800" value={selectedRetailerTeams} onChange={handleTeamsFilterChange}>
@@ -184,43 +202,46 @@ console.log(filteredWinningRetailers)
           </div>
 
           {/* Teams Sold Data */}
-          {filteredTeamsRetailers.map((retailer) => {
-            // Calculate total price for each retailer
-            const totalRetailerSales = retailer.teamsSold.reduce((sum, team) => sum + team.price, 0);
+          <div className="flex justify-center ">
+            <div className="flex flex-col items-center ">
+            {filteredTeamsRetailers.map((retailer) => {
+              // Calculate total price for each retailer
+              const totalRetailerSales = retailer.teamsSold.reduce((sum, team) => sum + team.price, 0);
 
-            return (
-              <div key={retailer._id} className="p-4 mb-4 bg-gray-800 rounded-lg justify-center sm:max-w-1/2">
-                <h2 className="text-xl font-bold">{retailer.username}</h2>
-               <p className="mt-3 font-bold text-green-400">Total Sale: ₹{totalRetailerSales}</p>
-                <div className="flex justify-between items-center mt-2">
-                  <p className="text-white">Teams Sold: {retailer.teamsSold.length}</p>
-                  <button className="px-2 py-1 text-white rounded-lg" onClick={() => toggleTeamsSold(retailer._id)}>
-                    {expandedTeamsSold[retailer._id] ? "🔼" : "🔽"}
-                  </button>
-                </div>
-               {/* Display total price per retailer */}
-                {expandedTeamsSold[retailer._id] && (
-                  <div className="mt-2 p-3 bg-gray-700 rounded-lg">
-                    {retailer.teamsSold.length > 0 ? (
-                      <>
-                        <ul className="list-inside text-gray-300">
-                          {retailer.teamsSold.map((team, index) => (
-                            <li key={index}>
-                              🏷️ {team.teamID} - ₹{team.price}
-                            </li>
-                          ))}
-                        </ul>
-                       
-                      </>
-                    ) : (
-                      <p className="text-gray-400">No teams sold.</p>
-                    )}
+              return (
+                <div key={retailer._id} className="p-4 mb-4  bg-gray-800 rounded-lg sm:w-2xl w-[calc(100vw-40px)]">
+                  <h2 className="text-xl font-bold">{retailer.username}</h2>
+                <p className="mt-3 font-bold text-green-400">Total Sale: ₹{totalRetailerSales}</p>
+                  <div className="flex justify-between items-center mt-2">
+                    <p className="text-white">Teams Sold: {retailer.teamsSold.length}</p>
+                    <button className="px-2 py-1 text-white rounded-lg" onClick={() => toggleTeamsSold(retailer._id)}>
+                      {expandedTeamsSold[retailer._id] ? "🔼" : "🔽"}
+                    </button>
                   </div>
-                )}
-              </div>
-            );
-          })}
-
+                {/* Display total price per retailer */}
+                  {expandedTeamsSold[retailer._id] && (
+                    <div className="mt-2 p-3 bg-gray-700 rounded-lg">
+                      {retailer.teamsSold.length > 0 ? (
+                        <>
+                          <ul className="list-inside text-gray-300">
+                            {retailer.teamsSold.map((team, index) => (
+                              <li key={index}>
+                                🏷️ {team.teamID} - ₹{team.price}
+                              </li>
+                            ))}
+                          </ul>
+                        
+                        </>
+                      ) : (
+                        <p className="text-gray-400">No teams sold.</p>
+                      )}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+            </div>
+          </div>
         </>
       )}
 
@@ -259,8 +280,10 @@ console.log(filteredWinningRetailers)
           </div>
 
           {/* Winning Data */}
+          <div className="flex justify-center ">
+            <div className="flex flex-col items-center ">
           {filteredWinningRetailers.map((retailer) => (
-            <div key={retailer._id} className="p-4 mb-4 bg-gray-800 rounded-lg">
+            <div key={retailer._id} className="p-4 mb-4 bg-gray-800 rounded-lg sm:w-2xl w-[calc(100vw-40px)]">
               <h2 className="text-xl font-bold">{retailer.username}</h2>
               <p className="text-green-400 mt-2">Total Winning Paid: ₹{retailer.totalWinningPaid}</p>
               <div className="flex justify-between items-center mt-2">
@@ -284,6 +307,8 @@ console.log(filteredWinningRetailers)
               )}
             </div>
           ))}
+          </div>
+          </div>
         </>
       )}
     </div>

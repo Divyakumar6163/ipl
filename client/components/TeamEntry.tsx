@@ -139,7 +139,7 @@ const handleSubmit = async (e: React.FormEvent) => {
   if (isAuthorized === false) {
     return (
       <div className="h-screen flex items-center justify-center bg-gray-900 text-white">
-        <h2 className="text-xl font-bold">🚫 You are not authorized to access this page.</h2>
+        <h2 className="text-xl font-bold text-center p-6">🚫 You are not authorized to access this page.</h2>
       </div>
     );
   }

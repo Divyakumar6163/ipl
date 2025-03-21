@@ -4,8 +4,7 @@ import { useDispatch } from "react-redux";
 import { selectMatch } from "../store/matchesSlice";
 import { matches } from "../utils/data/matches";
 import { useRouter } from "next/navigation";
-// import IPL_TEAMS from "@/utils/data/shortname";
-// import Image from "next/image";
+
 export default function UpcomingMatches() {
   const [upcoming, setUpcoming] = useState(matches);
   const [isAuthorized, setIsAuthorized] = useState(true); // New state for role check
@@ -17,8 +16,6 @@ export default function UpcomingMatches() {
     // Filter matches that are in the future
     const filteredMatches = matches.filter((match) => {
       const matchDate = new Date(match.matchDate.split("-").reverse().join("-"));
-      console.log("MatchDate",matchDate);
-      console.log("Today",today);
       return matchDate > today;
     });
 
@@ -51,10 +48,10 @@ export default function UpcomingMatches() {
   };
 
   return (
-    <div className="flex-col flex items-center justify-center p-8 bg-gray-900 min-h-screen">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full max-w-6xl">
-        {isAuthorized ? (
-          upcoming.map((match, index) => (
+    <div className="flex items-center justify-center min-h-screen bg-gray-900 p-8">
+      {isAuthorized ? (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full max-w-6xl">
+          {upcoming.map((match, index) => (
             <div
               key={index}
               onClick={() => handleMatchClick(match)}
@@ -62,27 +59,23 @@ export default function UpcomingMatches() {
             >
               <div className="flex flex-col items-center text-center">
                 <div className="flex items-center space-x-2 mb-2">
-                  {/* <Image src={IPL_TEAMS[match.team1]?.logo} alt={match.team1} width={40} height={40} />
-                  <h3 className="text-lg font-semibold text-white">{IPL_TEAMS[match.team1]?.short}</h3> */}
                   <h3 className="text-lg font-semibold text-white">{match.team1}</h3>
-
                 </div>
 
                 <span className="text-xl font-bold text-gray-300 mb-2">VS</span>
 
                 <div className="flex items-center space-x-2">
-                  {/* <Image src={IPL_TEAMS[match.team2]?.logo} alt={match.team2} width={40} height={40} />
-                  <h3 className="text-lg font-semibold text-white">{IPL_TEAMS[match.team2]?.short}</h3> */}
                   <h3 className="text-lg font-semibold text-white">{match.team2}</h3>
-
                 </div>
               </div>
             </div>
-          ))
-        ) : (
-          <p className="text-red-500 text-xl font-bold text-center">❌ You are not authorized to access this page.</p>
-        )}
-      </div>
+          ))}
+        </div>
+      ) : (
+        <p className="text-red-500 text-xl font-bold text-center">
+          ❌ You are not authorized to access this page.
+        </p>
+      )}
     </div>
-  )
+  );
 }
