@@ -61,79 +61,86 @@ export default function Home() {
   };
 
   // ✅ Submit Form Handler
- // ✅ Submit Form Handler
-const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
-
-  if (!contestPrice) {
-    alert("Please select a contest entry fee!");
-    return;
-  }
-
-  // ✅ Wallet Balance Check
-  if (wallet < contestPrice) {
-    alert("⚠️ Low balance! Please add funds to your wallet.");
-    return;
-  }
-
-  const matchData = {
-    team1: formData.team1,
-    team2: formData.team2,
-    matchDate: formData.matchDate,
-    matchTime: formData.matchTime,
-    players: formData.selectedPlayers,
-    price: contestPrice,
-  };
-
-  try {
-    const response = await axios.post(
-      `${process.env.NEXT_PUBLIC_BACKEND_LINK}/makeTeam`,
-      matchData,
-      {
-        headers: { "Content-Type": "application/json" },
-        responseType: "blob", // Expect binary PDF data
-      }
-    );
-
-    if (response.status === 200) {
-      const matchId = response.headers["match-id"];
-      if (!matchId) {
-        alert("Error: Match ID missing from response");
-        return;
-      }
-
-      // ✅ Deduct Contest Price from Wallet on Success
-      setWallet((prev) => prev - contestPrice);
-      console.log("Wallet",wallet);
-      await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_LINK}/updatesold`, {
-        teamID: matchId,
-        price: contestPrice,
-        retailerID: localStorage.getItem("retailerID"),
-      });
-
-      // alert("✅ Match saved successfully!");
-
-      // ✅ PDF download
-      const pdfBlob = new Blob([response.data], { type: "application/pdf" });
-      const downloadUrl = window.URL.createObjectURL(pdfBlob);
-      const link = document.createElement("a");
-      link.href = downloadUrl;
-      link.download = `Match_Receipt.pdf`;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-
-      // ✅ Reset Form
-      setFormData({ team1: "", team2: "", matchDate: "", matchTime: "", selectedPlayers: [] });
-      router.push("/");
-    } else {
-      alert("❌ Failed to save match details.");
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+  
+    if (!contestPrice) {
+      alert("⚠️ Please select a contest entry fee!");
+      return;
     }
-  } catch (error) {
-    console.error("Error:", error);
-    alert("❌ Something went wrong.");
-  }
-};
+  
+    // ✅ Wallet Balance Check
+    if (wallet < contestPrice) {
+      alert("⚠️ Insufficient balance! Please add funds.");
+      return;
+    }
+  
+    const matchData = {
+      team1: formData.team1,
+      team2: formData.team2,
+      matchDate: formData.matchDate,
+      matchTime: formData.matchTime,
+      players: formData.selectedPlayers,
+      price: contestPrice,
+    };
+  
+    try {
+      const response = await axios.post(
+        `${process.env.NEXT_PUBLIC_BACKEND_LINK}/makeTeam`,
+        matchData,
+        {
+          headers: { "Content-Type": "application/json" },
+          responseType: "blob", // Expect binary PDF data
+        }
+      );
+  
+      if (response.status === 200) {
+        // ✅ Fix for Extracting Match ID (Handles `headers` issue)
+        const matchId =
+          response.headers["match-id"] ||
+          // response.headers.get?.("match-id") || 
+          new TextDecoder().decode(response.data).match(/"matchId":"(.*?)"/)?.[1];
+  
+        console.log("✅ Match ID Received:", matchId);
+  
+        if (!matchId) {
+          alert("❌ Error: Match ID missing from response.");
+          return;
+        }
+  
+        // ✅ Deduct Contest Price from Wallet
+        setWallet((prev) => prev - contestPrice);
+  
+        // ✅ Update Sold Status
+        await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_LINK}/updatesold`, {
+          teamID: matchId,
+          price: contestPrice,
+          retailerID: localStorage.getItem("retailerID"),
+        });
+  
+        // ✅ Download PDF
+        const pdfBlob = new Blob([response.data], { type: "application/pdf" });
+        const downloadUrl = window.URL.createObjectURL(pdfBlob);
+        const link = document.createElement("a");
+        link.href = downloadUrl;
+        link.download = `Match_Receipt_${matchId}.pdf`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+  
+        // ✅ Reset Form & Redirect
+        setFormData({ team1: "", team2: "", matchDate: "", matchTime: "", selectedPlayers: [] });
+        router.push("/");
+      } else {
+        alert("❌ Failed to save match details.");
+      }
+    } catch (error) {
+      console.error("🚨 Error:", error);
+      alert("❌ Something went wrong. Please try again.");
+    }
+  };
+  
+ 
 
 
   if (isAuthorized === false) {
