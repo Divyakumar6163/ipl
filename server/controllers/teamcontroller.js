@@ -22,7 +22,18 @@ const generateInvoice = async (match, res) => {
       doc.pipe(res);
 
       const invoiceNumber = match._id.toString();
-      const invoiceDate = new Date().toLocaleString();
+      const options = {
+        timeZone: "Asia/Kolkata",
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false,
+      };
+
+      const now = new Date();
+      const invoiceDate = now.toLocaleString("en-IN", options);
       const purchasePrice = match.price;
 
       // Start at a vertical position (for centering if needed)
