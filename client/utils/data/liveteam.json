@@ -6,7 +6,7 @@
       "team2": "Royal Challengers Bengaluru",
       "players": {
         "Venkatesh Iyer": 0,
-        "Angkrish Raghuvanshi": 0,
+        "Quinton de Kock": 0,
         "Rinku Singh": 0,
         "Ramandeep Singh": 0,
         "Varun Chakaravarthy": 0,
@@ -17,8 +17,8 @@
         "Rajat Patidar": 0,
         "Krunal Pandya": 0,
         "Jitesh Sharma": 0,
-        "Devdutt Padikkal": 0,
-        "Suyash Sharma": 0
+        "Liam Livingston": 0,
+        "Yash Dayal": 0
       }
     },
     {
@@ -33,13 +33,13 @@
         "Sandeep Sharma": 0,
         "Abhinav Manohar": 0,
         "Harshal Patel": 0,
-        "Rahul Chahar": 0,
+        "Travis Head": 0,
         "Mohammed Shami": 0,
         "Yashasvi Jaiswal": 0,
         "Nitish Rana": 0,
         "Riyan Parag": 0,
         "Dhruv Jurel": 0,
-        "Akash Madhwal": 0,
+        "Jofra Archer": 0,
         "Sanju Samson": 0
       }
     },
@@ -58,7 +58,7 @@
         "Khaleel Ahmed": 0,
         "Deepak Chahar": 0,
         "Rohit Sharma": 0,
-        "Naman Dhir": 0,
+        "Ryan Rickelton": 0,
         "Suryakumar Yadav": 0,
         "Tilak Varma": 0,
         "Hardik Pandya": 0,
@@ -83,8 +83,8 @@
         "Shahbaz Ahamad": 0,
         "Ravi Bishnoi": 0,
         "Avesh Khan": 0,
-        "Mayank Yadav": 0,
-        "Mohsin Khan": 0
+        "Abdul Samad": 0,
+        "Nicholas Pooran": 0
       }
     },
     {
@@ -96,16 +96,16 @@
         "Shubman Gill": 0,
         "Sai Sudharsan": 0,
         "Shahrukh Khan": 0,
-        "Washington Sundar": 0,
+        "Jos Buttler": 0,
         "Rahul Tewatia": 0,
         "Yuzvendra Chahal": 0,
         "Mohammed Siraj": 0,
         "Prasidh Krishna": 0,
         "Prabhsimran Singh": 0,
         "Shreyas Iyer": 0,
-        "Nehal Wadhera": 0,
+        "Glenn Maxwell": 0,
         "Shashank Singh": 0,
-        "Harpreet Brar": 0,
+        "Marcus Stoinis": 0,
         "Arshdeep Singh": 0
       }
     },
@@ -119,11 +119,11 @@
         "Nitish Rana": 0,
         "Riyan Parag": 0,
         "Dhruv Jurel": 0,
-        "Akash Madhwal": 0,
+        "Jofra Archer": 0,
         "Sandeep Sharma": 0,
         "Sanju Samson": 0,
         "Venkatesh Iyer": 0,
-        "Angkrish Raghuvanshi": 0,
+        "Quinton de Kock": 0,
         "Rinku Singh": 0,
         "Ramandeep Singh": 0,
         "Varun Chakaravarthy": 0,
@@ -140,17 +140,17 @@
         "Abhishek Sharma": 0,
         "Ishan Kishan": 0,
         "Nitish Kumar Reddy": 0,
-        "Mayank Yadav": 0,
+        "Abdul Samad": 0,
         "Abhinav Manohar": 0,
         "Harshal Patel": 0,
-        "Rahul Chahar": 0,
+        "Travis Head": 0,
         "Mohammed Shami": 0,
         "Rishabh Pant": 0,
         "Ayush Badoni": 0,
         "Shahbaz Ahamad": 0,
         "Ravi Bishnoi": 0,
         "Avesh Khan": 0,
-        "Mohsin Khan": 0
+        "Nicholas Pooran": 0
       }
     },
     {
@@ -171,8 +171,8 @@
         "Rajat Patidar": 0,
         "Krunal Pandya": 0,
         "Jitesh Sharma": 0,
-        "Devdutt Padikkal": 0,
-        "Suyash Sharma": 0
+        "Liam Livingston": 0,
+        "Yash Dayal": 0
       }
     },
     {
@@ -184,13 +184,13 @@
         "Shubman Gill": 0,
         "Sai Sudharsan": 0,
         "Shahrukh Khan": 0,
-        "Washington Sundar": 0,
+        "Jos Buttler": 0,
         "Rahul Tewatia": 0,
         "Deepak Chahar": 0,
         "Mohammed Siraj": 0,
         "Prasidh Krishna": 0,
         "Rohit Sharma": 0,
-        "Naman Dhir": 0,
+        "Ryan Rickelton": 0,
         "Suryakumar Yadav": 0,
         "Tilak Varma": 0,
         "Hardik Pandya": 0,
@@ -216,7 +216,7 @@
         "Mohammed Shami": 0,
         "Abhinav Manohar": 0,
         "Harshal Patel": 0,
-        "Rahul Chahar": 0
+        "Travis Head": 0
       }
     },
     {
@@ -229,7 +229,7 @@
         "Nitish Rana": 0,
         "Riyan Parag": 0,
         "Dhruv Jurel": 0,
-        "Akash Madhwal": 0,
+        "Jofra Archer": 0,
         "Sandeep Sharma": 0,
         "Sanju Samson": 0,
         "Ruturaj Gaikwad": 0,
@@ -248,14 +248,14 @@
       "team2": "Kolkata Knight Riders",
       "players": {
         "Rohit Sharma": 0,
-        "Naman Dhir": 0,
+        "Ryan Rickelton": 0,
         "Suryakumar Yadav": 0,
         "Tilak Varma": 0,
         "Hardik Pandya": 0,
         "Jasprit Bumrah": 0,
         "Deepak Chahar": 0,
         "Venkatesh Iyer": 0,
-        "Angkrish Raghuvanshi": 0,
+        "Quinton de Kock": 0,
         "Rinku Singh": 0,
         "Ramandeep Singh": 0,
         "Varun Chakaravarthy": 0,
@@ -274,13 +274,13 @@
         "Shahbaz Ahamad": 0,
         "Ravi Bishnoi": 0,
         "Avesh Khan": 0,
-        "Mayank Yadav": 0,
-        "Mohsin Khan": 0,
+        "Abdul Samad": 0,
+        "Nicholas Pooran": 0,
         "Prabhsimran Singh": 0,
         "Shreyas Iyer": 0,
-        "Nehal Wadhera": 0,
+        "Glenn Maxwell": 0,
         "Shashank Singh": 0,
-        "Harpreet Brar": 0,
+        "Marcus Stoinis": 0,
         "Arshdeep Singh": 0,
         "Yuzvendra Chahal": 0
       }
@@ -295,13 +295,13 @@
         "Rajat Patidar": 0,
         "Krunal Pandya": 0,
         "Jitesh Sharma": 0,
-        "Devdutt Padikkal": 0,
+        "Liam Livingston": 0,
         "Bhuvneshwar Kumar": 0,
-        "Suyash Sharma": 0,
+        "Yash Dayal": 0,
         "Shubman Gill": 0,
         "Sai Sudharsan": 0,
         "Shahrukh Khan": 0,
-        "Washington Sundar": 0,
+        "Jos Buttler": 0,
         "Rahul Tewatia": 0,
         "Mohammed Siraj": 0,
         "Prasidh Krishna": 0
@@ -314,7 +314,7 @@
       "team2": "Sunrisers Hyderabad",
       "players": {
         "Venkatesh Iyer": 0,
-        "Angkrish Raghuvanshi": 0,
+        "Quinton de Kock": 0,
         "Rinku Singh": 0,
         "Ramandeep Singh": 0,
         "Varun Chakaravarthy": 0,
@@ -326,7 +326,7 @@
         "Mohammed Shami": 0,
         "Abhinav Manohar": 0,
         "Harshal Patel": 0,
-        "Rahul Chahar": 0
+        "Travis Head": 0
       }
     },
     {
@@ -340,10 +340,10 @@
         "Shahbaz Ahamad": 0,
         "Ravi Bishnoi": 0,
         "Avesh Khan": 0,
-        "Mayank Yadav": 0,
-        "Mohsin Khan": 0,
+        "Abdul Samad": 0,
+        "Nicholas Pooran": 0,
         "Rohit Sharma": 0,
-        "Naman Dhir": 0,
+        "Ryan Rickelton": 0,
         "Suryakumar Yadav": 0,
         "Tilak Varma": 0,
         "Hardik Pandya": 0,
@@ -381,16 +381,16 @@
       "players": {
         "Prabhsimran Singh": 0,
         "Shreyas Iyer": 0,
-        "Nehal Wadhera": 0,
+        "Glenn Maxwell": 0,
         "Shashank Singh": 0,
-        "Harpreet Brar": 0,
+        "Marcus Stoinis": 0,
         "Arshdeep Singh": 0,
         "Yuzvendra Chahal": 0,
         "Yashasvi Jaiswal": 0,
         "Nitish Rana": 0,
         "Riyan Parag": 0,
         "Dhruv Jurel": 0,
-        "Akash Madhwal": 0,
+        "Jofra Archer": 0,
         "Sandeep Sharma": 0,
         "Sanju Samson": 0
       }
@@ -402,7 +402,7 @@
       "team2": "Lucknow Super Giants",
       "players": {
         "Venkatesh Iyer": 0,
-        "Angkrish Raghuvanshi": 0,
+        "Quinton de Kock": 0,
         "Rinku Singh": 0,
         "Ramandeep Singh": 0,
         "Varun Chakaravarthy": 0,
@@ -413,8 +413,8 @@
         "Shahbaz Ahamad": 0,
         "Ravi Bishnoi": 0,
         "Avesh Khan": 0,
-        "Mayank Yadav": 0,
-        "Mohsin Khan": 0
+        "Abdul Samad": 0,
+        "Nicholas Pooran": 0
       }
     },
     {
@@ -429,11 +429,11 @@
         "Mohammed Shami": 0,
         "Abhinav Manohar": 0,
         "Harshal Patel": 0,
-        "Rahul Chahar": 0,
+        "Travis Head": 0,
         "Shubman Gill": 0,
         "Sai Sudharsan": 0,
         "Shahrukh Khan": 0,
-        "Washington Sundar": 0,
+        "Jos Buttler": 0,
         "Rahul Tewatia": 0,
         "Mohammed Siraj": 0,
         "Prasidh Krishna": 0
@@ -446,7 +446,7 @@
       "team2": "Royal Challengers Bengaluru",
       "players": {
         "Rohit Sharma": 0,
-        "Naman Dhir": 0,
+        "Ryan Rickelton": 0,
         "Suryakumar Yadav": 0,
         "Tilak Varma": 0,
         "Hardik Pandya": 0,
@@ -456,9 +456,9 @@
         "Rajat Patidar": 0,
         "Krunal Pandya": 0,
         "Jitesh Sharma": 0,
-        "Devdutt Padikkal": 0,
+        "Liam Livingston": 0,
         "Bhuvneshwar Kumar": 0,
-        "Suyash Sharma": 0
+        "Yash Dayal": 0
       }
     },
     {
@@ -469,9 +469,9 @@
       "players": {
         "Prabhsimran Singh": 0,
         "Shreyas Iyer": 0,
-        "Nehal Wadhera": 0,
+        "Glenn Maxwell": 0,
         "Shashank Singh": 0,
-        "Harpreet Brar": 0,
+        "Marcus Stoinis": 0,
         "Arshdeep Singh": 0,
         "Yuzvendra Chahal": 0,
         "Ruturaj Gaikwad": 0,
@@ -492,7 +492,7 @@
         "Shubman Gill": 0,
         "Sai Sudharsan": 0,
         "Shahrukh Khan": 0,
-        "Washington Sundar": 0,
+        "Jos Buttler": 0,
         "Rahul Tewatia": 0,
         "Mohammed Siraj": 0,
         "Prasidh Krishna": 0,
@@ -500,7 +500,7 @@
         "Nitish Rana": 0,
         "Riyan Parag": 0,
         "Dhruv Jurel": 0,
-        "Akash Madhwal": 0,
+        "Jofra Archer": 0,
         "Sandeep Sharma": 0,
         "Sanju Samson": 0
       }
@@ -515,9 +515,9 @@
         "Rajat Patidar": 0,
         "Krunal Pandya": 0,
         "Jitesh Sharma": 0,
-        "Devdutt Padikkal": 0,
+        "Liam Livingston": 0,
         "Bhuvneshwar Kumar": 0,
-        "Suyash Sharma": 0,
+        "Yash Dayal": 0,
         "KL Rahul": 0,
         "Abishek Porel": 0,
         "Axar Patel": 0,
@@ -541,7 +541,7 @@
         "Ravichandran Ashwin": 0,
         "Khaleel Ahmed": 0,
         "Venkatesh Iyer": 0,
-        "Angkrish Raghuvanshi": 0,
+        "Quinton de Kock": 0,
         "Rinku Singh": 0,
         "Ramandeep Singh": 0,
         "Varun Chakaravarthy": 0,
@@ -560,12 +560,12 @@
         "Shahbaz Ahamad": 0,
         "Ravi Bishnoi": 0,
         "Avesh Khan": 0,
-        "Mayank Yadav": 0,
-        "Mohsin Khan": 0,
+        "Abdul Samad": 0,
+        "Nicholas Pooran": 0,
         "Shubman Gill": 0,
         "Sai Sudharsan": 0,
         "Shahrukh Khan": 0,
-        "Washington Sundar": 0,
+        "Jos Buttler": 0,
         "Rahul Tewatia": 0,
         "Mohammed Siraj": 0,
         "Prasidh Krishna": 0
@@ -583,12 +583,12 @@
         "Mohammed Shami": 0,
         "Abhinav Manohar": 0,
         "Harshal Patel": 0,
-        "Rahul Chahar": 0,
+        "Travis Head": 0,
         "Prabhsimran Singh": 0,
         "Shreyas Iyer": 0,
-        "Nehal Wadhera": 0,
+        "Glenn Maxwell": 0,
         "Shashank Singh": 0,
-        "Harpreet Brar": 0,
+        "Marcus Stoinis": 0,
         "Arshdeep Singh": 0,
         "Yuzvendra Chahal": 0
       }
@@ -603,16 +603,16 @@
         "Nitish Rana": 0,
         "Riyan Parag": 0,
         "Dhruv Jurel": 0,
-        "Akash Madhwal": 0,
+        "Jofra Archer": 0,
         "Sandeep Sharma": 0,
         "Sanju Samson": 0,
         "Virat Kohli": 0,
         "Rajat Patidar": 0,
         "Krunal Pandya": 0,
         "Jitesh Sharma": 0,
-        "Devdutt Padikkal": 0,
+        "Liam Livingston": 0,
         "Bhuvneshwar Kumar": 0,
-        "Suyash Sharma": 0
+        "Yash Dayal": 0
       }
     },
     {
@@ -629,7 +629,7 @@
         "Kuldeep Yadav": 0,
         "Mukesh Kumar": 0,
         "Rohit Sharma": 0,
-        "Naman Dhir": 0,
+        "Ryan Rickelton": 0,
         "Suryakumar Yadav": 0,
         "Tilak Varma": 0,
         "Hardik Pandya": 0,
@@ -648,8 +648,8 @@
         "Shahbaz Ahamad": 0,
         "Ravi Bishnoi": 0,
         "Avesh Khan": 0,
-        "Mayank Yadav": 0,
-        "Mohsin Khan": 0,
+        "Abdul Samad": 0,
+        "Nicholas Pooran": 0,
         "Ruturaj Gaikwad": 0,
         "Rahul Tripathi": 0,
         "Shivam Dube": 0,
@@ -667,13 +667,13 @@
       "players": {
         "Prabhsimran Singh": 0,
         "Shreyas Iyer": 0,
-        "Nehal Wadhera": 0,
+        "Glenn Maxwell": 0,
         "Shashank Singh": 0,
-        "Harpreet Brar": 0,
+        "Marcus Stoinis": 0,
         "Arshdeep Singh": 0,
         "Yuzvendra Chahal": 0,
         "Venkatesh Iyer": 0,
-        "Angkrish Raghuvanshi": 0,
+        "Quinton de Kock": 0,
         "Rinku Singh": 0,
         "Ramandeep Singh": 0,
         "Varun Chakaravarthy": 0,
@@ -698,7 +698,7 @@
         "Nitish Rana": 0,
         "Riyan Parag": 0,
         "Dhruv Jurel": 0,
-        "Akash Madhwal": 0,
+        "Jofra Archer": 0,
         "Sandeep Sharma": 0,
         "Sanju Samson": 0
       }
@@ -710,7 +710,7 @@
       "team2": "Sunrisers Hyderabad",
       "players": {
         "Rohit Sharma": 0,
-        "Naman Dhir": 0,
+        "Ryan Rickelton": 0,
         "Suryakumar Yadav": 0,
         "Tilak Varma": 0,
         "Hardik Pandya": 0,
@@ -722,7 +722,7 @@
         "Mohammed Shami": 0,
         "Abhinav Manohar": 0,
         "Harshal Patel": 0,
-        "Rahul Chahar": 0
+        "Travis Head": 0
       }
     },
     {
@@ -735,14 +735,14 @@
         "Rajat Patidar": 0,
         "Krunal Pandya": 0,
         "Jitesh Sharma": 0,
-        "Devdutt Padikkal": 0,
+        "Liam Livingston": 0,
         "Bhuvneshwar Kumar": 0,
-        "Suyash Sharma": 0,
+        "Yash Dayal": 0,
         "Prabhsimran Singh": 0,
         "Shreyas Iyer": 0,
-        "Nehal Wadhera": 0,
+        "Glenn Maxwell": 0,
         "Shashank Singh": 0,
-        "Harpreet Brar": 0,
+        "Marcus Stoinis": 0,
         "Arshdeep Singh": 0,
         "Yuzvendra Chahal": 0
       }
@@ -756,7 +756,7 @@
         "Shubman Gill": 0,
         "Sai Sudharsan": 0,
         "Shahrukh Khan": 0,
-        "Washington Sundar": 0,
+        "Jos Buttler": 0,
         "Rahul Tewatia": 0,
         "Mohammed Siraj": 0,
         "Prasidh Krishna": 0,
@@ -779,7 +779,7 @@
         "Nitish Rana": 0,
         "Riyan Parag": 0,
         "Dhruv Jurel": 0,
-        "Akash Madhwal": 0,
+        "Jofra Archer": 0,
         "Sandeep Sharma": 0,
         "Sanju Samson": 0,
         "Rishabh Pant": 0,
@@ -787,8 +787,8 @@
         "Shahbaz Ahamad": 0,
         "Ravi Bishnoi": 0,
         "Avesh Khan": 0,
-        "Mayank Yadav": 0,
-        "Mohsin Khan": 0
+        "Abdul Samad": 0,
+        "Nicholas Pooran": 0
       }
     },
     {
@@ -799,18 +799,18 @@
       "players": {
         "Prabhsimran Singh": 0,
         "Shreyas Iyer": 0,
-        "Nehal Wadhera": 0,
+        "Glenn Maxwell": 0,
         "Shashank Singh": 0,
-        "Harpreet Brar": 0,
+        "Marcus Stoinis": 0,
         "Arshdeep Singh": 0,
         "Yuzvendra Chahal": 0,
         "Virat Kohli": 0,
         "Rajat Patidar": 0,
         "Krunal Pandya": 0,
         "Jitesh Sharma": 0,
-        "Devdutt Padikkal": 0,
+        "Liam Livingston": 0,
         "Bhuvneshwar Kumar": 0,
-        "Suyash Sharma": 0
+        "Yash Dayal": 0
       }
     },
     {
@@ -820,7 +820,7 @@
       "team2": "Chennai Super Kings",
       "players": {
         "Rohit Sharma": 0,
-        "Naman Dhir": 0,
+        "Ryan Rickelton": 0,
         "Suryakumar Yadav": 0,
         "Tilak Varma": 0,
         "Hardik Pandya": 0,
@@ -842,7 +842,7 @@
       "team2": "Gujarat Titans",
       "players": {
         "Venkatesh Iyer": 0,
-        "Angkrish Raghuvanshi": 0,
+        "Quinton de Kock": 0,
         "Rinku Singh": 0,
         "Ramandeep Singh": 0,
         "Varun Chakaravarthy": 0,
@@ -851,7 +851,7 @@
         "Shubman Gill": 0,
         "Sai Sudharsan": 0,
         "Shahrukh Khan": 0,
-        "Washington Sundar": 0,
+        "Jos Buttler": 0,
         "Rahul Tewatia": 0,
         "Mohammed Siraj": 0,
         "Prasidh Krishna": 0
@@ -868,8 +868,8 @@
         "Shahbaz Ahamad": 0,
         "Ravi Bishnoi": 0,
         "Avesh Khan": 0,
-        "Mayank Yadav": 0,
-        "Mohsin Khan": 0,
+        "Abdul Samad": 0,
+        "Nicholas Pooran": 0,
         "KL Rahul": 0,
         "Abishek Porel": 0,
         "Axar Patel": 0,
@@ -891,9 +891,9 @@
         "Mohammed Shami": 0,
         "Abhinav Manohar": 0,
         "Harshal Patel": 0,
-        "Rahul Chahar": 0,
+        "Travis Head": 0,
         "Rohit Sharma": 0,
-        "Naman Dhir": 0,
+        "Ryan Rickelton": 0,
         "Suryakumar Yadav": 0,
         "Tilak Varma": 0,
         "Hardik Pandya": 0,
@@ -911,14 +911,14 @@
         "Rajat Patidar": 0,
         "Krunal Pandya": 0,
         "Jitesh Sharma": 0,
-        "Devdutt Padikkal": 0,
+        "Liam Livingston": 0,
         "Bhuvneshwar Kumar": 0,
-        "Suyash Sharma": 0,
+        "Yash Dayal": 0,
         "Yashasvi Jaiswal": 0,
         "Nitish Rana": 0,
         "Riyan Parag": 0,
         "Dhruv Jurel": 0,
-        "Akash Madhwal": 0,
+        "Jofra Archer": 0,
         "Sandeep Sharma": 0,
         "Sanju Samson": 0
       }
@@ -942,7 +942,7 @@
         "Mohammed Shami": 0,
         "Abhinav Manohar": 0,
         "Harshal Patel": 0,
-        "Rahul Chahar": 0
+        "Travis Head": 0
       }
     },
     {
@@ -952,7 +952,7 @@
       "team2": "Punjab Kings",
       "players": {
         "Venkatesh Iyer": 0,
-        "Angkrish Raghuvanshi": 0,
+        "Quinton de Kock": 0,
         "Rinku Singh": 0,
         "Ramandeep Singh": 0,
         "Varun Chakaravarthy": 0,
@@ -960,9 +960,9 @@
         "Ajinkya Rahane": 0,
         "Prabhsimran Singh": 0,
         "Shreyas Iyer": 0,
-        "Nehal Wadhera": 0,
+        "Glenn Maxwell": 0,
         "Shashank Singh": 0,
-        "Harpreet Brar": 0,
+        "Marcus Stoinis": 0,
         "Arshdeep Singh": 0,
         "Yuzvendra Chahal": 0
       }
@@ -974,7 +974,7 @@
       "team2": "Lucknow Super Giants",
       "players": {
         "Rohit Sharma": 0,
-        "Naman Dhir": 0,
+        "Ryan Rickelton": 0,
         "Suryakumar Yadav": 0,
         "Tilak Varma": 0,
         "Hardik Pandya": 0,
@@ -985,8 +985,8 @@
         "Shahbaz Ahamad": 0,
         "Ravi Bishnoi": 0,
         "Avesh Khan": 0,
-        "Mayank Yadav": 0,
-        "Mohsin Khan": 0
+        "Abdul Samad": 0,
+        "Nicholas Pooran": 0
       }
     },
     {
@@ -1006,9 +1006,9 @@
         "Rajat Patidar": 0,
         "Krunal Pandya": 0,
         "Jitesh Sharma": 0,
-        "Devdutt Padikkal": 0,
+        "Liam Livingston": 0,
         "Bhuvneshwar Kumar": 0,
-        "Suyash Sharma": 0
+        "Yash Dayal": 0
       }
     },
     {
@@ -1021,13 +1021,13 @@
         "Nitish Rana": 0,
         "Riyan Parag": 0,
         "Dhruv Jurel": 0,
-        "Akash Madhwal": 0,
+        "Jofra Archer": 0,
         "Sandeep Sharma": 0,
         "Sanju Samson": 0,
         "Shubman Gill": 0,
         "Sai Sudharsan": 0,
         "Shahrukh Khan": 0,
-        "Washington Sundar": 0,
+        "Jos Buttler": 0,
         "Rahul Tewatia": 0,
         "Mohammed Siraj": 0,
         "Prasidh Krishna": 0
@@ -1047,7 +1047,7 @@
         "Kuldeep Yadav": 0,
         "Mukesh Kumar": 0,
         "Venkatesh Iyer": 0,
-        "Angkrish Raghuvanshi": 0,
+        "Quinton de Kock": 0,
         "Rinku Singh": 0,
         "Ramandeep Singh": 0,
         "Varun Chakaravarthy": 0,
@@ -1070,9 +1070,9 @@
         "Khaleel Ahmed": 0,
         "Prabhsimran Singh": 0,
         "Shreyas Iyer": 0,
-        "Nehal Wadhera": 0,
+        "Glenn Maxwell": 0,
         "Shashank Singh": 0,
-        "Harpreet Brar": 0,
+        "Marcus Stoinis": 0,
         "Arshdeep Singh": 0,
         "Yuzvendra Chahal": 0
       }
@@ -1087,11 +1087,11 @@
         "Nitish Rana": 0,
         "Riyan Parag": 0,
         "Dhruv Jurel": 0,
-        "Akash Madhwal": 0,
+        "Jofra Archer": 0,
         "Sandeep Sharma": 0,
         "Sanju Samson": 0,
         "Rohit Sharma": 0,
-        "Naman Dhir": 0,
+        "Ryan Rickelton": 0,
         "Suryakumar Yadav": 0,
         "Tilak Varma": 0,
         "Hardik Pandya": 0,
@@ -1108,7 +1108,7 @@
         "Shubman Gill": 0,
         "Sai Sudharsan": 0,
         "Shahrukh Khan": 0,
-        "Washington Sundar": 0,
+        "Jos Buttler": 0,
         "Rahul Tewatia": 0,
         "Mohammed Siraj": 0,
         "Prasidh Krishna": 0,
@@ -1118,7 +1118,7 @@
         "Mohammed Shami": 0,
         "Abhinav Manohar": 0,
         "Harshal Patel": 0,
-        "Rahul Chahar": 0
+        "Travis Head": 0
       }
     },
     {
@@ -1131,9 +1131,9 @@
         "Rajat Patidar": 0,
         "Krunal Pandya": 0,
         "Jitesh Sharma": 0,
-        "Devdutt Padikkal": 0,
+        "Liam Livingston": 0,
         "Bhuvneshwar Kumar": 0,
-        "Suyash Sharma": 0,
+        "Yash Dayal": 0,
         "Ruturaj Gaikwad": 0,
         "Rahul Tripathi": 0,
         "Shivam Dube": 0,
@@ -1150,7 +1150,7 @@
       "team2": "Rajasthan Royals",
       "players": {
         "Venkatesh Iyer": 0,
-        "Angkrish Raghuvanshi": 0,
+        "Quinton de Kock": 0,
         "Rinku Singh": 0,
         "Ramandeep Singh": 0,
         "Varun Chakaravarthy": 0,
@@ -1160,7 +1160,7 @@
         "Nitish Rana": 0,
         "Riyan Parag": 0,
         "Dhruv Jurel": 0,
-        "Akash Madhwal": 0,
+        "Jofra Archer": 0,
         "Sandeep Sharma": 0,
         "Sanju Samson": 0
       }
@@ -1173,9 +1173,9 @@
       "players": {
         "Prabhsimran Singh": 0,
         "Shreyas Iyer": 0,
-        "Nehal Wadhera": 0,
+        "Glenn Maxwell": 0,
         "Shashank Singh": 0,
-        "Harpreet Brar": 0,
+        "Marcus Stoinis": 0,
         "Arshdeep Singh": 0,
         "Yuzvendra Chahal": 0,
         "Rishabh Pant": 0,
@@ -1183,8 +1183,8 @@
         "Shahbaz Ahamad": 0,
         "Ravi Bishnoi": 0,
         "Avesh Khan": 0,
-        "Mayank Yadav": 0,
-        "Mohsin Khan": 0
+        "Abdul Samad": 0,
+        "Nicholas Pooran": 0
       }
     },
     {
@@ -1199,7 +1199,7 @@
         "Mohammed Shami": 0,
         "Abhinav Manohar": 0,
         "Harshal Patel": 0,
-        "Rahul Chahar": 0,
+        "Travis Head": 0,
         "KL Rahul": 0,
         "Abishek Porel": 0,
         "Axar Patel": 0,
@@ -1216,7 +1216,7 @@
       "team2": "Gujarat Titans",
       "players": {
         "Rohit Sharma": 0,
-        "Naman Dhir": 0,
+        "Ryan Rickelton": 0,
         "Suryakumar Yadav": 0,
         "Tilak Varma": 0,
         "Hardik Pandya": 0,
@@ -1225,7 +1225,7 @@
         "Shubman Gill": 0,
         "Sai Sudharsan": 0,
         "Shahrukh Khan": 0,
-        "Washington Sundar": 0,
+        "Jos Buttler": 0,
         "Rahul Tewatia": 0,
         "Mohammed Siraj": 0,
         "Prasidh Krishna": 0
@@ -1238,7 +1238,7 @@
       "team2": "Chennai Super Kings",
       "players": {
         "Venkatesh Iyer": 0,
-        "Angkrish Raghuvanshi": 0,
+        "Quinton de Kock": 0,
         "Rinku Singh": 0,
         "Ramandeep Singh": 0,
         "Varun Chakaravarthy": 0,
@@ -1261,9 +1261,9 @@
       "players": {
         "Prabhsimran Singh": 0,
         "Shreyas Iyer": 0,
-        "Nehal Wadhera": 0,
+        "Glenn Maxwell": 0,
         "Shashank Singh": 0,
-        "Harpreet Brar": 0,
+        "Marcus Stoinis": 0,
         "Arshdeep Singh": 0,
         "Yuzvendra Chahal": 0,
         "KL Rahul": 0,
@@ -1286,15 +1286,15 @@
         "Shahbaz Ahamad": 0,
         "Ravi Bishnoi": 0,
         "Avesh Khan": 0,
-        "Mayank Yadav": 0,
-        "Mohsin Khan": 0,
+        "Abdul Samad": 0,
+        "Nicholas Pooran": 0,
         "Virat Kohli": 0,
         "Rajat Patidar": 0,
         "Krunal Pandya": 0,
         "Jitesh Sharma": 0,
-        "Devdutt Padikkal": 0,
+        "Liam Livingston": 0,
         "Bhuvneshwar Kumar": 0,
-        "Suyash Sharma": 0
+        "Yash Dayal": 0
       }
     },
     {
@@ -1309,9 +1309,9 @@
         "Mohammed Shami": 0,
         "Abhinav Manohar": 0,
         "Harshal Patel": 0,
-        "Rahul Chahar": 0,
+        "Travis Head": 0,
         "Venkatesh Iyer": 0,
-        "Angkrish Raghuvanshi": 0,
+        "Quinton de Kock": 0,
         "Rinku Singh": 0,
         "Ramandeep Singh": 0,
         "Varun Chakaravarthy": 0,
@@ -1327,13 +1327,13 @@
       "players": {
         "Prabhsimran Singh": 0,
         "Shreyas Iyer": 0,
-        "Nehal Wadhera": 0,
+        "Glenn Maxwell": 0,
         "Shashank Singh": 0,
-        "Harpreet Brar": 0,
+        "Marcus Stoinis": 0,
         "Arshdeep Singh": 0,
         "Yuzvendra Chahal": 0,
         "Rohit Sharma": 0,
-        "Naman Dhir": 0,
+        "Ryan Rickelton": 0,
         "Suryakumar Yadav": 0,
         "Tilak Varma": 0,
         "Hardik Pandya": 0,
@@ -1357,7 +1357,7 @@
         "Shubman Gill": 0,
         "Sai Sudharsan": 0,
         "Shahrukh Khan": 0,
-        "Washington Sundar": 0,
+        "Jos Buttler": 0,
         "Rahul Tewatia": 0,
         "Mohammed Siraj": 0,
         "Prasidh Krishna": 0
@@ -1380,7 +1380,7 @@
         "Nitish Rana": 0,
         "Riyan Parag": 0,
         "Dhruv Jurel": 0,
-        "Akash Madhwal": 0,
+        "Jofra Archer": 0,
         "Sandeep Sharma": 0,
         "Sanju Samson": 0
       }
@@ -1395,16 +1395,16 @@
         "Rajat Patidar": 0,
         "Krunal Pandya": 0,
         "Jitesh Sharma": 0,
-        "Devdutt Padikkal": 0,
+        "Liam Livingston": 0,
         "Bhuvneshwar Kumar": 0,
-        "Suyash Sharma": 0,
+        "Yash Dayal": 0,
         "Abhishek Sharma": 0,
         "Ishan Kishan": 0,
         "Nitish Kumar Reddy": 0,
         "Mohammed Shami": 0,
         "Abhinav Manohar": 0,
         "Harshal Patel": 0,
-        "Rahul Chahar": 0
+        "Travis Head": 0
       }
     },
     {
@@ -1416,7 +1416,7 @@
         "Shubman Gill": 0,
         "Sai Sudharsan": 0,
         "Shahrukh Khan": 0,
-        "Washington Sundar": 0,
+        "Jos Buttler": 0,
         "Rahul Tewatia": 0,
         "Mohammed Siraj": 0,
         "Prasidh Krishna": 0,
@@ -1425,8 +1425,8 @@
         "Shahbaz Ahamad": 0,
         "Ravi Bishnoi": 0,
         "Avesh Khan": 0,
-        "Mayank Yadav": 0,
-        "Mohsin Khan": 0
+        "Abdul Samad": 0,
+        "Nicholas Pooran": 0
       }
     },
     {
@@ -1436,7 +1436,7 @@
       "team2": "Delhi Capitals",
       "players": {
         "Rohit Sharma": 0,
-        "Naman Dhir": 0,
+        "Ryan Rickelton": 0,
         "Suryakumar Yadav": 0,
         "Tilak Varma": 0,
         "Hardik Pandya": 0,
@@ -1461,14 +1461,14 @@
         "Nitish Rana": 0,
         "Riyan Parag": 0,
         "Dhruv Jurel": 0,
-        "Akash Madhwal": 0,
+        "Jofra Archer": 0,
         "Sandeep Sharma": 0,
         "Sanju Samson": 0,
         "Prabhsimran Singh": 0,
         "Shreyas Iyer": 0,
-        "Nehal Wadhera": 0,
+        "Glenn Maxwell": 0,
         "Shashank Singh": 0,
-        "Harpreet Brar": 0,
+        "Marcus Stoinis": 0,
         "Arshdeep Singh": 0,
         "Yuzvendra Chahal": 0
       }
@@ -1483,11 +1483,11 @@
         "Rajat Patidar": 0,
         "Krunal Pandya": 0,
         "Jitesh Sharma": 0,
-        "Devdutt Padikkal": 0,
+        "Liam Livingston": 0,
         "Bhuvneshwar Kumar": 0,
-        "Suyash Sharma": 0,
+        "Yash Dayal": 0,
         "Venkatesh Iyer": 0,
-        "Angkrish Raghuvanshi": 0,
+        "Quinton de Kock": 0,
         "Rinku Singh": 0,
         "Ramandeep Singh": 0,
         "Varun Chakaravarthy": 0,
@@ -1504,7 +1504,7 @@
         "Shubman Gill": 0,
         "Sai Sudharsan": 0,
         "Shahrukh Khan": 0,
-        "Washington Sundar": 0,
+        "Jos Buttler": 0,
         "Rahul Tewatia": 0,
         "Mohammed Siraj": 0,
         "Prasidh Krishna": 0,
@@ -1528,15 +1528,15 @@
         "Shahbaz Ahamad": 0,
         "Ravi Bishnoi": 0,
         "Avesh Khan": 0,
-        "Mayank Yadav": 0,
-        "Mohsin Khan": 0,
+        "Abdul Samad": 0,
+        "Nicholas Pooran": 0,
         "Abhishek Sharma": 0,
         "Ishan Kishan": 0,
         "Nitish Kumar Reddy": 0,
         "Mohammed Shami": 0,
         "Abhinav Manohar": 0,
         "Harshal Patel": 0,
-        "Rahul Chahar": 0
+        "Travis Head": 0
       }
     }
   ]
