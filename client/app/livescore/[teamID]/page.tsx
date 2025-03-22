@@ -243,9 +243,9 @@ export default function SelectedPlayers() {
   
             {/* Rank & Score */}
             <div className="space-y-1">
-              <h2 className="text-lg font-bold text-yellow-400">
+              {/* <h2 className="text-lg font-bold text-yellow-400">
                 {teamRank !== null ? `Rank: ${teamRank}` : totalScore !== 0 ? "Calculating..." : "To be Started"}
-              </h2>
+              </h2> */}
               <h3 className="text-lg font-semibold text-yellow-400">
                 Total Score: {totalScore}
               </h3>
