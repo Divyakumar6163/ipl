@@ -85,15 +85,21 @@ export default function Home() {
     };
   
     try {
+      const token = localStorage.getItem("token"); // Retrieve JWT from local storage
+
       const response = await axios.post(
         `${process.env.NEXT_PUBLIC_BACKEND_LINK}/makeTeam`,
         matchData,
         {
-          headers: { "Content-Type": "application/json" },
+          headers: { "Content-Type": "application/json" , Authorization: `Bearer ${token}`,},validateStatus: () => true,
           responseType: "blob", // Expect binary PDF data
         }
       );
-  
+      
+      if (response.status === 403) {
+        setIsAuthorized(false);
+        return;
+      }
       if (response.status === 200) {
         // ✅ Fix for Extracting Match ID (Handles `headers` issue)
         const matchId =

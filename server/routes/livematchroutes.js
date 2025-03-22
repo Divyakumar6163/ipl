@@ -1,10 +1,15 @@
 const express = require("express");
 const livematchcontroller = require("../controllers/livematchcontroller");
+const verifyToken = require("../middleware/verifytoken");
 const router = express.Router();
 
 router.post("/getscore", livematchcontroller.getScore);
 router.post("/getrank", livematchcontroller.getRank);
-router.post("/matchplayer", livematchcontroller.getPlayer);
+router.post(
+  "/matchplayer",
+  verifyToken.checkRole(["admin", "updater"]),
+  livematchcontroller.getPlayer
+);
 router.post("/getprize", livematchcontroller.getPrize);
 router.post("/update-score", livematchcontroller.updateScore);
 router.post("/update-rank", livematchcontroller.updateRank);

@@ -101,7 +101,7 @@ const generateInvoice = async (match, res) => {
       doc.image(qrImage, qrX, doc.y, { width: qrSize, height: qrSize });
 
       // Move down the document to provide space after the QR code
-      doc.moveDown(8);
+      doc.moveDown(19);
 
       // Footer
       doc

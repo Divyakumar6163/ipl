@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { matches } from "../../utils/data/matches";
+import { useRouter } from "next/navigation";
 
 type PlayerScores = {
   [playerName: string]: number;
@@ -14,9 +15,14 @@ const ScoreTable = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [currentMatch, setCurrentMatch] = useState<any>(null);
-
+  const router= useRouter();
   // ✅ Find nearest match (handle 3:30pm and 7:30pm logic)
   useEffect(() => {
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+      router.push("/login"); // Redirect to login if not logged in
+    }
     const today = new Date();
     today.setHours(0, 0, 0, 0);
     let nearestMatch = null;
@@ -49,13 +55,22 @@ const ScoreTable = () => {
   useEffect(() => {
     if (!currentMatch) return;
     const fetchPlayers = async () => {
+      const token = localStorage.getItem("token"); // Retrieve JWT from local storage
       try {
         const response = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_LINK}/matchplayer`, {
           team1: currentMatch.team1,
           team2: currentMatch.team2,
           matchDate: currentMatch.matchDate,
           matchTime: currentMatch.matchTime,
-        });
+        },{
+          headers: {
+            Authorization: `Bearer ${token}`, // Send JWT in Authorization header
+          },validateStatus: () => true});
+          if (response.status === 403) {
+            setIsAuthorized(false);
+            setError('❌ Unauthorized Access: Admin or Updater role required.');
+            return;
+          }
         if (!response.data.match || !response.data.match.players) {
           setError("No players found for this match.");
           setLoading(false);

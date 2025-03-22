@@ -36,6 +36,11 @@ const TeamResultPage: React.FC = () => {
   // ✅ Main flow to fetch match details, rank, and winning amount
   useEffect(() => {
       const role = localStorage.getItem('role');
+      const token = localStorage.getItem("token");
+
+      if (!token) {
+        router.push("/login"); 
+      }
       if (role === 'admin' || role === 'retailer') {
         setIsAuthorized(true);
       } else {
@@ -45,14 +50,20 @@ const TeamResultPage: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        const token = localStorage.getItem('token');
         setLoading(true);
 
         // 1. Fetch Match Detail using teamId
         const matchResponse = await axios.get(
           `${process.env.NEXT_PUBLIC_BACKEND_LINK}/getTeam/${teamID}`,
-          { headers: { "Content-Type": "application/json" } }
+          { headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}`},validateStatus: () => true, }
         );
-
+        if (matchResponse.status === 403) {
+          setIsAuthorized(false);
+          setError("❌ Unauthorized Access: Admin or Retailer role required.")
+          return;
+        }
+        console.log(matchResponse)
         const matchData = matchResponse.data[0];
         setMatchDetail(matchData);
 

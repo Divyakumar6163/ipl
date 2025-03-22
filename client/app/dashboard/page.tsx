@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { useRouter } from "next/navigation";
 
 interface Retailer {
   _id: string;
@@ -31,8 +32,14 @@ const Dashboard = () => {
 
   const [fromDate, setFromDate] = useState<string>("");
   const [toDate, setToDate] = useState<string>("");
+  const router=useRouter();
   useEffect(() => {
       const role = localStorage.getItem('role');
+      const token = localStorage.getItem("token");
+
+      if (!token) {
+        router.push("/login"); // Redirect to login if not logged in
+      }
       if (role === 'admin' || role === 'retailer') {
         setIsAuthorized(true);
       } else {
@@ -45,8 +52,22 @@ const Dashboard = () => {
       setError("");
 
       try {
-        const response = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_LINK}/getretailers`);
-        console.log(response.data);
+        const token = localStorage.getItem("token"); // Retrieve token from localStorage
+
+        const response = await axios.get(
+          `${process.env.NEXT_PUBLIC_BACKEND_LINK}/getretailers`,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },validateStatus: () => true,
+          }
+        );
+        console.log(response);
+        if (response.status === 403) {
+          setIsAuthorized(false);
+          setError('❌ Unauthorized Access: Admin or Retailer role required.');
+          return;
+        }
         const processedRetailers = response.data.map((retailer: any) => ({
           _id: retailer._id,
           username: retailer.username,

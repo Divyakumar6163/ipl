@@ -34,7 +34,8 @@ const verifyToken = (req, res) => {
   }
 
   try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const decoded = jwt.verify(token, process.env.ACCESS_JWT_SECRET);
+    console.log(JSON.stringify("Decode", decoded));
     res.status(200).json({ message: "Token is valid", user: decoded });
   } catch (error) {
     res.status(401).json({ message: "Invalid token" });
