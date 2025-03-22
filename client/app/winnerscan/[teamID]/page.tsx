@@ -50,19 +50,14 @@ const TeamResultPage: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const token = localStorage.getItem('token');
         setLoading(true);
 
         // 1. Fetch Match Detail using teamId
         const matchResponse = await axios.get(
           `${process.env.NEXT_PUBLIC_BACKEND_LINK}/getTeam/${teamID}`,
-          { headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}`},validateStatus: () => true, }
+          { headers: { "Content-Type": "application/json",}}
         );
-        if (matchResponse.status === 403) {
-          setIsAuthorized(false);
-          setError("❌ Unauthorized Access: Admin or Retailer role required.")
-          return;
-        }
+       
         console.log(matchResponse)
         const matchData = matchResponse.data[0];
         setMatchDetail(matchData);
@@ -112,6 +107,7 @@ const TeamResultPage: React.FC = () => {
 
   const handlePhoneSubmit = async () => {
     try {
+      const token = localStorage.getItem('token');
       if (!phoneNumber || phoneNumber.length < 10) {
         setError('Please enter a valid 10-digit phone number.');
         return;
@@ -121,8 +117,13 @@ const TeamResultPage: React.FC = () => {
       const phoneResponse = await axios.post(
         `${process.env.NEXT_PUBLIC_BACKEND_LINK}/verifyPhone`,
         { phoneNumber,teamID },
-        { validateStatus: () => true } 
+        { headers: { Authorization: `Bearer ${token}`},validateStatus: () => true, }
       );
+      if (phoneResponse.status === 403) {
+        setIsAuthorized(false);
+        setError("❌ Unauthorized Access: Admin or Retailer role required.")
+        return;
+      }
       console.log(phoneResponse);
       if (phoneResponse.status === 200) {
         setPhoneSubmitted(true);

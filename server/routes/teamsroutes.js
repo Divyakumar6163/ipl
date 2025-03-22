@@ -10,9 +10,5 @@ router.post(
   teamcontroller.createMatch
 );
 router.get("/invoice/:filename", teamcontroller.getInvoice);
-router.get(
-  "/getTeam/:teamID",
-  verifyToken.checkRole(["admin", "retailer"]),
-  teamcontroller.getPlayers
-);
+router.get("/getTeam/:teamID", teamcontroller.getPlayers);
 module.exports = router;
