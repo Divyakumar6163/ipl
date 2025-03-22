@@ -2,7 +2,10 @@ const mongoose = require("mongoose");
 
 const userSessionSchema = new mongoose.Schema({
   from: { type: String, required: true, unique: true },
-  createdAt: { type: Date, default: Date.now, expires: "24h" }, // Auto-expire in 24h
+  invoiceId: { type: String, required: true },
+  teamName: { type: String, required: true },
+  matchDate: { type: String, required: true },
+  matchTime: { type: String, required: true },
 });
 
 module.exports = mongoose.model("UserWhatsApp", userSessionSchema);

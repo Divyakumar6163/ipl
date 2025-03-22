@@ -15,11 +15,8 @@ const client = twilio(accountSid, authToken);
 // OpenAI Configuration
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
-// In-memory tracking for users and invoice data
-const userHistory = new Set();
 const userInvoiceMap = new Map(); // Store {from: extractedInvoiceData}
 
-// ✅ WhatsApp Webhook Controller
 const webhook = async (req, res) => {
   try {
     const from = req.body.From;
@@ -27,37 +24,33 @@ const webhook = async (req, res) => {
     const incomingMessage = req.body.Body?.trim().toLowerCase();
 
     console.log("From:", from);
-    console.log("Incoming Message:", req.body);
+    console.log("Incoming Message:", incomingMessage);
 
     // ✅ Check if user exists in DB
-    const existingSession = await UserSession.findOne({ from });
+    let existingSession = await UserSession.findOne({ from });
 
     // ✅ First-time user welcome
     if (!existingSession) {
-      await UserSession.create({ from }); // Persist in DB
       await sendMessage(
         from,
         `👋 *Hello!* Welcome to *Fantasy Rank Checker*!\n\n✨ I can help you check your *current ranking and score*.\n\n📸 Please upload a *clear photo of your receipt* to get started!`
       );
-      return res.sendStatus(200); // Send success response
+      return res.sendStatus(200);
     }
 
     // ✅ If user replies 'yes' or 'no' (for confirmation)
     if (incomingMessage === "yes" || incomingMessage === "no") {
-      const lastInvoiceData = userInvoiceMap.get(from);
-
       if (incomingMessage === "yes") {
         await sendMessage(
           from,
           "✅ Thank you! Your Receipt details have been *verified successfully*. Processing further..."
         );
 
-        // ✅ Backend call with Invoice ID for further processing
-        if (lastInvoiceData && lastInvoiceData.invoiceId !== "Not found") {
+        if (existingSession && existingSession.invoiceId !== "Not found") {
           try {
+            // ✅ Backend call with Invoice ID for further processing
             const backendResponse = await axios.get(
-              `${process.env.BACKEND_LINK}/matchdetails/${lastInvoiceData.invoiceId}`,
-              { headers: { "Content-Type": "application/json" } }
+              `${process.env.BACKEND_LINK}/matchdetails/${existingSession.invoiceId}`
             );
 
             if (backendResponse.status === 200) {
@@ -128,7 +121,8 @@ const webhook = async (req, res) => {
         );
       }
 
-      userInvoiceMap.delete(from);
+      // ✅ Delete session after completion
+      await UserSession.deleteOne({ from });
       return res.sendStatus(200);
     }
 
@@ -147,7 +141,18 @@ const webhook = async (req, res) => {
         return res.sendStatus(200);
       }
 
-      userInvoiceMap.set(from, extractedData);
+      // ✅ Persist session in DB
+      await UserSession.findOneAndUpdate(
+        { from },
+        {
+          from,
+          invoiceId: extractedData.invoiceId,
+          teamName: extractedData.teamName,
+          matchDate: extractedData.matchDate,
+          matchTime: extractedData.matchTime,
+        },
+        { upsert: true, new: true }
+      );
 
       await sendMessage(
         from,
@@ -155,11 +160,9 @@ const webhook = async (req, res) => {
       );
       return res.sendStatus(200);
     }
-
-    return res.sendStatus(200);
   } catch (error) {
     console.error("Webhook Error:", error.message);
-    res.sendStatus(500);
+    return res.sendStatus(500);
   }
 };
 
