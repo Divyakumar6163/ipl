@@ -26,7 +26,7 @@ export default function Login() {
       });
 
       if (response.status === 200) {
-        router.push("/");
+        router.back(); 
       }
     } catch (error) {
       console.error("Invalid token, logging out.");
@@ -50,7 +50,7 @@ export default function Login() {
         localStorage.setItem("role", response.data.role); // Store role
         localStorage.setItem("retailerID", response.data.data._id); // Store username
         setIsLogin(false); // Reset login state
-        router.push("/"); // Redirect after login
+        router.back();  // Redirect after login
       }
     } catch (error) {
       setError("Invalid username or password");
