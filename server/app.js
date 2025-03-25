@@ -18,6 +18,7 @@ const allowedOrigins = [
   "https://j92fkdxv-3000.inc1.devtunnels.ms",
   "https://ipl-livid.vercel.app",
   "https://ipl-backend-eight.vercel.app",
+  "https://www.dhamaka.org.in",
 ];
 
 app.use(
