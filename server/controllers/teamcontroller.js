@@ -104,6 +104,10 @@ const generateInvoice = async (match, res) => {
       doc.moveDown(19);
 
       // Footer
+      doc.text(`Contact Us: ${process.env.CONTACT_NUMBER}`, {
+        align: "center",
+      });
+      doc.moveDown(1);
       doc
         .font("Helvetica-Oblique")
         .fontSize(10)
