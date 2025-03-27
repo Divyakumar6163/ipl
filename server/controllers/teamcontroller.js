@@ -21,7 +21,7 @@ const generateInvoice = async (match, res) => {
       // Pipe the document directly to the response
       doc.pipe(res);
 
-      const invoiceNumber = match._id.toString();
+      const invoiceNumber = match._id;
       const options = {
         timeZone: "Asia/Kolkata",
         day: "2-digit",
@@ -147,8 +147,9 @@ const createMatch = async (req, res) => {
     if (isNaN(matchDate)) {
       return res.status(400).json({ message: "Invalid match date format" });
     }
-
+    const match_id = "ABCDEFGHIJKLMNOPQRSTUVWXYZabc";
     const match = new Match({
+      match_id,
       team1,
       team2,
       matchDate,
