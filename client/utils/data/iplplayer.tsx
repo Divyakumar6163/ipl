@@ -16,15 +16,15 @@ export const IPL_PLAYERS: Record<string, Player> = {
 
   // ✅ Mumbai Indians (MI)
   "Rohit Sharma": { team: "MI", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/6.png" },
-  "Naman Dhir": { team: "MI", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/3107.png" },
+  // "Naman Dhir": { team: "MI", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/3107.png" },
   "Ryan Rickelton": { team: "MI", image: "https://documents.iplt20.com/ipl/IPLHeadshot2025/743.png" },
   "Suryakumar Yadav": { team: "MI", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/174.png" },
   "Tilak Varma": { team: "MI", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/993.png" },
-  // "Hardik Pandya": { team: "MI", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/54.png" },
+  "Hardik Pandya": { team: "MI", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/54.png" },
   // "Robin Minz": { team: "MI", image: "/default-player.png" },
   "Deepak Chahar": { team: "MI", image: "https://statico.sportskeeda.com/editor/2025/01/1fda9-17358317348920-1920.jpg" },
-  // "Jasprit Bumrah": { team: "MI", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/9.png" },
-  "Trent Boult": { team: "MI", image: "https://documents.iplt20.com/ipl/IPLHeadshot2025/66.png" },
+  "Jasprit Bumrah": { team: "MI", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/9.png" },
+  // "Trent Boult": { team: "MI", image: "https://documents.iplt20.com/ipl/IPLHeadshot2025/66.png" },
 
 
   // ✅ Royal Challengers Bengaluru (RCB)

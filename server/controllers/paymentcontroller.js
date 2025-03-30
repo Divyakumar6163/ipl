@@ -1,6 +1,50 @@
 const CheckPayment = require("../models/checkpayment"); // Adjust the path based on your structure
 const User = require("../models/usermodel"); // Adjust the path based on your structure
 
+const checkpayment = async (req, res) => {
+  try {
+    const { team1, team2, matchDate, matchTime, price, teamID } = req.body;
+    console.log("Payemnt Verification", req.body);
+    if (!team1 || !team2 || !matchDate || !matchTime || !price || !teamID) {
+      return res.status(400).json({ message: "Missing required fields." });
+    }
+
+    // ✅ Check if match entry exists
+    let existingMatch = await CheckPayment.findOne({
+      team1,
+      team2,
+      matchDate,
+      matchTime,
+      price,
+    });
+
+    if (existingMatch) {
+      // ✅ Match found, now check if teamID is already added
+      const isTeamPresent = existingMatch.teams.some(
+        (team) => team.teamID === teamID
+      );
+
+      if (isTeamPresent) {
+        return res.status(200).json({
+          message: "✅ Team ID already recorded. Payment exists.",
+          status: "already-paid",
+        });
+      }
+    } else {
+      console.log("Checking for team ID");
+      return res.status(201).json({
+        message: "✅ Team ID not recorded. Payment does not exist.",
+        status: "not-paid",
+      });
+    }
+  } catch (error) {
+    console.error("Error checking/adding payment:", error);
+    return res.status(500).json({
+      message: "⚠️ Internal Server Error. Please try again.",
+      error: error.message,
+    });
+  }
+};
 const verifypayment = async (req, res) => {
   try {
     const { team1, team2, matchDate, matchTime, price, teamID } = req.body;
@@ -109,4 +153,4 @@ const addpaymentdetail = async (req, res) => {
   }
 };
 
-module.exports = { verifypayment, addpaymentdetail };
+module.exports = { verifypayment, addpaymentdetail, checkpayment };

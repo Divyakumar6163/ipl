@@ -49,7 +49,7 @@ const generateInvoice = async (match, res) => {
 
       // Invoice Information
       doc.font("Helvetica").fontSize(12);
-      doc.text(`Receipt ID: ${invoiceNumber}`, { align: "center" });
+      doc.text(`Receipt ID: ${match.match_id}`, { align: "center" });
       doc.text(`Receipt Date: ${invoiceDate}`, { align: "center" });
       doc.text(`Purchase Price: Rs.${purchasePrice}`, { align: "center" });
       doc.moveDown(0.5);
@@ -123,7 +123,14 @@ const generateInvoice = async (match, res) => {
     }
   });
 };
-
+const generateInvoiceId = () => {
+  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const randomLetters =
+    letters[Math.floor(Math.random() * 26)] +
+    letters[Math.floor(Math.random() * 26)];
+  const randomNumbers = Math.floor(100 + Math.random() * 900); // 3-digit random number (100-999)
+  return `${randomLetters}${randomNumbers}`;
+};
 // Create Match & Generate PDF (streamed)
 const createMatch = async (req, res) => {
   try {
@@ -147,7 +154,8 @@ const createMatch = async (req, res) => {
     if (isNaN(matchDate)) {
       return res.status(400).json({ message: "Invalid match date format" });
     }
-    const match_id = "ABCDEFGHIJKLMNOPQRSTUVWXYZabc";
+    const match_id = generateInvoiceId();
+
     const match = new Match({
       match_id,
       team1,

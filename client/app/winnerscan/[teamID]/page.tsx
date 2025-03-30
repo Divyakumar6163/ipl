@@ -61,7 +61,17 @@ const TeamResultPage: React.FC = () => {
         console.log(matchResponse)
         const matchData = matchResponse.data[0];
         setMatchDetail(matchData);
-
+        console.log(matchData)
+        const checkResponse = await axios.post(
+          `${process.env.NEXT_PUBLIC_BACKEND_LINK}/check`,
+          { teamID, ...matchData },
+        );
+        console.log(checkResponse)
+        if (checkResponse.data.status=="already-paid") {
+          setError('⚠️ Payment already processed for this team.');
+          setPaying(false);
+          return;
+        }
         // 2. Fetch Team Rank
         const rankResponse = await axios.post(
           `${process.env.NEXT_PUBLIC_BACKEND_LINK}/getrank`,
@@ -94,7 +104,7 @@ const TeamResultPage: React.FC = () => {
         setWinningAmount(prizeResponse.data.prize || 0);
       } catch (err: any) {
         console.error('Error fetching data:', err);
-        setError('Failed to load data. Please try again later.');
+        setError('Match not started yet. Please try again later.');
       } finally {
         setLoading(false);
       }
@@ -282,7 +292,7 @@ const TeamResultPage: React.FC = () => {
 
             {/* Rank & Winning */}
             <div className="space-y-2">
-              <h2 className="text-lg font-bold text-yellow-400">{rank !== null ? `Rank: ${rank}` : "Calculating Rank..."}</h2>
+              {/* <h2 className="text-lg font-bold text-yellow-400">{rank !== null ? `Rank: ${rank}` : "Calculating Rank..."}</h2> */}
               {matchDetail.matchCompletion && <h3 className="text-lg font-semibold text-yellow-400">Winning Amount: ₹ {winningAmount}</h3>}
             </div>
 

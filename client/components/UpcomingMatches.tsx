@@ -12,16 +12,48 @@ export default function UpcomingMatches() {
   const router = useRouter();
 
   useEffect(() => {
-    const today = new Date();
-    // Filter matches that are in the future
+    const todayUTC = new Date();
+    
+    // Convert to Indian Standard Time (IST)
+    const todayIST = new Date(todayUTC.toLocaleString("en-US", { timeZone: "Asia/Kolkata" }));
+  
+    // Filter matches that are in the future or the same day but later in time
     const filteredMatches = matches.filter((match) => {
-      const matchDate = new Date(match.matchDate.split("-").reverse().join("-"));
-      return matchDate > today;
+      const [day, month, year] = match.matchDate.split("-").map(Number);
+      const matchDate = new Date(year, month - 1, day);
+  
+      // Convert match date to IST (forcing midnight IST)
+      const matchDateIST = new Date(matchDate.toLocaleString("en-US", { timeZone: "Asia/Kolkata" }));
+  
+      // If match date is in the future (IST), keep it
+      if (matchDateIST > todayIST) return true;
+  
+      // If the match is today (IST), check the time
+      if (matchDateIST.toDateString() === todayIST.toDateString()) {
+        let matchTime = match.matchTime.toLowerCase().replace(/\s/g, ""); // Remove spaces and make lowercase
+        let [time, period] = matchTime.split(/(am|pm)/);
+        let [hours, minutes] = time.split(":").map(Number);
+  
+        // Convert 12-hour format to 24-hour format
+        let matchHours = hours;
+        if (period === "pm" && hours !== 12) matchHours += 12;
+        if (period === "am" && hours === 12) matchHours = 0;
+  
+        // Create full match datetime in IST
+        const matchDateTimeIST = new Date(matchDateIST);
+        matchDateTimeIST.setHours(matchHours, minutes, 0, 0);
+  
+        // Compare match time with the current IST time
+        return matchDateTimeIST > todayIST;
+      }
+  
+      return false; // Otherwise, filter it out
     });
-
+  
     // Get the next three upcoming matches
     setUpcoming(filteredMatches.slice(0, 3));
-  }, []);
+  }, [matches]);
+  
 
   useEffect(() => {
     // ✅ Check if user is logged in

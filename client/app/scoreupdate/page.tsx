@@ -35,7 +35,8 @@ const ScoreTable = () => {
         nearestDateDiff = diff;
         nearestMatch = match;
         const now = new Date();
-        if (match.matchTime === "3:30pm" && now.getHours() >= 19) {
+        if (match.matchTime === "3:30pm" && now.getHours() >= 19 && now.getMinutes() >= 30) {
+          // If it's past 7:30pm, find the same day evening match
           const sameDayEveningMatch = matches.find(
             (m) => m.matchDate === match.matchDate && m.matchTime === "7:30pm"
           );
