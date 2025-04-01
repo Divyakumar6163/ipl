@@ -10,11 +10,11 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 
 const questionsDefault = [
-  { text: "Do you like coding?", yesPoints: 10, noPoints: 5 },
-  { text: "Have you used Next.js before?", yesPoints: 15, noPoints: 7 },
-  { text: "Do you prefer TypeScript over JavaScript?", yesPoints: 12, noPoints: 10 },
-  { text: "Is Tailwind CSS your go-to styling solution?", yesPoints: 8, noPoints: 6 },
-  { text: "Would you recommend Next.js to others?", yesPoints: 20, noPoints: 15 },
+  { text: "Will Virat Kohli score 50+ runs?", yesPoints: 10, noPoints: 5 },
+  { text: "Will the match have more than 10 sixes?", yesPoints: 15, noPoints: 7 },
+  { text: "Will your selected team win the match?", yesPoints: 12, noPoints: 10 },
+  { text: "Will there be a hat-trick in the match?", yesPoints: 8, noPoints: 6 },
+  { text: "Will the total score exceed 350 runs?", yesPoints: 20, noPoints: 15 },
 ];
 
 type QuestionnaireProps = {
@@ -25,6 +25,7 @@ type QuestionnaireProps = {
 const Questionnaire: React.FC<QuestionnaireProps> = ({ setOption, option }) => {
   const selectedMatch = useSelector((state: RootState) => state.matches.selectedMatch);
   const [wallet, setWallet] = useState<number>(0);
+  const [loading, setLoading] = useState<boolean>(true);
   const [isAuthorized, setIsAuthorized] = useState<boolean | null>(null);
   const router=useRouter();
   const formData = {
@@ -60,6 +61,7 @@ const Questionnaire: React.FC<QuestionnaireProps> = ({ setOption, option }) => {
         const retailerID = localStorage.getItem("retailerID");
         const response = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_LINK}/getwallet`, { retailerID });
         setWallet(response.data.wallet);
+        // setLoading(false);
       } catch (error) {
         console.error("Failed to fetch wallet balance:", error);
       }
@@ -73,7 +75,7 @@ const Questionnaire: React.FC<QuestionnaireProps> = ({ setOption, option }) => {
         const response = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_LINK}/getcontest`,formData); // Replace with actual match ID
         console.log(response.data);
         setQuestions(response.data.questions);
-        // setMatchData(response.data);
+        setLoading(false);
       } catch (error) {
         console.error("Failed to fetch match data:", error);
       }
@@ -185,6 +187,8 @@ const Questionnaire: React.FC<QuestionnaireProps> = ({ setOption, option }) => {
       </div>
     );
   }
+  if (isAuthorized === null || loading) return <div className="h-screen flex items-center justify-center bg-gray-900 text-white"><h2 className="text-xl font-bold">⏳ Loading...</h2></div>;
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white p-6">
       <div className="w-full md:w-1/2">

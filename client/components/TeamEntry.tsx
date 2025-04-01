@@ -27,7 +27,7 @@ export default function Home({ option,setOption}: HomeProps) {
   });
 
   const [isAuthorized, setIsAuthorized] = useState<boolean | null>(null);
-
+  const [loading, setLoading] = useState<boolean>(true);
   // ✅ Fetch wallet amount
   useEffect(() => {
     const fetchWallet = async () => {
@@ -35,6 +35,7 @@ export default function Home({ option,setOption}: HomeProps) {
         const retailerID = localStorage.getItem("retailerID");
         const response = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_LINK}/getwallet`, { retailerID });
         setWallet(response.data.wallet);
+        setLoading(false);
       } catch (error) {
         console.error("Failed to fetch wallet balance:", error);
       }
@@ -163,6 +164,7 @@ export default function Home({ option,setOption}: HomeProps) {
       </div>
     );
   }
+  if (isAuthorized === null || loading) return <div className="h-screen flex items-center justify-center bg-gray-900 text-white"><h2 className="text-xl font-bold">⏳ Loading...</h2></div>;
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white p-4 relative">
