@@ -1,0 +1,980 @@
+[
+    {
+      "matchDate": "22-03-2025",
+      "matchTime":"7:30pm",
+      "team1": "Kolkata Knight Riders",
+      "team2": "Royal Challengers Bengaluru",
+      "questions": [
+        { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+        { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+        { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+        { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+        { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+        ]
+    },
+    {
+      "matchDate": "23-03-2025",
+      "matchTime":"3:30pm",
+      "team1": "Sunrisers Hyderabad",
+      "team2": "Rajasthan Royals",
+      "questions": [
+        { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+        { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+        { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+        { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+        { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+        ]
+    },
+    {
+      "matchDate": "23-03-2025",
+      "matchTime":"7:30pm",
+      "team1": "Chennai Super Kings",
+      "team2": "Mumbai Indians",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "24-03-2025",
+      "matchTime":"7:30pm",
+      "team1": "Delhi Capitals",
+      "team2": "Lucknow Super Giants",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "25-03-2025",
+      "matchTime":"7:30pm",
+      "team1": "Gujarat Titans",
+      "team2": "Punjab Kings",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "26-03-2025",
+      "matchTime":"7:30pm",
+      "team1": "Rajasthan Royals",
+      "team2": "Kolkata Knight Riders",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "27-03-2025",
+      "matchTime":"7:30pm",
+      "team1": "Sunrisers Hyderabad",
+      "team2": "Lucknow Super Giants",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "28-03-2025",
+      "matchTime":"7:30pm",
+      "team1": "Chennai Super Kings",
+      "team2": "Royal Challengers Bengaluru",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "29-03-2025",
+      "matchTime":"7:30pm",
+      "team1": "Gujarat Titans",
+      "team2": "Mumbai Indians",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "30-03-2025",
+      "matchTime":"3:30pm",
+      "team1": "Delhi Capitals",
+      "team2": "Sunrisers Hyderabad",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "30-03-2025",
+      "matchTime":"7:30pm",
+      "team1": "Rajasthan Royals",
+      "team2": "Chennai Super Kings",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "31-03-2025",
+      "matchTime":"7:30pm",
+      "team1": "Mumbai Indians",
+      "team2": "Kolkata Knight Riders",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "01-04-2025",
+      "matchTime":"7:30pm",
+      "team1": "Lucknow Super Giants",
+      "team2": "Punjab Kings",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "02-04-2025",
+      "matchTime":"7:30pm",
+      "team1": "Royal Challengers Bengaluru",
+      "team2": "Gujarat Titans",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "03-04-2025",
+      "matchTime":"7:30pm",
+      "team1": "Kolkata Knight Riders",
+      "team2": "Sunrisers Hyderabad",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "04-04-2025",
+      "matchTime":"7:30pm",
+      "team1": "Lucknow Super Giants",
+      "team2": "Mumbai Indians",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "05-04-2025",
+      "matchTime":"3:30pm",
+      "team1": "Chennai Super Kings",
+      "team2": "Delhi Capitals",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "05-04-2025",
+      "matchTime":"7:30pm",
+      "team1": "Punjab Kings",
+      "team2": "Rajasthan Royals",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "06-04-2025",
+      "matchTime":"3:30pm",
+      "team1": "Kolkata Knight Riders",
+      "team2": "Lucknow Super Giants",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "06-04-2025",
+      "matchTime":"7:30pm",
+      "team1": "Sunrisers Hyderabad",
+      "team2": "Gujarat Titans",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "07-04-2025",
+      "matchTime":"7:30pm",
+      "team1": "Mumbai Indians",
+      "team2": "Royal Challengers Bengaluru",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "08-04-2025",
+      "matchTime":"7:30pm",
+      "team1": "Punjab Kings",
+      "team2": "Chennai Super Kings",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "09-04-2025",
+      "matchTime":"7:30pm",
+      "team1": "Gujarat Titans",
+      "team2": "Rajasthan Royals",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "10-04-2025",
+      "matchTime":"7:30pm",
+      "team1": "Royal Challengers Bengaluru",
+      "team2": "Delhi Capitals",
+     "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "11-04-2025",
+      "matchTime":"7:30pm",
+      "team1": "Chennai Super Kings",
+      "team2": "Kolkata Knight Riders",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "12-04-2025",
+      "matchTime":"3:30pm",
+      "team1": "Lucknow Super Giants",
+      "team2": "Gujarat Titans",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "12-04-2025",
+      "matchTime":"7:30pm",
+      "team1": "Sunrisers Hyderabad",
+      "team2": "Punjab Kings",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "13-04-2025",
+      "matchTime":"3:30pm",
+      "team1": "Rajasthan Royals",
+      "team2": "Royal Challengers Bengaluru",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "13-04-2025",
+      "matchTime":"7:30pm",
+      "team1": "Delhi Capitals",
+      "team2": "Mumbai Indians",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "14-04-2025",
+      "matchTime":"7:30pm",
+      "team1": "Lucknow Super Giants",
+      "team2": "Chennai Super Kings",
+     "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "15-04-2025",
+      "matchTime":"7:30pm",
+      "team1": "Punjab Kings",
+      "team2": "Kolkata Knight Riders",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "16-04-2025",
+      "matchTime":"7:30pm",
+      "team1": "Delhi Capitals",
+      "team2": "Rajasthan Royals",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "17-04-2025",
+      "matchTime":"7:30pm",
+      "team1": "Mumbai Indians",
+      "team2": "Sunrisers Hyderabad",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "18-04-2025",
+      "matchTime":"7:30pm",
+      "team1": "Royal Challengers Bengaluru",
+      "team2": "Punjab Kings",
+     "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "19-04-2025",
+      "matchTime":"3:30pm",
+      "team1": "Gujarat Titans",
+      "team2": "Delhi Capitals",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "19-04-2025",
+      "matchTime":"7:30pm",
+      "team1": "Rajasthan Royals",
+      "team2": "Lucknow Super Giants",
+     "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "20-04-2025",
+      "matchTime":"3:30pm",
+      "team1": "Punjab Kings",
+      "team2": "Royal Challengers Bengaluru",
+     "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "20-04-2025",
+      "matchTime":"7:30pm",
+      "team1": "Mumbai Indians",
+      "team2": "Chennai Super Kings",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "21-04-2025",
+      "matchTime":"7:30pm",
+      "team1": "Kolkata Knight Riders",
+      "team2": "Gujarat Titans",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "22-04-2025",
+      "matchTime":"7:30pm",
+      "team1": "Lucknow Super Giants",
+      "team2": "Delhi Capitals",
+     "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "23-04-2025",
+      "matchTime":"7:30pm",
+      "team1": "Sunrisers Hyderabad",
+      "team2": "Mumbai Indians",
+     "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "24-04-2025",
+      "matchTime":"7:30pm",
+      "team1": "Royal Challengers Bengaluru",
+      "team2": "Rajasthan Royals",
+     "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "25-04-2025",
+      "matchTime":"7:30pm",
+      "team1": "Chennai Super Kings",
+      "team2": "Sunrisers Hyderabad",
+     "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "26-04-2025",
+      "matchTime":"7:30pm",
+      "team1": "Kolkata Knight Riders",
+      "team2": "Punjab Kings",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "27-04-2025",
+      "matchTime":"3:30pm",
+      "team1": "Mumbai Indians",
+      "team2": "Lucknow Super Giants",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "27-04-2025",
+      "matchTime":"7:30pm",
+      "team1": "Delhi Capitals",
+      "team2": "Royal Challengers Bengaluru",
+     "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "28-04-2025",
+      "matchTime":"7:30pm",
+      "team1": "Rajasthan Royals",
+      "team2": "Gujarat Titans",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "29-04-2025",
+      "matchTime":"7:30pm",
+      "team1": "Delhi Capitals",
+      "team2": "Kolkata Knight Riders",
+     "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "30-04-2025",
+      "matchTime":"7:30pm",
+      "team1": "Chennai Super Kings",
+      "team2": "Punjab Kings",
+     "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "01-05-2025",
+      "matchTime":"7:30pm",
+      "team1": "Rajasthan Royals",
+      "team2": "Mumbai Indians",
+    "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "02-05-2025",
+      "matchTime":"7:30pm",
+      "team1": "Gujarat Titans",
+      "team2": "Sunrisers Hyderabad",
+     "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "03-05-2025",
+      "matchTime":"7:30pm",
+      "team1": "Royal Challengers Bengaluru",
+      "team2": "Chennai Super Kings",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "04-05-2025",
+      "matchTime":"3:30pm",
+      "team1": "Kolkata Knight Riders",
+      "team2": "Rajasthan Royals",
+     "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "04-05-2025",
+      "matchTime":"7:30pm",
+      "team1": "Punjab Kings",
+      "team2": "Lucknow Super Giants",
+     "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "05-05-2025",
+      "matchTime":"7:30pm",
+      "team1": "Sunrisers Hyderabad",
+      "team2": "Delhi Capitals",
+     "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "06-05-2025",
+      "matchTime":"7:30pm",
+      "team1": "Mumbai Indians",
+      "team2": "Gujarat Titans",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "07-05-2025",
+      "matchTime":"7:30pm",
+      "team1": "Kolkata Knight Riders",
+      "team2": "Chennai Super Kings",
+     "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "08-05-2025",
+      "matchTime":"7:30pm",
+      "team1": "Punjab Kings",
+      "team2": "Delhi Capitals",
+     "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "09-05-2025",
+      "matchTime":"7:30pm",
+      "team1": "Lucknow Super Giants",
+      "team2": "Royal Challengers Bengaluru",
+    "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "10-05-2025",
+      "matchTime":"7:30pm",
+      "team1": "Sunrisers Hyderabad",
+      "team2": "Kolkata Knight Riders",
+     "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "11-05-2025",
+      "matchTime":"3:30pm",
+      "team1": "Punjab Kings",
+      "team2": "Mumbai Indians",
+    "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "11-05-2025",
+      "matchTime":"7:30pm",
+      "team1": "Delhi Capitals",
+      "team2": "Gujarat Titans",
+     "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "12-05-2025",
+      "matchTime":"7:30pm",
+      "team1": "Chennai Super Kings",
+      "team2": "Rajasthan Royals",
+     "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "13-05-2025",
+      "matchTime":"7:30pm",
+      "team1": "Royal Challengers Bengaluru",
+      "team2": "Sunrisers Hyderabad",
+     "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "14-05-2025",
+      "matchTime":"7:30pm",
+      "team1": "Gujarat Titans",
+      "team2": "Lucknow Super Giants",
+      "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "15-05-2025",
+      "matchTime":"7:30pm",
+      "team1": "Mumbai Indians",
+      "team2": "Delhi Capitals",
+     "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "16-05-2025",
+      "matchTime":"7:30pm",
+      "team1": "Rajasthan Royals",
+      "team2": "Punjab Kings",
+     "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "17-05-2025",
+      "matchTime":"7:30pm",
+      "team1": "Royal Challengers Bengaluru",
+      "team2": "Kolkata Knight Riders",
+     "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "18-05-2025",
+      "matchTime":"3:30pm",
+      "team1": "Gujarat Titans",
+      "team2": "Chennai Super Kings",
+     "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    },
+    {
+      "matchDate": "18-05-2025",
+      "matchTime":"7:30pm",
+      "team1": "Lucknow Super Giants",
+      "team2": "Sunrisers Hyderabad",
+     "questions": [
+  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
+  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
+  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
+  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
+  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+]
+
+    }
+  ]

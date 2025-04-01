@@ -19,29 +19,32 @@ const getRetailers = async (req, res) => {
     // Fetch details of teamsSold from Team collection
     const soldTeams = await Team.find({
       _id: { $in: allTeamIDs },
-    }).select("_id price");
+    });
 
     console.log("Filtered Teams:", soldTeams);
 
     // Create a map of teamID -> price
     const teamPriceMap = new Map();
     soldTeams.forEach((team) => {
-      teamPriceMap.set(team._id.toString(), team.price);
+      teamPriceMap.set(team._id.toString(), {
+        price: team.price,
+        match_id: team.match_id,
+      });
     });
 
     // Format retailer data to match frontend expectations
     const filteredRetailers = retailers.map((retailer) => {
       const filteredTeams = (retailer.teamsold || [])
         .filter((teamID) => teamPriceMap.has(teamID.toString()))
-        .map((teamID) => ({
-          teamID,
-          price: teamPriceMap.get(teamID.toString()),
-        }));
+        .map((teamID) => {
+          const { price, match_id } = teamPriceMap.get(teamID.toString());
+          return { teamID, price, match_id };
+        });
 
       return {
         _id: retailer._id,
         username: retailer.username,
-        teamsSold: filteredTeams, // Now matches frontend { teamID, price }
+        teamsSold: filteredTeams, // Now matches frontend { teamID, price, match_id }
         totalWinningTickets: retailer.payments ? retailer.payments.length : 0,
         totalWinningPaid: retailer.payments
           ? retailer.payments.reduce(
@@ -98,7 +101,10 @@ const getsoldteam = async (req, res) => {
     // Create a map of teamID -> price
     const teamPriceMap = new Map();
     soldTeams.forEach((team) => {
-      teamPriceMap.set(team._id.toString(), team.price);
+      teamPriceMap.set(team._id.toString(), {
+        price: team.price,
+        match_id: team.match_id,
+      });
     });
 
     // Filter teamsSold for each retailer & attach prices
@@ -106,7 +112,8 @@ const getsoldteam = async (req, res) => {
       const filteredTeams = (retailer.teamsSold || [])
         .map((team) => ({
           teamID: team.teamID,
-          price: teamPriceMap.get(team.teamID) || null,
+          price: teamPriceMap.get(team.teamID)?.price || null,
+          matchId: teamPriceMap.get(team.teamID)?.match_id || null,
         }))
         .filter((team) => team.price !== null); // Remove teams not in date range
 

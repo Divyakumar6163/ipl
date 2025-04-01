@@ -8,6 +8,7 @@ const paymentroutes = require("./routes/payment");
 const customerroutes = require("./routes/customer");
 const webhookroutes = require("./routes/webhook");
 const dashboardroutes = require("./routes/dashboard");
+const contestroutes = require("./routes/contest");
 const cookieParser = require("cookie-parser");
 const app = express();
 
@@ -54,5 +55,6 @@ app.use("/", paymentroutes);
 app.use("/", customerroutes);
 app.use("/", webhookroutes);
 app.use("/", dashboardroutes);
+app.use("/", contestroutes);
 
 module.exports = app;

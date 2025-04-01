@@ -8,7 +8,11 @@ import Image from "next/image";
 import IPL_TEAMS from "@/utils/data/shortname";
 import IPL_PLAYERS from "@/utils/data/iplplayer";
 import { IoWalletOutline } from "react-icons/io5";
-export default function Home() {
+type HomeProps = {
+  setOption: (value: string) => void; // Function to update option
+  option: string; // Current option value
+};
+export default function Home({ option,setOption}: HomeProps) {
   const selectedMatch = useSelector((state: RootState) => state.matches.selectedMatch);
   const router = useRouter();
   const [wallet, setWallet] = useState<number>(0);
@@ -147,7 +151,10 @@ export default function Home() {
   };
   
  
-
+  const handleAction = (type: "team" | "contest") => {
+    console.log("handleAction", type);
+    setOption(type);
+  };
 
   if (isAuthorized === false) {
     return (
@@ -167,6 +174,29 @@ export default function Home() {
       <span>₹{wallet.toLocaleString('en-IN')}</span>
     </div>
   </div>
+     {/* Tab Buttons */}
+     <div className="flex justify-center mt-6">
+  <div className="flex bg-[#374151] rounded-lg w-full md:w-1/2 justify-center items-center">
+  <button
+        className={`w-1/2 py-2 text-white rounded-md transition-all duration-300 
+                    hover:bg-blue-500 hover:shadow-md 
+                    focus:bg-blue-600 focus:shadow-lg 
+                    ${option === "team" ? "border-2 border-light-blue-400" : ""}`}
+        onClick={() => handleAction("team")}
+      >
+        Make Team
+      </button>
+      <button
+        className={`w-1/2 py-2 text-white rounded-md transition-all duration-300 
+                    hover:bg-green-500 hover:shadow-md 
+                    focus:bg-green-600 focus:shadow-lg 
+                    ${option === "contest" ? "border-2 border-light-blue-400" : ""}`}
+        onClick={() => handleAction("contest")}
+      >
+        Contest
+      </button>
+  </div>
+</div>
 
   {/* ✅ Form Centered Vertically */}
   <div className="flex-grow flex items-center justify-center">
