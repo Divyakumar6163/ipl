@@ -1,6 +1,8 @@
 const Contest = require("../models/contest");
 const PDFDocument = require("pdfkit");
 const qr = require("qr-image");
+const path = require("path"); // Import path module
+const fs = require("fs"); // Import fs module
 const dotenv = require("dotenv");
 dotenv.config({ path: "../config.env" });
 const ContestSubmission = require("../models/makecontest");
@@ -41,16 +43,31 @@ const generateInvoice = async (match, res) => {
       // doc.y = startY;
 
       // // Invoice Title
-      doc
-        .font("Helvetica-Bold")
-        .fontSize(22)
-        .text("IPL FANTASY", { align: "center" });
-      doc.moveDown(1);
+      const imagePath = path.join(__dirname, "../public/companyLogo.jpg");
+      console.log("Image Path:", imagePath);
+
+      if (fs.existsSync(imagePath)) {
+        const pageWidth = doc.page.width;
+        const imageWidth = 150;
+        const imageX = (pageWidth - imageWidth) / 2; // Center the image
+
+        doc.image(imagePath, imageX, 50, { width: imageWidth });
+      } else {
+        console.error("Image not found:", imagePath);
+      }
+
+      // ✅ Move down after image
+      doc.moveDown(7);
+
+      // doc
+      //   .font("Helvetica-Bold")
+      //   .fontSize(22)
+      //   .text("IPL FANTASY", { align: "center" });
+      // doc.moveDown(1);
 
       // Invoice Information
-      doc.font("Helvetica").fontSize(12);
+      doc.font("Helvetica").fontSize(18);
       doc.text(`Receipt ID: ${match.contest_id}`, { align: "center" });
-      doc.text(`Receipt Date: ${invoiceDate}`, { align: "center" });
       // doc.text(`Purchase Price: Rs.${purchasePrice}`, { align: "center" });
       doc.moveDown(0.5);
 
@@ -84,7 +101,7 @@ const generateInvoice = async (match, res) => {
       match.selectedQuestions.forEach((question, index) => {
         doc.text(`${index + 1}. ${question.text}`, { align: "center" });
         doc.text(
-          `   - Answer: ${question.response.toUpperCase()} (${
+          `   - Answer: ${question.option.toUpperCase()} (${
             question.points
           } pts)`,
           { align: "center" }
@@ -111,14 +128,18 @@ const generateInvoice = async (match, res) => {
       doc.moveDown(19);
 
       // Footer
-      doc.text(`Contact Us: ${process.env.CONTACT_NUMBER}`, {
+      doc.text(`WhatsApp Us: ${process.env.CONTACT_NUMBER}`, {
         align: "center",
       });
       doc.moveDown(1);
       doc
         .font("Helvetica-Oblique")
-        .fontSize(10)
-        .text("Thank you for using our service!", { align: "center" });
+        .fontSize(12)
+        .text(`Receipt Date: ${invoiceDate}`, { align: "center" });
+      // doc
+      //   .font("Helvetica-Oblique")
+      //   .fontSize(10)
+      //   .text("Thank you for using our service!", { align: "center" });
 
       // Finalize PDF file
       doc.end();
@@ -164,7 +185,7 @@ const generateInvoiceId = () => {
 const makecontest = async (req, res) => {
   try {
     const { matchDate, matchTime, team1, team2, selectedQuestions } = req.body;
-
+    console.log("Request Body:", req.body);
     // ✅ Validate Input
     if (
       !matchDate ||
@@ -190,11 +211,11 @@ const makecontest = async (req, res) => {
 
     await newSubmission.save();
 
-    // console.log("Sending Response Headers:", {
-    //   "Content-Type": "application/pdf",
-    //   "Content-Disposition": `attachment; filename=Contest_Invoice_${newSubmission._id}.pdf`,
-    //   "Contest-ID": newSubmission._id.toString(),
-    // });
+    console.log("Sending Response Headers:", {
+      "Content-Type": "application/pdf",
+      "Content-Disposition": `attachment; filename=Contest_Invoice_${newSubmission._id}.pdf`,
+      "Contest-ID": newSubmission._id.toString(),
+    });
 
     res.set({
       "Content-Type": "application/pdf",

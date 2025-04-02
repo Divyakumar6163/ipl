@@ -2,7 +2,9 @@ const mongoose = require("mongoose");
 
 const QuestionSchema = new mongoose.Schema({
   text: { type: String, required: true },
+  yesOption: { type: String, default: "YES" },
   yesPoints: { type: Number, required: true },
+  noOption: { type: String, default: "NO" },
   noPoints: { type: Number, required: true },
 });
 

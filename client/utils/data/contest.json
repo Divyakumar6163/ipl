@@ -5,12 +5,12 @@
       "team1": "Kolkata Knight Riders",
       "team2": "Royal Challengers Bengaluru",
       "questions": [
-        { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-        { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-        { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-        { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-        { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
-        ]
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+]
     },
     {
       "matchDate": "23-03-2025",
@@ -18,12 +18,12 @@
       "team1": "Sunrisers Hyderabad",
       "team2": "Rajasthan Royals",
       "questions": [
-        { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-        { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-        { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-        { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-        { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
-        ]
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+]
     },
     {
       "matchDate": "23-03-2025",
@@ -31,11 +31,11 @@
       "team1": "Chennai Super Kings",
       "team2": "Mumbai Indians",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -45,11 +45,11 @@
       "team1": "Delhi Capitals",
       "team2": "Lucknow Super Giants",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -59,11 +59,11 @@
       "team1": "Gujarat Titans",
       "team2": "Punjab Kings",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -73,11 +73,11 @@
       "team1": "Rajasthan Royals",
       "team2": "Kolkata Knight Riders",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -87,11 +87,11 @@
       "team1": "Sunrisers Hyderabad",
       "team2": "Lucknow Super Giants",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -101,11 +101,11 @@
       "team1": "Chennai Super Kings",
       "team2": "Royal Challengers Bengaluru",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -115,11 +115,11 @@
       "team1": "Gujarat Titans",
       "team2": "Mumbai Indians",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -129,11 +129,11 @@
       "team1": "Delhi Capitals",
       "team2": "Sunrisers Hyderabad",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -143,11 +143,11 @@
       "team1": "Rajasthan Royals",
       "team2": "Chennai Super Kings",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -157,11 +157,11 @@
       "team1": "Mumbai Indians",
       "team2": "Kolkata Knight Riders",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -171,11 +171,11 @@
       "team1": "Lucknow Super Giants",
       "team2": "Punjab Kings",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -185,11 +185,11 @@
       "team1": "Royal Challengers Bengaluru",
       "team2": "Gujarat Titans",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -199,11 +199,11 @@
       "team1": "Kolkata Knight Riders",
       "team2": "Sunrisers Hyderabad",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -213,11 +213,11 @@
       "team1": "Lucknow Super Giants",
       "team2": "Mumbai Indians",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -227,11 +227,11 @@
       "team1": "Chennai Super Kings",
       "team2": "Delhi Capitals",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -241,11 +241,11 @@
       "team1": "Punjab Kings",
       "team2": "Rajasthan Royals",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -255,11 +255,11 @@
       "team1": "Kolkata Knight Riders",
       "team2": "Lucknow Super Giants",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -269,11 +269,11 @@
       "team1": "Sunrisers Hyderabad",
       "team2": "Gujarat Titans",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -283,11 +283,11 @@
       "team1": "Mumbai Indians",
       "team2": "Royal Challengers Bengaluru",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -297,11 +297,11 @@
       "team1": "Punjab Kings",
       "team2": "Chennai Super Kings",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -311,11 +311,11 @@
       "team1": "Gujarat Titans",
       "team2": "Rajasthan Royals",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -325,11 +325,11 @@
       "team1": "Royal Challengers Bengaluru",
       "team2": "Delhi Capitals",
      "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -339,11 +339,11 @@
       "team1": "Chennai Super Kings",
       "team2": "Kolkata Knight Riders",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -353,11 +353,11 @@
       "team1": "Lucknow Super Giants",
       "team2": "Gujarat Titans",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -367,11 +367,11 @@
       "team1": "Sunrisers Hyderabad",
       "team2": "Punjab Kings",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -381,11 +381,11 @@
       "team1": "Rajasthan Royals",
       "team2": "Royal Challengers Bengaluru",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -395,11 +395,11 @@
       "team1": "Delhi Capitals",
       "team2": "Mumbai Indians",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -409,11 +409,11 @@
       "team1": "Lucknow Super Giants",
       "team2": "Chennai Super Kings",
      "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -423,11 +423,11 @@
       "team1": "Punjab Kings",
       "team2": "Kolkata Knight Riders",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -437,11 +437,11 @@
       "team1": "Delhi Capitals",
       "team2": "Rajasthan Royals",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -451,11 +451,11 @@
       "team1": "Mumbai Indians",
       "team2": "Sunrisers Hyderabad",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -465,11 +465,11 @@
       "team1": "Royal Challengers Bengaluru",
       "team2": "Punjab Kings",
      "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -479,11 +479,11 @@
       "team1": "Gujarat Titans",
       "team2": "Delhi Capitals",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -493,11 +493,11 @@
       "team1": "Rajasthan Royals",
       "team2": "Lucknow Super Giants",
      "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -507,11 +507,11 @@
       "team1": "Punjab Kings",
       "team2": "Royal Challengers Bengaluru",
      "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -521,11 +521,11 @@
       "team1": "Mumbai Indians",
       "team2": "Chennai Super Kings",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -535,11 +535,11 @@
       "team1": "Kolkata Knight Riders",
       "team2": "Gujarat Titans",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -549,11 +549,11 @@
       "team1": "Lucknow Super Giants",
       "team2": "Delhi Capitals",
      "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -563,11 +563,11 @@
       "team1": "Sunrisers Hyderabad",
       "team2": "Mumbai Indians",
      "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -577,11 +577,11 @@
       "team1": "Royal Challengers Bengaluru",
       "team2": "Rajasthan Royals",
      "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -591,11 +591,11 @@
       "team1": "Chennai Super Kings",
       "team2": "Sunrisers Hyderabad",
      "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -605,11 +605,11 @@
       "team1": "Kolkata Knight Riders",
       "team2": "Punjab Kings",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -619,11 +619,11 @@
       "team1": "Mumbai Indians",
       "team2": "Lucknow Super Giants",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -633,11 +633,11 @@
       "team1": "Delhi Capitals",
       "team2": "Royal Challengers Bengaluru",
      "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -647,11 +647,11 @@
       "team1": "Rajasthan Royals",
       "team2": "Gujarat Titans",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -661,11 +661,11 @@
       "team1": "Delhi Capitals",
       "team2": "Kolkata Knight Riders",
      "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -675,11 +675,11 @@
       "team1": "Chennai Super Kings",
       "team2": "Punjab Kings",
      "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -689,11 +689,11 @@
       "team1": "Rajasthan Royals",
       "team2": "Mumbai Indians",
     "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -703,11 +703,11 @@
       "team1": "Gujarat Titans",
       "team2": "Sunrisers Hyderabad",
      "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -717,11 +717,11 @@
       "team1": "Royal Challengers Bengaluru",
       "team2": "Chennai Super Kings",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -731,11 +731,11 @@
       "team1": "Kolkata Knight Riders",
       "team2": "Rajasthan Royals",
      "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -745,11 +745,11 @@
       "team1": "Punjab Kings",
       "team2": "Lucknow Super Giants",
      "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -759,11 +759,11 @@
       "team1": "Sunrisers Hyderabad",
       "team2": "Delhi Capitals",
      "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -773,11 +773,11 @@
       "team1": "Mumbai Indians",
       "team2": "Gujarat Titans",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -787,11 +787,11 @@
       "team1": "Kolkata Knight Riders",
       "team2": "Chennai Super Kings",
      "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -801,11 +801,11 @@
       "team1": "Punjab Kings",
       "team2": "Delhi Capitals",
      "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -815,11 +815,11 @@
       "team1": "Lucknow Super Giants",
       "team2": "Royal Challengers Bengaluru",
     "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -829,11 +829,11 @@
       "team1": "Sunrisers Hyderabad",
       "team2": "Kolkata Knight Riders",
      "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -843,11 +843,11 @@
       "team1": "Punjab Kings",
       "team2": "Mumbai Indians",
     "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -857,11 +857,11 @@
       "team1": "Delhi Capitals",
       "team2": "Gujarat Titans",
      "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -871,11 +871,11 @@
       "team1": "Chennai Super Kings",
       "team2": "Rajasthan Royals",
      "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -885,11 +885,11 @@
       "team1": "Royal Challengers Bengaluru",
       "team2": "Sunrisers Hyderabad",
      "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -899,11 +899,11 @@
       "team1": "Gujarat Titans",
       "team2": "Lucknow Super Giants",
       "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -913,11 +913,11 @@
       "team1": "Mumbai Indians",
       "team2": "Delhi Capitals",
      "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -927,11 +927,11 @@
       "team1": "Rajasthan Royals",
       "team2": "Punjab Kings",
      "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -941,11 +941,11 @@
       "team1": "Royal Challengers Bengaluru",
       "team2": "Kolkata Knight Riders",
      "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -955,11 +955,11 @@
       "team1": "Gujarat Titans",
       "team2": "Chennai Super Kings",
      "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     },
@@ -969,11 +969,11 @@
       "team1": "Lucknow Super Giants",
       "team2": "Sunrisers Hyderabad",
      "questions": [
-  { "text": "Will Virat Kohli score 50+ runs?", "yesPoints": 15, "noPoints": 10 },
-  { "text": "Will the match have more than 10 sixes?", "yesPoints": 12, "noPoints": 8 },
-  { "text": "Will your selected team win the match?", "yesPoints": 20, "noPoints": 15 },
-  { "text": "Will there be a hat-trick in the match?", "yesPoints": 25, "noPoints": 18 },
-  { "text": "Will the total score exceed 350 runs?", "yesPoints": 18, "noPoints": 12 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ]
 
     }

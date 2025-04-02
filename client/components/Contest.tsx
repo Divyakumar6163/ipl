@@ -10,11 +10,11 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 
 const questionsDefault = [
-  { text: "Will Virat Kohli score 50+ runs?", yesPoints: 10, noPoints: 5 },
-  { text: "Will the match have more than 10 sixes?", yesPoints: 15, noPoints: 7 },
-  { text: "Will your selected team win the match?", yesPoints: 12, noPoints: 10 },
-  { text: "Will there be a hat-trick in the match?", yesPoints: 8, noPoints: 6 },
-  { text: "Will the total score exceed 350 runs?", yesPoints: 20, noPoints: 15 },
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
 ];
 
 type QuestionnaireProps = {
@@ -98,63 +98,75 @@ const Questionnaire: React.FC<QuestionnaireProps> = ({ setOption, option }) => {
 
   const selectedCount = Object.values(answers).filter((v) => v !== null).length;
   const isValid = selectedCount === 3;
-  const handleSaveContest = async () => {
-    try {
-        const token = localStorage.getItem("token");
-      // ✅ Filter out only selected questions (3 selected ones)
-      const selectedQuestions = Object.entries(answers)
-        .filter(([_, value]) => value !== null) // Get only selected questions
-        .map(([index, value]) => ({
-          text: questions[parseInt(index)].text,
-          response: value, // Yes or No
-          points: value === "yes" ? questions[parseInt(index)].yesPoints : questions[parseInt(index)].noPoints,
-        }));
-  
-      if (selectedQuestions.length !== 3) {
-        alert("Please select exactly 3 questions.");
-        return;
+
+ const handleSaveContest = async () => {
+  try {
+    const token = localStorage.getItem("token");
+
+    // ✅ Filter out only selected questions (3 selected ones)
+    const selectedQuestions = Object.entries(answers)
+      .filter(([_, value]) => value !== null) // Get only selected questions
+      .map(([index, value]) => {
+        const question = questions[parseInt(index)];
+        
+        return {
+          text: question.text,
+          response: value, // "yes" or "no"
+          option: value === "yes" ? question.yesOption : question.noOption,
+          points: value === "yes" ? question.yesPoints : question.noPoints,
+        };
+      });
+
+    if (selectedQuestions.length !== 3) {
+      alert("Please select exactly 3 questions.");
+      return;
+    }
+
+    console.log("Selected Questions:", selectedQuestions);
+
+    // ✅ Prepare Payload
+    const payload = {
+      matchDate: formData.matchDate,
+      matchTime: formData.matchTime,
+      team1: formData.team1,
+      team2: formData.team2,
+      selectedQuestions,
+    };
+
+    // ✅ Send API Request
+    const response = await axios.post(
+      `${process.env.NEXT_PUBLIC_BACKEND_LINK}/savecontest`,
+      payload,
+      {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        validateStatus: () => true,
+        responseType: "blob",
       }
-  
-      // ✅ Prepare Payload
-      const payload = {
-        matchDate: formData.matchDate,
-        matchTime: formData.matchTime,
-        team1: formData.team1,
-        team2: formData.team2,
-        selectedQuestions,
-      };
-  
-      // ✅ Send API Request
-      const response = await axios.post(
-        `${process.env.NEXT_PUBLIC_BACKEND_LINK}/savecontest`,
-        payload,
-        {
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
-          },
-          validateStatus: () => true,
-          responseType: "blob",
-        }
-      );
-      console.log("Contest saved successfully:", response);
-      if (response.status === 403) {
-        setIsAuthorized(false);
-        return;
-      }
-      // Step 1: Debug headers
-      console.log("Response Headers:", response.headers);
-      if(response.status === 200) {
+    );
+
+    console.log("Contest saved successfully:", response);
+
+    if (response.status === 403) {
+      setIsAuthorized(false);
+      return;
+    }
+
+    console.log("Response Headers:", response.headers);
+
+    if (response.status === 200) {
       const fileName = response.headers["content-disposition"];
-        const match = fileName.match(/Contest_Invoice_(.*?)\.pdf/);
-        const contestId = match ? match[1] : null;
-        console.log("✅ Extracted Contest ID:", contestId);
-        console.log(contestId);
+      const match = fileName.match(/Contest_Invoice_(.*?)\.pdf/);
+      const contestId = match ? match[1] : null;
+      console.log("✅ Extracted Contest ID:", contestId);
+
       if (!contestId) {
         alert("❌ Error: Contest ID missing from response.");
         return;
       }
-      
+
       // ✅ Download PDF
       const pdfBlob = new Blob([response.data], { type: "application/pdf" });
       const downloadUrl = window.URL.createObjectURL(pdfBlob);
@@ -164,17 +176,18 @@ const Questionnaire: React.FC<QuestionnaireProps> = ({ setOption, option }) => {
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-      
+
       // ✅ Redirect
       router.push("/");
-    }else {
-        alert("❌ Failed to save contest.");
-      }
-    }catch (error) {
-      console.error("Failed to save contest:", error);
-      alert("Error saving contest. Please try again.");
+    } else {
+      alert("❌ Failed to save contest.");
     }
-  };
+  } catch (error) {
+    console.error("Failed to save contest:", error);
+    alert("Error saving contest. Please try again.");
+  }
+};
+
   
   const handleAction = (type: "team" | "contest") => {
     console.log("handleAction", type);
@@ -269,14 +282,14 @@ const Questionnaire: React.FC<QuestionnaireProps> = ({ setOption, option }) => {
                   className={`px-4 py-2 rounded-md w-24 text-center transition-all duration-300 
                             ${answers[index] === "yes" ? "bg-blue-500 text-white" : "bg-[#374151] hover:bg-blue-400"}`}
                 >
-                  Yes <br /><span className="text-sm text-gray-300">{question.yesPoints} pts</span>
+                  {question.yesOption} <br /><span className="text-sm text-gray-300">{question.yesPoints} pts</span>
                 </button>
                 <button
                   onClick={() => handleSelect(index, "no")}
                   className={`px-4 py-2 rounded-md w-24 text-center transition-all duration-300 
                             ${answers[index] === "no" ? "bg-red-500 text-white" : "bg-[#374151] hover:bg-red-400"}`}
                 >
-                  No <br /><span className="text-sm text-gray-300">{question.noPoints} pts</span>
+                  {question.noOption} <br /><span className="text-sm text-gray-300">{question.noPoints} pts</span>
                 </button>
               </div>
             </div>

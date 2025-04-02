@@ -10,6 +10,7 @@ const contestSubmissionSchema = new mongoose.Schema({
     {
       text: { type: String, required: true },
       response: { type: String, enum: ["yes", "no"], required: true },
+      option: { type: String },
       points: { type: Number, required: true },
     },
   ],

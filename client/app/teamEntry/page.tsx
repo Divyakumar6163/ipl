@@ -3,7 +3,7 @@ import { useState } from "react";
 import TeamEntry from "../../components/TeamEntry";
 import Contest from "../../components/Contest";
 export default function Home() {
-  const [option,setOption] =useState("team");
+  const [option,setOption] =useState("contest");
   return (
     <div >
       {/* <Header/> */}
