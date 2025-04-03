@@ -11,8 +11,9 @@ const paymentSchema = new mongoose.Schema(
 const userSchema = new mongoose.Schema({
   username: { type: String, required: true, unique: true },
   password: { type: String, required: true },
-  role: { type: String, default: "user" },
+  role: { type: String },
   teamsold: { type: [String] },
+  contestsold: { type: [String], default: [] },
   payments: [paymentSchema],
   wallet: { type: Number, default: 0 },
 });

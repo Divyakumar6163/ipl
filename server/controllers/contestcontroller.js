@@ -1,4 +1,6 @@
 const Contest = require("../models/contest");
+const UserContest = require("../models/makecontest");
+const User = require("../models/usermodel");
 const PDFDocument = require("pdfkit");
 const qr = require("qr-image");
 const path = require("path"); // Import path module
@@ -184,8 +186,10 @@ const generateInvoiceId = () => {
 };
 const makecontest = async (req, res) => {
   try {
-    const { matchDate, matchTime, team1, team2, selectedQuestions } = req.body;
-    console.log("Request Body:", req.body);
+    const { payload, retailerID } = req.body;
+    console.log("Req Body", req.body);
+    const { matchDate, matchTime, team1, team2, selectedQuestions } = payload;
+    // console.log("Request Body:", req.body);
     // ✅ Validate Input
     if (
       !matchDate ||
@@ -210,7 +214,14 @@ const makecontest = async (req, res) => {
     });
 
     await newSubmission.save();
+    const retailer = await User.findById(retailerID);
 
+    if (!retailer) {
+      return res.status(404).json({ message: "Retailer not found" });
+    }
+
+    retailer.contestsold.push(newSubmission._id); // Add contest ID to the contestsold array
+    await retailer.save();
     console.log("Sending Response Headers:", {
       "Content-Type": "application/pdf",
       "Content-Disposition": `attachment; filename=Contest_Invoice_${newSubmission._id}.pdf`,
@@ -235,4 +246,26 @@ const makecontest = async (req, res) => {
   }
 };
 
-module.exports = { getcontest, makecontest };
+const getusercontest = async (req, res) => {
+  try {
+    const { contestID } = req.params;
+    console.log(contestID);
+    if (!contestID) {
+      return res.status(400).json({ message: "Contest ID is required." });
+    }
+
+    // Find contest by ID
+    const contest = await UserContest.findById(contestID);
+
+    if (!contest) {
+      return res.status(404).json({ message: "Contest not found." });
+    }
+
+    res.status(200).json({ contest });
+  } catch (error) {
+    console.error("Error fetching contest:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+};
+
+module.exports = { getcontest, makecontest, getusercontest };

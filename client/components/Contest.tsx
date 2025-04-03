@@ -102,7 +102,7 @@ const Questionnaire: React.FC<QuestionnaireProps> = ({ setOption, option }) => {
  const handleSaveContest = async () => {
   try {
     const token = localStorage.getItem("token");
-
+    const retailerID = localStorage.getItem("retailerID");
     // ✅ Filter out only selected questions (3 selected ones)
     const selectedQuestions = Object.entries(answers)
       .filter(([_, value]) => value !== null) // Get only selected questions
@@ -136,7 +136,7 @@ const Questionnaire: React.FC<QuestionnaireProps> = ({ setOption, option }) => {
     // ✅ Send API Request
     const response = await axios.post(
       `${process.env.NEXT_PUBLIC_BACKEND_LINK}/savecontest`,
-      payload,
+      {payload,retailerID},
       {
         headers: {
           "Content-Type": "application/json",

@@ -1,13 +1,147 @@
-const MatchNotCompleted = () => {
-    return (
-      <div className="flex items-center justify-center h-screen bg-gray-900 text-white">
-        <div className="p-6 bg-gray-800 rounded-lg shadow-md text-center">
-          <h2 className="text-xl font-semibold">⚠ Match is Not Completed Yet</h2>
-          <p className="text-gray-400 mt-2">Please try again later.</p>
+"use client";
+import { useEffect, useState } from "react";
+import { useParams } from "next/navigation";
+import axios from "axios";
+import Image from "next/image";
+import IPL_TEAMS from "@/utils/data/shortname";
+
+interface Question {
+  text: string;
+  response: string;
+  option: string;
+  points: number;
+  _id: string;
+}
+
+interface ContestData {
+  contest_id: string;
+  matchDate: string;
+  matchTime: string;
+  selectedQuestions: Question[];
+  team1: string;
+  team2: string;
+  _id: string;
+}
+
+const ContestDetails: React.FC = () => {
+  const params = useParams();
+  const contestID = params.contestID as string;
+  const [contestData, setContestData] = useState<ContestData | null>(null);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!contestID) return;
+
+    const fetchContestData = async () => {
+      try {
+        console.log(contestID);
+
+        const response = await axios.get(
+          `${process.env.NEXT_PUBLIC_BACKEND_LINK}/contest/${contestID}`
+        );
+        console.log(response.data);
+        setContestData(response.data.contest);
+      } catch (err) {
+        setError("Failed to fetch contest data");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchContestData();
+  }, [contestID]);
+
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-6">
+      {contestData ? (
+        <>
+          {/* Match Card */}
+          <div className="bg-gray-800 rounded-lg shadow-lg w-full max-w-md p-6 space-y-4 text-center">
+            {/* Team Names & Logos */}
+            <div className="flex justify-between items-center">
+              <div className="flex items-center space-x-2">
+                <Image
+                  src={IPL_TEAMS[contestData.team1]?.logo}
+                  alt={contestData.team1}
+                  width={40}
+                  height={40}
+                  className="object-contain"
+                />
+                <span className="font-bold text-xl">
+                  {IPL_TEAMS[contestData.team1]?.short || "Team 1"}
+                </span>
+              </div>
+
+              <span className="text-gray-400 font-semibold text-lg">VS</span>
+
+              <div className="flex items-center space-x-2">
+                <Image
+                  src={IPL_TEAMS[contestData.team2]?.logo}
+                  alt={contestData.team2}
+                  width={40}
+                  height={40}
+                  className="object-contain"
+                />
+                <span className="font-bold text-xl">
+                  {IPL_TEAMS[contestData.team2]?.short || "Team 2"}
+                </span>
+              </div>
+            </div>
+
+            {/* Date & Time */}
+            <div className="text-gray-400 font-medium">
+              {new Date(contestData.matchDate).toLocaleDateString("en-GB", {
+                day: "2-digit",
+                month: "short",
+              })}{" "}
+              | {contestData.matchTime || "Time Not Available"}
+            </div>
+          </div>
+
+          {/* Questions List */}
+          <div className=" shadow-lg w-full max-w-md mt-6">
+            <h2 className="text-xl font-bold text-center text-white mb-4">
+              Your Contest
+            </h2>
+            <div className="space-y-4">
+              {contestData.selectedQuestions.map((question, index) => (
+                <div
+                  key={question._id}
+                  className="bg-gray-700 p-4 rounded-lg shadow-md"
+                >
+                  <p className="text-lg font-semibold text-gray-100">
+                    {index + 1}. {question.text}
+                  </p>
+                  <div className="flex justify-between items-center mt-2">
+                    <span className="text-gray-300">
+                      Selected:{" "}
+                      <span className="font-bold text-blue-400">
+                        {question.option}
+                      </span>
+                    </span>
+                    <span className="text-gray-300">
+                      Points:{" "}
+                      <span className="font-bold text-green-400">
+                        {question.points}
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </>
+      ) : (
+        // Loader if match details are not available yet
+        <div className="flex items-center justify-center h-full">
+          <p className="text-gray-300 text-xl md:text-2xl font-bold animate-pulse">
+            Loading match details...
+          </p>
         </div>
-      </div>
-    );
-  };
-  
-  export default MatchNotCompleted;
-  
+      )}
+    </div>
+  );
+};
+
+export default ContestDetails;
