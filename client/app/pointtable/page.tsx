@@ -61,7 +61,7 @@ const FluctuatingPointsTable: React.FC = () => {
     };
 
     updatePoints();
-    const interval = setInterval(updatePoints, 5000);
+    const interval = setInterval(updatePoints, 2500);
     return () => clearInterval(interval);
   }, []);
 
