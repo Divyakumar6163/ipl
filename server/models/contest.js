@@ -6,6 +6,7 @@ const QuestionSchema = new mongoose.Schema({
   yesPoints: { type: Number, required: true },
   noOption: { type: String, default: "NO" },
   noPoints: { type: Number, required: true },
+  answer: { type: String, default: "" },
 });
 
 const ContestSchema = new mongoose.Schema(

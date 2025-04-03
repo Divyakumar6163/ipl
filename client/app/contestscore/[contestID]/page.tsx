@@ -20,6 +20,17 @@ interface ContestData {
   selectedQuestions: Question[];
   team1: string;
   team2: string;
+  matchCompletion?: boolean;
+  _id: string;
+}
+
+interface BackendQuestion {
+  text: string;
+  yesOption: string;
+  noOption: string;
+  yesPoints: number;
+  noPoints: number;
+  answer: string;
   _id: string;
 }
 
@@ -29,19 +40,53 @@ const ContestDetails: React.FC = () => {
   const [contestData, setContestData] = useState<ContestData | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+  const [totalScore, setTotalScore] = useState<number | null>(null);
 
   useEffect(() => {
     if (!contestID) return;
 
     const fetchContestData = async () => {
       try {
-        console.log(contestID);
-
+        console.log("Fetching Contest:", contestID);
         const response = await axios.get(
           `${process.env.NEXT_PUBLIC_BACKEND_LINK}/contest/${contestID}`
         );
-        console.log(response.data);
+
         setContestData(response.data.contest);
+
+        if (response.data.contest.matchCompletion === true) {
+          console.log("Match Completed. Fetching correct answers...");
+
+          const formData = {
+            team1: response.data.contest?.team1 || "",
+            team2: response.data.contest?.team2 || "",
+            matchDate: response.data.contest?.matchDate || "",
+            matchTime: response.data.contest?.matchTime || "",
+          };
+
+          const res = await axios.post(
+            `${process.env.NEXT_PUBLIC_BACKEND_LINK}/getcontest`,
+            formData
+          );
+
+          console.log("Fetched correct answers:", res.data);
+
+          const Questions: BackendQuestion[] = res.data.questions;
+
+          let score = 0;
+
+          response.data.contest.selectedQuestions.forEach((userQuestion:Question) => {
+            const correctQuestion = Questions.find(
+              (q) => q.text === userQuestion.text
+            );
+
+            if (correctQuestion && correctQuestion.answer === userQuestion.option) {
+              score += userQuestion.points;
+            }
+          });
+
+          setTotalScore(score);
+        }
       } catch (err) {
         setError("Failed to fetch contest data");
       } finally {
@@ -97,10 +142,17 @@ const ContestDetails: React.FC = () => {
               })}{" "}
               | {contestData.matchTime || "Time Not Available"}
             </div>
+
+            {/* Total Score */}
+            <div className="space-y-1">
+              <h3 className="text-lg font-semibold text-yellow-400">
+                Total Score: {totalScore !== null ? totalScore : "Calculating..."}
+              </h3>
+            </div>
           </div>
 
           {/* Questions List */}
-          <div className=" shadow-lg w-full max-w-md mt-6">
+          <div className="shadow-lg w-full max-w-md mt-6">
             <h2 className="text-xl font-bold text-center text-white mb-4">
               Your Contest
             </h2>
