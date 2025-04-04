@@ -4,12 +4,13 @@
       "matchTime":"7:30pm",
       "team1": "Kolkata Knight Riders",
       "team2": "Royal Challengers Bengaluru",
+      "matchCompletion":true,
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
     },
     {
@@ -18,11 +19,11 @@
       "team1": "Sunrisers Hyderabad",
       "team2": "Rajasthan Royals",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
     },
     {
@@ -31,11 +32,11 @@
       "team1": "Chennai Super Kings",
       "team2": "Mumbai Indians",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -45,11 +46,11 @@
       "team1": "Delhi Capitals",
       "team2": "Lucknow Super Giants",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -59,11 +60,11 @@
       "team1": "Gujarat Titans",
       "team2": "Punjab Kings",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -73,11 +74,11 @@
       "team1": "Rajasthan Royals",
       "team2": "Kolkata Knight Riders",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -87,11 +88,11 @@
       "team1": "Sunrisers Hyderabad",
       "team2": "Lucknow Super Giants",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -101,11 +102,11 @@
       "team1": "Chennai Super Kings",
       "team2": "Royal Challengers Bengaluru",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -115,11 +116,11 @@
       "team1": "Gujarat Titans",
       "team2": "Mumbai Indians",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -129,11 +130,11 @@
       "team1": "Delhi Capitals",
       "team2": "Sunrisers Hyderabad",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -143,11 +144,11 @@
       "team1": "Rajasthan Royals",
       "team2": "Chennai Super Kings",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -157,11 +158,11 @@
       "team1": "Mumbai Indians",
       "team2": "Kolkata Knight Riders",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -171,11 +172,11 @@
       "team1": "Lucknow Super Giants",
       "team2": "Punjab Kings",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -184,12 +185,13 @@
       "matchTime":"7:30pm",
       "team1": "Royal Challengers Bengaluru",
       "team2": "Gujarat Titans",
+      "matchCompletion":true,
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -197,13 +199,14 @@
       "matchDate": "03-04-2025",
       "matchTime":"7:30pm",
       "team1": "Kolkata Knight Riders",
+      "matchCompletion":true,
       "team2": "Sunrisers Hyderabad",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -213,11 +216,11 @@
       "team1": "Lucknow Super Giants",
       "team2": "Mumbai Indians",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -227,11 +230,11 @@
       "team1": "Chennai Super Kings",
       "team2": "Delhi Capitals",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -241,11 +244,11 @@
       "team1": "Punjab Kings",
       "team2": "Rajasthan Royals",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -255,11 +258,11 @@
       "team1": "Kolkata Knight Riders",
       "team2": "Lucknow Super Giants",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -269,11 +272,11 @@
       "team1": "Sunrisers Hyderabad",
       "team2": "Gujarat Titans",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -283,11 +286,11 @@
       "team1": "Mumbai Indians",
       "team2": "Royal Challengers Bengaluru",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -297,11 +300,11 @@
       "team1": "Punjab Kings",
       "team2": "Chennai Super Kings",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -311,11 +314,11 @@
       "team1": "Gujarat Titans",
       "team2": "Rajasthan Royals",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -325,11 +328,11 @@
       "team1": "Royal Challengers Bengaluru",
       "team2": "Delhi Capitals",
      "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -339,11 +342,11 @@
       "team1": "Chennai Super Kings",
       "team2": "Kolkata Knight Riders",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -353,11 +356,11 @@
       "team1": "Lucknow Super Giants",
       "team2": "Gujarat Titans",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -367,11 +370,11 @@
       "team1": "Sunrisers Hyderabad",
       "team2": "Punjab Kings",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -381,11 +384,11 @@
       "team1": "Rajasthan Royals",
       "team2": "Royal Challengers Bengaluru",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -395,11 +398,11 @@
       "team1": "Delhi Capitals",
       "team2": "Mumbai Indians",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -409,11 +412,11 @@
       "team1": "Lucknow Super Giants",
       "team2": "Chennai Super Kings",
      "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -423,11 +426,11 @@
       "team1": "Punjab Kings",
       "team2": "Kolkata Knight Riders",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -437,11 +440,11 @@
       "team1": "Delhi Capitals",
       "team2": "Rajasthan Royals",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -451,11 +454,11 @@
       "team1": "Mumbai Indians",
       "team2": "Sunrisers Hyderabad",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -465,11 +468,11 @@
       "team1": "Royal Challengers Bengaluru",
       "team2": "Punjab Kings",
      "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -479,11 +482,11 @@
       "team1": "Gujarat Titans",
       "team2": "Delhi Capitals",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -493,11 +496,11 @@
       "team1": "Rajasthan Royals",
       "team2": "Lucknow Super Giants",
      "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -507,11 +510,11 @@
       "team1": "Punjab Kings",
       "team2": "Royal Challengers Bengaluru",
      "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -521,11 +524,11 @@
       "team1": "Mumbai Indians",
       "team2": "Chennai Super Kings",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -535,11 +538,11 @@
       "team1": "Kolkata Knight Riders",
       "team2": "Gujarat Titans",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -549,11 +552,11 @@
       "team1": "Lucknow Super Giants",
       "team2": "Delhi Capitals",
      "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -563,11 +566,11 @@
       "team1": "Sunrisers Hyderabad",
       "team2": "Mumbai Indians",
      "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -577,11 +580,11 @@
       "team1": "Royal Challengers Bengaluru",
       "team2": "Rajasthan Royals",
      "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -591,11 +594,11 @@
       "team1": "Chennai Super Kings",
       "team2": "Sunrisers Hyderabad",
      "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -605,11 +608,11 @@
       "team1": "Kolkata Knight Riders",
       "team2": "Punjab Kings",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -619,11 +622,11 @@
       "team1": "Mumbai Indians",
       "team2": "Lucknow Super Giants",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -633,11 +636,11 @@
       "team1": "Delhi Capitals",
       "team2": "Royal Challengers Bengaluru",
      "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -647,11 +650,11 @@
       "team1": "Rajasthan Royals",
       "team2": "Gujarat Titans",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -661,11 +664,11 @@
       "team1": "Delhi Capitals",
       "team2": "Kolkata Knight Riders",
      "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -675,11 +678,11 @@
       "team1": "Chennai Super Kings",
       "team2": "Punjab Kings",
      "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -689,11 +692,11 @@
       "team1": "Rajasthan Royals",
       "team2": "Mumbai Indians",
     "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -703,11 +706,11 @@
       "team1": "Gujarat Titans",
       "team2": "Sunrisers Hyderabad",
      "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -717,11 +720,11 @@
       "team1": "Royal Challengers Bengaluru",
       "team2": "Chennai Super Kings",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -731,11 +734,11 @@
       "team1": "Kolkata Knight Riders",
       "team2": "Rajasthan Royals",
      "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -745,11 +748,11 @@
       "team1": "Punjab Kings",
       "team2": "Lucknow Super Giants",
      "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -759,11 +762,11 @@
       "team1": "Sunrisers Hyderabad",
       "team2": "Delhi Capitals",
      "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -773,11 +776,11 @@
       "team1": "Mumbai Indians",
       "team2": "Gujarat Titans",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -787,11 +790,11 @@
       "team1": "Kolkata Knight Riders",
       "team2": "Chennai Super Kings",
      "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -801,11 +804,11 @@
       "team1": "Punjab Kings",
       "team2": "Delhi Capitals",
      "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -815,11 +818,11 @@
       "team1": "Lucknow Super Giants",
       "team2": "Royal Challengers Bengaluru",
     "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -829,11 +832,11 @@
       "team1": "Sunrisers Hyderabad",
       "team2": "Kolkata Knight Riders",
      "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -843,11 +846,11 @@
       "team1": "Punjab Kings",
       "team2": "Mumbai Indians",
     "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -857,11 +860,11 @@
       "team1": "Delhi Capitals",
       "team2": "Gujarat Titans",
      "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -871,11 +874,11 @@
       "team1": "Chennai Super Kings",
       "team2": "Rajasthan Royals",
      "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -885,11 +888,11 @@
       "team1": "Royal Challengers Bengaluru",
       "team2": "Sunrisers Hyderabad",
      "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -899,11 +902,11 @@
       "team1": "Gujarat Titans",
       "team2": "Lucknow Super Giants",
       "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -913,11 +916,11 @@
       "team1": "Mumbai Indians",
       "team2": "Delhi Capitals",
      "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -927,11 +930,11 @@
       "team1": "Rajasthan Royals",
       "team2": "Punjab Kings",
      "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -941,11 +944,11 @@
       "team1": "Royal Challengers Bengaluru",
       "team2": "Kolkata Knight Riders",
      "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -955,11 +958,11 @@
       "team1": "Gujarat Titans",
       "team2": "Chennai Super Kings",
      "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     },
@@ -969,11 +972,11 @@
       "team1": "Lucknow Super Giants",
       "team2": "Sunrisers Hyderabad",
      "questions": [
-  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5 },
-  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5 },
-  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5 },
-  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3 },
-  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5 }
+  { "text": "Who will win the match?","yesOption":"KKR", "yesPoints": 5,"noOption":"SRH", "noPoints": 5,"answer":"" },
+  { "text": "Which team will hit more 6?","yesOption":"KKR", "yesPoints": 6.5, "noOption":"SRH","noPoints": 3.5, "answer":"" },
+  { "text": "SRH to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 4.5,"noOption":"NO", "noPoints": 5.5, "answer":"" },
+  { "text": "KKR to score 30+ runs after 3 over?","yesOption":"YES", "yesPoints": 7, "noOption":"NO","noPoints": 3,"answer":""},
+  { "text": "Target score will be 200+ runs?","yesOption":"YES", "yesPoints": 6.5, "noOption":"NO","noPoints": 3.5, "answer":"" }
 ]
 
     }
