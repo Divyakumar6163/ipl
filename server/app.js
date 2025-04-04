@@ -60,8 +60,8 @@ app.use("/", dashboardroutes);
 app.use("/", contestroutes);
 app.use("/", appVersionroutes);
 
-app.get("/", () => (req, res) => {
-  res.send("Welcome to IPL API");
-});
+// app.get("/", () => (req, res) => {
+//   res.send("Welcome to IPL API");
+// });
 
 module.exports = app;
