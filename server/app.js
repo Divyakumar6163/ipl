@@ -9,6 +9,8 @@ const customerroutes = require("./routes/customer");
 const webhookroutes = require("./routes/webhook");
 const dashboardroutes = require("./routes/dashboard");
 const contestroutes = require("./routes/contest");
+const appVersionroutes = require("./routes/appVersion");
+
 const cookieParser = require("cookie-parser");
 const app = express();
 
@@ -56,5 +58,10 @@ app.use("/", customerroutes);
 app.use("/", webhookroutes);
 app.use("/", dashboardroutes);
 app.use("/", contestroutes);
+app.use("/", appVersionroutes);
+
+app.get("/", () => (req, res) => {
+  res.send("Welcome to IPL API");
+});
 
 module.exports = app;

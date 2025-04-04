@@ -189,6 +189,92 @@ const createMatch = async (req, res) => {
   }
 };
 
+// Create Match & Generate PDF (streamed)
+const createMatchApp = async (req, res) => {
+  try {
+    let { team1, team2, matchDate, matchTime, players, price } = req.body;
+
+    // Validate required fields
+    if (
+      !team1 ||
+      !team2 ||
+      !matchDate ||
+      !matchTime ||
+      !price ||
+      players.length < 1
+    ) {
+      return res.status(400).json({ message: "All fields are required" });
+    }
+
+    // Parse the match date (assumed format: "DD-MM-YYYY")
+    const dateParts = matchDate.split("-");
+    matchDate = new Date(`${dateParts[2]}-${dateParts[1]}-${dateParts[0]}`);
+    if (isNaN(matchDate)) {
+      return res.status(400).json({ message: "Invalid match date format" });
+    }
+    const match_id = generateInvoiceId();
+
+    let match = new Match({
+      match_id,
+      team1,
+      team2,
+      matchDate,
+      matchTime,
+      price,
+      players,
+    });
+    await match.save();
+
+    // Log headers for debugging
+    console.log("Sending Response Headers:", {
+      "Content-Type": "application/pdf",
+      "Content-Disposition": `attachment; filename=Match_Invoice_${match._id}.pdf`,
+      "Match-ID": match._id.toString(),
+    });
+
+    // Set response headers and stream PDF directly
+    res.set({
+      "Content-Type": "application/pdf",
+      "Content-Disposition": `attachment; filename=Match_Invoice_${match._id}.pdf`,
+      "Match-ID": match._id.toString(),
+    });
+
+    const options = {
+      timeZone: "Asia/Kolkata",
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: false,
+    };
+
+    const now = new Date();
+    const invoiceDate = now.toLocaleString("en-IN", options);
+    const invoiceNumber = match._id;
+    const qrCodeData = `${process.env.FRONTEND_LINK}/livescore/${invoiceNumber}`;
+
+    match.invoiceDate = invoiceDate;
+    match.contactus = process.env.CONTACT_NUMBER;
+    match.qrCode = qrCodeData;
+
+    const newMatch = {
+      match,
+      invoiceDate,
+      contactus: process.env.CONTACT_NUMBER,
+      qrCode: qrCodeData,
+    };
+    // send the match details to the client
+    res.status(200).json({
+      match: newMatch,
+      message: "Match created successfully",
+    });
+  } catch (error) {
+    console.error("Error generating match Receipt:", error);
+    res.status(500).json({ message: "Server error" });
+  }
+};
+
 // Serve PDF files (for local testing; not used on Vercel)
 const getInvoice = async (req, res) => {
   const filePath = `./invoices/${req.params.filename}`;
@@ -213,4 +299,4 @@ const getPlayers = async (req, res) => {
   }
 };
 
-module.exports = { createMatch, getInvoice, getPlayers };
+module.exports = { createMatch, createMatchApp, getInvoice, getPlayers };
