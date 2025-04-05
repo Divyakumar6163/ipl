@@ -8,6 +8,9 @@ const router = express.Router();
 //   verifyToken.checkRole(["admin", "retailer"]),
 //   contestcontroller.verifyphone
 // );
+
+router.get("/contestOptions", contestcontroller.getcontestoptions);
+
 router.get("/contest/:contestID", contestcontroller.getusercontest);
 router.post("/getcontest", contestcontroller.getcontest);
 router.post(

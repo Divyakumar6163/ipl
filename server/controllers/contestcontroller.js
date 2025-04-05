@@ -268,4 +268,19 @@ const getusercontest = async (req, res) => {
   }
 };
 
-module.exports = { getcontest, makecontest, getusercontest };
+const getcontestoptions = async (req, res) => {
+  try {
+    const contestOptions = [
+      { label: "₹50", value: 50 },
+      { label: "₹100", value: 100 },
+      { label: "₹200", value: 200 },
+    ];
+
+    res.status(200).json({ contestOptions });
+  } catch (error) {
+    console.error("Error fetching contests:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+};
+
+module.exports = { getcontest, makecontest, getusercontest, getcontestoptions };

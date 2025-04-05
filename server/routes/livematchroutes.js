@@ -3,6 +3,8 @@ const livematchcontroller = require("../controllers/livematchcontroller");
 const verifyToken = require("../middleware/verifytoken");
 const router = express.Router();
 
+router.get("/matches", livematchcontroller.getMatches);
+
 router.post("/getscore", livematchcontroller.getScore);
 router.post("/getrank", livematchcontroller.getRank);
 router.post(
