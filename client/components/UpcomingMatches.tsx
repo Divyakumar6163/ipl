@@ -4,12 +4,14 @@ import { useDispatch } from "react-redux";
 import { selectMatch } from "../store/matchesSlice";
 import { matches } from "../utils/data/matches";
 import { useRouter } from "next/navigation";
+import LogoutButton from "./Logout";
 
 export default function UpcomingMatches() {
   const [upcoming, setUpcoming] = useState(matches);
   const [isAuthorized, setIsAuthorized] = useState(true); // New state for role check
   const dispatch = useDispatch();
   const router = useRouter();
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const todayUTC = new Date();
@@ -52,6 +54,7 @@ export default function UpcomingMatches() {
   
     // Get the next three upcoming matches
     setUpcoming(filteredMatches.slice(0, 3));
+    setLoading(false);
   }, [matches]);
   
 
@@ -78,11 +81,17 @@ export default function UpcomingMatches() {
     dispatch(selectMatch(match));
     router.push("/teamEntry");
   };
+  if (isAuthorized === null || loading) return <div className="h-screen flex items-center justify-center bg-gray-900 text-white"><h2 className="text-xl font-bold">⏳ Loading...</h2></div>;
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-900 p-8">
+       <div className="absolute top-4 left-4">
+        <LogoutButton />
+      </div>
       {isAuthorized ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full max-w-6xl">
+      {/* <LogoutButton/> */}
+
           {upcoming.map((match, index) => (
             <div
               key={index}

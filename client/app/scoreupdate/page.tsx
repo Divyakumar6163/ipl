@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { matches } from "../../utils/data/matches";
 import { useRouter } from "next/navigation";
-
+import LogoutButton from "@/components/Logout";
 type PlayerScores = {
   [playerName: string]: number;
 };
@@ -192,6 +192,9 @@ const completeMatch = async () => {
 
   return (
     <div className="p-2 bg-gray-900 text-white shadow-lg overflow-auto h-screen flex flex-col">
+      <div className="absolute top-2 left-4">
+        <LogoutButton />
+      </div>
       <div className="relative mb-4">
         <h2 className="text-2xl font-bold text-center">Score Table</h2>
         <button
