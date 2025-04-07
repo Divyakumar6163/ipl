@@ -29,6 +29,11 @@ const checkpayment = async (req, res) => {
           message: "✅ Team ID already recorded. Payment exists.",
           status: "already-paid",
         });
+      } else {
+        return res.status(201).json({
+          message: "✅ Team ID not recorded. Payment does not exist.",
+          status: "not-paid",
+        });
       }
     } else {
       console.log("Checking for team ID");

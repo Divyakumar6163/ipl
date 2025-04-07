@@ -58,7 +58,7 @@ const getRetailers = async (req, res) => {
       };
     });
 
-    console.log("Final Processed Retailers:", filteredRetailers);
+    // console.log("Final Processed Retailers:", filteredRetailers);
     res.status(200).json(filteredRetailers);
   } catch (error) {
     console.error("Error fetching retailers:", error);

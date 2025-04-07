@@ -245,7 +245,7 @@ const getRank = async (req, res) => {
         message: "Missing required fields: team1, team2, matchDate",
       });
     }
-
+    console.log("GET Rank Body:", req.body);
     // const dateParts = matchDate.split("-");
     // matchDate = new Date(`${dateParts[2]}-${dateParts[1]}-${dateParts[0]}`);
 
@@ -257,13 +257,14 @@ const getRank = async (req, res) => {
       matchTime,
       contestPrice,
     });
+    console.log("RankData", rankData);
 
     if (!rankData) {
       return res
-        .status(404)
+        .status(400)
         .json({ message: "No ranking data found for this match" });
     }
-
+    // console.log("RankData", rankData);
     res.status(200).json({
       message: "Ranking data retrieved successfully",
       rankings: rankData.rankings,
@@ -400,7 +401,7 @@ const matchCompletion = async (req, res) => {
     const updateResult = await Team.updateMany(filter, {
       $set: { matchCompletion: true },
     });
-    console.log("MatchCompletion", match);
+    // console.log("MatchCompletion", match);
     await Match.updateMany(
       { team1, team2, matchDate, matchTime },
       { $set: { matchCompletion: true } }
@@ -443,7 +444,7 @@ const getPrize = async (req, res) => {
       matchTime,
       contestPrice,
     });
-    console.log("WinnerData", winnerData);
+    // console.log("WinnerData", winnerData);
     if (!winnerData) {
       return res
         .status(404)
@@ -496,7 +497,7 @@ const getMatches = async (req, res) => {
       return matchDate > today;
     });
 
-    console.log("Matches", filteredMatches);
+    // console.log("Matches", filteredMatches);
     if (filteredMatches.length === 0) {
       return res.status(404).json({ message: "No upcoming matches found" });
     }
