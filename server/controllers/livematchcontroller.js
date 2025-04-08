@@ -3,6 +3,7 @@ const Team = require("../models/team");
 const Rank = require("../models/rankmodel");
 const Trackrun = require("../models/trackrun");
 const Winners = require("../models/winner");
+
 const getScore = async (req, res) => {
   try {
     const { team1, team2, matchDate, matchTime, players } = req.body;
@@ -244,7 +245,7 @@ const getRank = async (req, res) => {
         message: "Missing required fields: team1, team2, matchDate",
       });
     }
-
+    console.log("GET Rank Body:", req.body);
     // const dateParts = matchDate.split("-");
     // matchDate = new Date(`${dateParts[2]}-${dateParts[1]}-${dateParts[0]}`);
 
@@ -256,13 +257,14 @@ const getRank = async (req, res) => {
       matchTime,
       contestPrice,
     });
+    console.log("RankData", rankData);
 
     if (!rankData) {
       return res
-        .status(404)
+        .status(400)
         .json({ message: "No ranking data found for this match" });
     }
-
+    // console.log("RankData", rankData);
     res.status(200).json({
       message: "Ranking data retrieved successfully",
       rankings: rankData.rankings,
@@ -399,7 +401,7 @@ const matchCompletion = async (req, res) => {
     const updateResult = await Team.updateMany(filter, {
       $set: { matchCompletion: true },
     });
-    console.log("MatchCompletion", match);
+    // console.log("MatchCompletion", match);
     await Match.updateMany(
       { team1, team2, matchDate, matchTime },
       { $set: { matchCompletion: true } }
@@ -442,7 +444,7 @@ const getPrize = async (req, res) => {
       matchTime,
       contestPrice,
     });
-    console.log("WinnerData", winnerData);
+    // console.log("WinnerData", winnerData);
     if (!winnerData) {
       return res
         .status(404)
@@ -482,6 +484,33 @@ const getPrize = async (req, res) => {
   }
 };
 
+const getMatches = async (req, res) => {
+  // Get three upcoming matches
+  try {
+    const today = new Date();
+    const matches = await Match.find();
+
+    const filteredMatches = matches.filter((match) => {
+      const matchDate = new Date(
+        match.matchDate.split("-").reverse().join("-")
+      );
+      return matchDate > today;
+    });
+
+    // console.log("Matches", filteredMatches);
+    if (filteredMatches.length === 0) {
+      return res.status(404).json({ message: "No upcoming matches found" });
+    }
+
+    res.status(200).json({
+      data: filteredMatches.slice(0, 3), // Get only the first three matches
+    });
+  } catch (error) {
+    console.error("Error fetching upcoming matches:", error);
+    res.status(500).json({ message: "Internal server error" });
+  }
+};
+
 module.exports = {
   getScore,
   getPlayer,
@@ -491,4 +520,5 @@ module.exports = {
   trackRun,
   matchCompletion,
   getPrize,
+  getMatches,
 };
