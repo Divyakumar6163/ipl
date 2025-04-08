@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Html5QrcodeScanner } from 'html5-qrcode';
 import { useRouter } from 'next/navigation';
-
+import LogoutButton from '@/components/Logout';
 const QRScannerPage: React.FC = () => {
   const [isAuthorized, setIsAuthorized] = useState<boolean>(false);
   const [teamId, setTeamId] = useState<string | null>(null);
@@ -79,7 +79,10 @@ const QRScannerPage: React.FC = () => {
   // ✅ Main UI with scanner and result (if not yet redirected)
   return (
     <div className="flex flex-col items-center  min-h-screen bg-gray-900 p-6 text-white">
-      <h2 className="text-3xl font-bold mb-10">Scan Team QR Code</h2>
+      <div className="absolute top-4 left-4">
+        <LogoutButton />
+      </div>
+      <h2 className="text-3xl font-bold my-10">Scan QR Code</h2>
       <div id="qr-reader" style={{ width: '100%', maxWidth: '400px' }}></div>
       {error && (
         <div className="mt-4 p-2 bg-red-500 text-white rounded">{error}</div>
