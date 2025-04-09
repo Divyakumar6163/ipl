@@ -105,7 +105,7 @@ const FluctuatingPointsTable: React.FC = () => {
           return (
             <div key={q.question} className="shadow-lg">
               <h3 className="text-lg font-semibold text-yellow-400 mb-3 px-3">{q.question}</h3>
-              <div className="text-right text-m font-bold text-green-400 mt-1 px-2">
+              <div className="text-left text-m font-bold text-green-400 mt-1 px-2">
                 Bet Amount: ₹{amount}
               </div>
               <table className="w-full border border-gray-700 rounded-lg overflow-hidden">
