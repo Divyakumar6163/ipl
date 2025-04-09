@@ -113,7 +113,7 @@ const FluctuatingPointsTable: React.FC = () => {
                   <tr className="bg-gray-700 text-white">
                     <th className="p-1 border font-bold text-xl border-gray-700 w-1/3">Option</th>
                     <th className="p-1 border font-bold text-xl border-gray-700 w-1/3">Rate</th>
-                    <th className="p-1 border font-bold text-xl border-gray-700 w-1/3">Expected</th>
+                    <th className="p-1 border font-bold text-xl border-gray-700 w-1/3">Expected Winning</th>
                   </tr>
                 </thead>
                 <tbody>

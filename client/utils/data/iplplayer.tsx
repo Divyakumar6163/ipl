@@ -6,7 +6,7 @@ type Player = {
 export const IPL_PLAYERS: Record<string, Player> = {
   // ✅ Chennai Super Kings (CSK)
   "Ruturaj Gaikwad": { team: "CSK", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/102.png" },
-  "Rahul Tripathi": { team: "CSK", image: "https://scontent.fmaa8-1.fna.fbcdn.net/v/t39.30808-6/468402852_982711187234076_8925912968949385228_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=eoGOFs4araIQ7kNvgF--jO7&_nc_oc=Adjf58jCwGkYK9rYERT1vZAyCIe8csqG3nvkP1iqnYKKQbDKlXMl0v4ezC8ucsZbunk&_nc_zt=23&_nc_ht=scontent.fmaa8-1.fna&_nc_gid=ANBgV_f6sgANAYwnZonMHWX&oh=00_AYHnKiODZ7s6c1BWwtf1RJaaDwG_Nw52-RrD4F5V25QYYw&oe=67D23F87" },
+  "Rahul Tripathi": { team: "CSK", image: "https://documents.iplt20.com/ipl/IPLHeadshot2025/188.png" },
   "Shivam Dube": { team: "CSK", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/211.png" },
   "Ravindra Jadeja": { team: "CSK", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/46.png" },
   "MS Dhoni": { team: "CSK", image: "https://documents.iplt20.com/ipl/IPLHeadshot2024/57.png" },
